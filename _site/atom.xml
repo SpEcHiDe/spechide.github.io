@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  
+    <title type="text" xml:lang="en">Jigar Lodaya</title>
+    <link type="application/atom+xml" rel="self" href="jigarlodaya.me/atom.xml"/>
+  
+  <link href="jigarlodaya.me/"/>
+  <id>jigarlodaya.me/</id>
+  <updated>2015-12-17T23:25:38Z</updated>
+  <author>
+    <name>Jigar Lodaya</name>
+    <email>mailme@jigarlodaya.me</email>
+  </author>
+  <rights type="text">Copyright © 2015 Jigar Lodaya. All rights reserved.</rights>
+  
+  <entry>
+  <title type="text">My First Hackathon.</title>
+  <link rel="alternate" type="text/html" href="jigarlodaya.me/post1.html" />
+  <id>jigarlodaya.me/post1</id>
+  <published>2015-12-17T00:00:00Z</published>
+  <updated>2015-12-17T00:00:00Z</updated>
+  <content type="html"><![CDATA[ <h2>Mozilla Hackathon at NIT Calicut on 19th-20th September.</h2>
+
+<blockquote><p>Hackathon was on the Firefox OS - We had to build apps for Firefox OS.</p></blockquote>
+
+<h4>I came to know about different opportunities available in tech related companies when I and my some friends with mentors attended the <strong>Campus++</strong> which was arranged @ Cherukara by <strong>Fellows from Kerala Startup Mission</strong>. There is where I came to know about <strong>Mozilla Kerala Community</strong> and also about different kind of awareness program, workshop they provide and also about the hackathon.</h4>
+
+<h4>I had no proper idea of how it is done and what it is gonna happen. I just registered for it, it was <strong>INVITE</strong> only event and had a little form to fill up as part of registration. I was eagerly waiting for the invite, and there it is in my mailbox couple of days to event. Along with me there was my classmate <em>Muhsin N V</em> who attended the hackathon.</h4>
+
+<h4>The day of the event we reached the NIT Campus at around 11:00 AM and searched for the event venue and we got seated. After few moments the hackathon Started as usual it was the introduction. That is the speaker introduced himself <strong>Shine Nelson</strong> and his colleague <strong>Kumaresan C S</strong>. Then he spoke about <strong>Mozilla and Mozilla Kerala Community</strong>. Then we had a self introduction session where we had to speak of our capabilities and the weirdest thing we did. It all went well and then we were split into teams. After explaining what we are gonna do for the event, they had kept the sticky notes on which every group who would like to share what they are gonna do and anyone who is interested can drop in. And we had a lunch break.</h4>
+
+<h4>After the lunch around 2:00PM the hackathon began. I and my friend grouped in and for the first 1hr we kept on thinking what to do, and there my friend spotted the new app which he installed in his phone recently. We started working on that app and started researching for the features we could use <em>(We had no idea about it and the webapis)</em>. Then after long time working on some features, we asked for a phone through which we can test the app, and then is when we came to know that some features are not available to us as they are in need of the review from <strong>World Wide Web Consortium (W3C)</strong>. By that time it was time for dinner. Before leaving for dinner I asked Shine for some ideas for apps, and he just gave me a sneak peak to his pending list of apps he wish to develop. And We left for dinner.</h4>
+
+<h4>After a nice dinner we came back and discussed on that list and we researched what all possible ways we can implement them. We divided the work, and started working. <strong><em>Oh yes forgot to mention there were few more addition to the people who were part of Mozilla Kerala Community. Varghese Thomas, Athul Suresh, Faheem Mohidheen, Nadeem Ahmed to name a few. </em></strong>. The help and guidance by them was very helpful for us as we move ahead. Came up with few stuffs, and tried implement but couldn&rsquo;t succeed but yes we kept trying and will be trying our best. The app development went on whole night and every one working lively with their app, yes everybody took a little nap just to refresh the mind and getting back to the app.</h4>
+
+<h4>By morning when we tested our flash light app it gave us positive response by working as expected. <strong>Yay!!!</strong> We were hell happy that yes we could come up with one app which could be added to the Firefox Marketplace. When we were testing, Kumaresan said that the app is eligible for the monthly app contest and asked us to apply for it. And after few updates and modification we uploaded it to the Marketplace. And also applied for the contest, but unfortunately we did not get selected as the winner. <strong>It doesn&rsquo;t matter we did not get the prize but what matters is the effort we put in to learn new things and then participation</strong>.</h4>
+
+<h4>It was time to mark the end of the hackathon. Every group who had succeeded in bringing up the apps were to demonstrate the app and to explain what, why and how they came up with the app. While they were demonstrating the other groups had to rate them. After the demo it was time to give away the prizes. And yes we got third prize for the <strong>Flasher App</strong>. Second prize was for the <strong>Bunkometer App</strong> which allows a student to keep track of the no.of class he/she can miss and still stay away from shortage of attendance. The group was from the NIT Calicut itself. First prize was secured by the app <strong>Speek</strong>, it was unique app which allows conversation using a voice only and with facebook friends. This group also wass from the NIT Calicut. After the prize distribution (which was distributed by the professor from the NIT Calicut), it was time for the group photo, in which I was left out from the frame <em>(Sad)</em>. As we start leaving the venue after marking the end of the event, it was already 4:00PM. Then is when we realized that its almost 28-30 hours without sleep and need to reach home safe.</h4>
+
+<blockquote><h4>After that event I just made my mind to start working with the community and grow with it. It was fun being there and <strong>lot of knowledge was received, made new friends and mentors</strong>.</h4></blockquote>
+ ]]></content>
+</entry>
+
+
+
+</feed>

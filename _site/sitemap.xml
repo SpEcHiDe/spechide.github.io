@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>jigarlodaya.me/</loc>
+    <lastmod>2015-12-17T23:25:38+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+    <url>
+      <loc>jigarlodaya.me/post1.html</loc>
+      
+        <lastmod>2015-12-17T00:00:00+05:30</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+  
+  
+  <url>
+    <loc>jigarlodaya.me/404</loc>
+    
+      <lastmod>2015-12-17T23:25:38+05:30</lastmod>
+    
+    
+      <changefreq>monthly</changefreq>
+    
+    
+      <priority>0.3</priority>
+    
+  </url>
+  
+  <url>
+    <loc>jigarlodaya.me/atom.xml</loc>
+    
+      <lastmod>2015-12-17T23:25:38+05:30</lastmod>
+    
+    
+      <changefreq>monthly</changefreq>
+    
+    
+      <priority>0.3</priority>
+    
+  </url>
+  
+  <url>
+    <loc>jigarlodaya.me/blog</loc>
+    
+      <lastmod>2015-12-17T23:25:38+05:30</lastmod>
+    
+    
+      <changefreq>monthly</changefreq>
+    
+    
+      <priority>0.3</priority>
+    
+  </url>
+  
+  <url>
+    <loc>jigarlodaya.me/</loc>
+    
+      <lastmod>2015-12-17T23:25:38+05:30</lastmod>
+    
+    
+      <changefreq>monthly</changefreq>
+    
+    
+      <priority>0.3</priority>
+    
+  </url>
+  
+  <url>
+    <loc>jigarlodaya.me/projects</loc>
+    
+      <lastmod>2015-12-17T23:25:38+05:30</lastmod>
+    
+    
+      <changefreq>monthly</changefreq>
+    
+    
+      <priority>0.3</priority>
+    
+  </url>
+  
+  <url>
+    <loc>jigarlodaya.me/sitemap.xml</loc>
+    
+      <lastmod>2015-12-17T23:25:38+05:30</lastmod>
+    
+    
+      <changefreq>monthly</changefreq>
+    
+    
+      <priority>0.3</priority>
+    
+  </url>
+  
+</urlset>

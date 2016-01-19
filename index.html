@@ -1,18 +1,110 @@
----
-layout: home
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
 
-<section id="about">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SpEcHiDe" />
+    <meta name="description" content="Personal blog and resume">
+<link rel="shortcut icon" type="image/jpg" href="img/photo.jpg" />   
+    <title>Shrimadhav U K</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+    crossorigin="anonymous">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="css/bootstrap.icon-large.min.css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script>
+
+      console.log('I do not like Google Analytics!');
+
+    </script>
+
+  </head>
+
+  <!-- Main Body-->
+  <body>
+  <!-- Wrap all page content here -->
+  <div id="wrap">
+    <!-- Navbar header -->
+    <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html"><i class="fa fa-home"></i></a>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="404.html">PROJECTS</a></li>
+        <li><a href="http://athena.nitc.ac.in/shrimadhav_b130253cs/res/resume.pdf">RESUME</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <section id="about">
 	<div class="container">
 	  <div class="avatar">
-		<img class="img-circle" src="{{ site.baseurl }}static/img/{{ site.avatar }}" alt="Responsive image" height="190px">
+		<img class="img-circle" src="img/photo.jpg" alt="Responsive image" height="190px">
 		<canvas id="myCanvas"></canvas>
 	  </div>
-	  <h3>I'm <strong>{{ site.author }}</strong>, a n00b.</h3>
+	  <h3>I'm <strong>SpEcHiDe</strong>, a n00b.</h3>
 	  <h3>I love all things computer science.</h3>
-	  <h3>Have a look at some of my working <a href="{{ site.baseurl }}/projects.html"> projects</a>.</h3>
-	  <h3>For more check out my academic &amp; professional <a href="#">Resume</a>.</h3>
-	  <h3>Contact me at <a href="http://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</a> or by <a href="mailto:{{ site.email }}">email</a>.</h3>
-	  {% include social.html %}
+	  <h3>Have a look at some of my working <a href="projects.html"> projects</a>.</h3>
+	  <h3>For more check out my academic &amp; professional <a href="http://athena.nitc.ac.in/shrimadhav_b130253cs/res/resume.pdf">Resume</a>.</h3>
+	  <h3>Contact me at <a href="http://twitter.com/SpEcHiDe">@SpEcHiDe</a> or by <a href="mailto:webadmin@spechide.xyz">email</a>.</h3>
+	  <div class="social">
+	<h4>
+	  <a href="http://github.com/SpEcHiDe"><i class="fa fa-github"></i></a>
+	  <a href="http://twitter.com/SpEcHiDe"><i class="fa fa-twitter"></i></a>
+	  <a href="http://linkedin.com/in/shrimadhav"><i class="fa fa-linkedin"></i></a>
+	</h4>
+</div>
 	</div>
 </section>
+
+
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div id="footer">
+        <div class="container">
+            <p class="text-muted">© All rights reserved. Powered by <!--<a href="http://jekyllrb.com/">Jekyll</a> and -->
+            <a href="http://www.github.com/biomadeira/sustain">sustain</a> with ♥</p>
+        </div>
+    </div>
+</footer>
+<div class="footer"></div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+    integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+    crossorigin="anonymous"></script>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/docs.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/alphabet.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

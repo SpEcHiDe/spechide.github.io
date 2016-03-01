@@ -1,106 +1,226 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-  <head>
+	<head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="author" content="SpEcHiDe" />
+                <meta name="description" content="Personal blog and resume">
+                <link rel="shortcut icon" type="image/jpg" href="images/photo.jpg" />
+		<title>Shrimadhav U K</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="SpEcHiDe" />
-    <meta name="description" content="Personal blog and resume">
-    <link rel="shortcut icon" type="image/jpg" href="img/photo.jpg" />
-    <title>Shrimadhav U K</title>
+		<!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+	</head>
+	<body>
 
-    <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
-    crossorigin="anonymous">
+		<!-- Header -->
+			<div id="header">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+				<div class="top">
 
-    <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href="css/bootstrap.icon-large.min.css" rel="stylesheet">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="author" content="Shrimadhav U K" />
-    <link rel="shortcut icon" type="image/jpg" href="img/photo.jpg" />
-  </head>
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/photo.jpg" alt="" /></span>
+							<h1 id="title">Shrimadhav U K</h1>
+							<p>CS UnderGrad</p>
+						</div>
 
-  <!-- Main Body-->
-  <body>
-  <!-- Wrap all page content here -->
-  <div id="wrap">
-    <!-- Navbar header -->
-    <nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="index.html"><i class="fa fa-home"></i></a>
-    </div>
-    <div id="navbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="blog.html">OLD BLOG</a></li>
-        <li><a href="projects.html">PROJECTS</a></li>
-        <li><a href="http://athena.nitc.ac.in/shrimadhav_b130253cs/res/resume.pdf">RESUME</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
 
+								Prologue's nav expects links in one of two formats:
 
-    <section id="about">
-	<div class="container">
-	  <div class="avatar">
-		<img class="img-circle" src="img/photo.jpg" alt="Responsive image" height="190px">
-		<canvas id="myCanvas"></canvas>
-	  </div>
-	  <h3>I'm <strong>SpEcHiDe</strong>, a n00b.</h3>
-	  <h3>I love all things computer science.</h3>
-	  <h3>Have a look at some of my working <a href="projects.html"> projects</a>.</h3>
-	  <h3>For more check out my academic &amp; professional <a href="http://athena.nitc.ac.in/shrimadhav_b130253cs/res/resume.pdf">Resume</a>.</h3>
-	  <h3>Contact me at <a href="http://twitter.com/SpEcHiDe">@SpEcHiDe</a> or by <a href="mailto:webadmin@spechide.xyz">email</a>.</h3>
-	  <div class="social">
-	<h4>
-	  <a href="http://github.com/SpEcHiDe"><i class="fa fa-github"></i></a>
-	  <a href="http://twitter.com/SpEcHiDe"><i class="fa fa-twitter"></i></a>
-	  <a href="http://linkedin.com/in/shrimadhav"><i class="fa fa-linkedin"></i></a>
-	</h4>
-</div>
-	</div>
-</section>
+								1. Hash link (scrolls to a different section within the page)
 
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
 
-  </div>
-  <!-- Footer -->
-  <footer>
-    <div id="footer">
-        <div class="container">
-            <p class="text-muted">© All rights reserved. Powered by <!--<a href="http://jekyllrb.com/">Jekyll</a> and -->
-            <a href="http://www.github.com/biomadeira/sustain">sustain</a> with ♥</p>
-        </div>
-    </div>
-</footer>
-<div class="footer"></div>
+								2. Standard link (sends the user to another page/site)
 
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
-    integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
-    crossorigin="anonymous"></script>
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
+								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/docs.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/alphabet.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+				</div>
 
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://twitter.com/SpEcHiDe" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://fb.me/shrimadhav" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/SpEcHiDe" class="icon fa-github"><span class="label">Github</span></a></li>
+							<!--<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li> -->
+							<li><a href="mailto:spechide@shrimadhavuk.me" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">Hi! I'm <strong>Shrimadhav U K</strong>, a Computer Science and Engineering student <br />
+								at <a href="http://cse.nitc.ac.in/">National Institute of Technology, Calicut</a>.</h2>
+								<!--<p>I love all things computer science.<br />
+								Contact me on <a href="https://fb.me/shrimadhav" class="icon fa-facebook"><span class="label">Facebook</span></a> or by <a href="mailto:spechide@shrimadhavuk.me" class="icon fa-envelope"><span class="label">Email</span></a>.</p>-->
+							</header>
+
+							<!--<footer>
+								<a href="#portfolio" class="button scrolly"></a>
+							</footer>-->
+
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Portfolio</h2>
+							</header>
+
+							<!--<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
+							egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
+							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
+							fusce hendrerit lacus ridiculus.</p>-->
+
+							<div class="row">
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="http://fossmeet.in/" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+										<header>
+											<h3>FOSSMeet '16</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="https://www.youtube.com/watch?v=LCPluhMTI0A" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+										<header>
+											<h3>Smart Water Meter</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="https://github.com/SpEcHiDe/WhatsAppTransmitter" class="image fit"><img src="images/pic04.png" alt="" /></a>
+										<header>
+											<h3>WhatsApp Transmitter</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="http://rakthadatha.hol.es/" class="image fit"><img src="images/pic05.png" alt="" /></a>
+										<header>
+											<h3>RakthaDatha</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u$ 12u$(mobile)">
+									<article class="item">
+										<a href="https://github.com/SpEcHiDe/SpEcHiDe" class="image fit"><img src="images/pic06.png" alt="" /></a>
+										<header>
+											<h3>S p E c H i D e</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="https://github.com/SpEcHiDe/Kaun-Banega-Crorepati-7" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+										<header>
+											<h3>Kaun-Banega-Crorepati-7</h3>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>About Me</h2>
+							</header>
+                                                        
+                                                        <img src="images/download.png"/>                                                        
+
+							<p>This section is currently under maintenance. Please come back later!</p>
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<!--<p>Elementum sem parturient nulla quam placerat viverra
+							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
+							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
+							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>-->
+
+                                                        <!-- 
+                                                                write an AJAX code here to 
+                                                                POST http://athena.nitc.ac.in/shrimadhav_b130253cs/I/AnnonyMail/send-mail.html
+                                                                here!
+                                                        -->
+
+							<form method="post" action="#">
+								<div class="row">
+									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="12u$">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="12u$">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<!-- <div id="footer"> -->
+
+				<!-- Copyright -->
+					<!--<ul class="copyright">
+						<li>&copy; 2016. All rights reserved.</li>
+					</ul>-->
+
+			<!-- </div>-->
+
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.scrolly.min.js"></script>
+			<script src="js/jquery.scrollzer.min.js"></script>
+			<script src="js/skel.min.js"></script>
+			<script src="js/util.js"></script>
+			<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
+			<script src="js/main.js"></script>
+
+	</body>
 </html>

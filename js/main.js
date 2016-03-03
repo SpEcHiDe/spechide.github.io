@@ -112,3 +112,24 @@
 	});
 
 })(jQuery);
+
+function sendemail(){
+  var from = document.getElementById('name').value + "<" + document.getElementById('email').value + ">";
+console.log(from);
+  var to = "spechide@shrimadhavuk.me";
+console.log(to);
+  var sub = "message from contact form on website!";
+console.log(sub);
+  var msg = document.getElementById('message').value;
+console.log(msg);
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      console.log(xhttp.responseText);
+    }
+  }
+  xhttp.open("POST", "http://spechide.netne.net/send-mail.php", true);
+  var formdata = "from="+from+"&to="+to+"&sub="+sub+"&msg="+msg+"";
+console.log(formdata);
+  xhttp.send(formdata);
+}

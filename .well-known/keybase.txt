@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/spechide
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://shrimadhavuk.me
+  * I am spechide (https://keybase.io/spechide) on keybase.
+  * I have a public key with fingerprint FF20 DDAD DFE7 F304 D7D4  1CF6 2A53 1323 33CE FE85
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120e79d545f676390c274a725f63b87fc269f8afaa4e8b8bddfde7718b0fea748170a",
+            "fingerprint": "ff20ddaddfe7f304d7d41cf62a53132333cefe85",
+            "host": "keybase.io",
+            "key_id": "2a53132333cefe85",
+            "kid": "01016c2759820337a7ec4dc15be8bbc1a2e845ff55d4b20d2fa9a5a3dddffeabe7bb0a",
+            "uid": "c28a6ae2aaf66fba54f3013f72d42619",
+            "username": "spechide"
+        },
+        "service": {
+            "hostname": "shrimadhavuk.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1458310311,
+    "expire_in": 157680000,
+    "prev": "4715aa8d0f3ac9d4a9031317d0db4d2c45ceb2411355abf4ccbab49a570da922",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.51
+Comment: https://keybase.io/crypto
+
+yMNvAnicbZJ9UBRlHMePwEQQw8DQ0KZZ3uU69333TsZyxhccQRwgNGC6nt3nWW4D
+bs+7AyXTiEAoJ4EYQ4pUNEMDYrCBaEAS48WBM4aQQhBNrbEGHMua3i6PnmPiv/af
+nee33+93P9/fPH1BvroAn7VpIRHMV54yn+HeugJdxuzSxv2EpMEiwrSfyEXzL5QH
+kcNpzlUhYSJIiiaRYIQcyym8wDNGUqYFFgg0PjKSKCgyzRsVESgAsEiURAlCBSJB
+oESJVBAQWJESSEDoCUW15iC7za5anThWUWgSQoDFSFAYkoUCZClZ4WnAMRRDMwwj
+IwWJHDZaNIfXgeEk4EAGVcMzfDDP4/2PfoGbpHiMyhlFmmQYAQhIZqFMcRKmlGQK
+0EjElRSOg6yEWWgFGAEHGIiRMLeEBEma5y6Yj5NpEfAA0QAoPK9IgGMxNcUoAg1Z
+mqeMXqED2a0gH2G1w4ZkiwoRcUBP4GmhKiPvYr1NFhQWu5oPoAUUFuQa8ERP2Oya
+U5O1PPzR4nTaTF6vs8jmFe9Fkvm/GLOkWiHeJDYUIrtD1ayEicJK2al6cymWExmK
+ZChKT6B9NtWOzKpXwQm8SOLH+xtUiCNZgeIAECGpMEA2QhYYsYmhBEhCiYW0zHIy
+kmiWohiOA5LCyrIEJBZvSCAhMNI04S22x6oRJiPGBDneSmqOFTgL7Lj1pd5sP51P
+gO7RRY94b5guYEnwwr2L+TtY1z3XFbVqevLE2KvLk8iHh1cB3flB8PaVre7EDyqq
+5YPRsZ4j7riJr2+HNrv++LCqLKrFGvZwciQXHlt3jc7wvWL4rXT7XHjnn9GB6aUb
+KGu4ucVhft6RBUI0bTz78e07tjYsK7JNT4R8Ht107t4Zw2CGQt9uZ79sT4oKNTU0
+96/pYsoa72e2NoxtStlwelvs5rY7orQndeNUxfrklvHOFUf9N2YWvJVYfbFDCFr9
+QsWZ6KXhJ180DKGL10sa+6Lz3UJVHP8aO/kS73eg7tfWzODks6YTkTfiPc6mqfJb
+Na7Id2evNjXqt9US0enXxsOybqT6b/rr5lhq1mOV0891Hjt5ExiyOiZ83iw+VbL5
+G/k9+9DEYEz23pTvS39yeLYs6gdsshgz98mt5MVpO0aqj3cdHB2OSVz/0euVET8+
+dSputm6ooaU/4WX9ZPGnDwwBOzOCoizHE9wz8YeXnd/9ZJUgp7iR38efLV/cXFXc
+MXP0csDPnZe0GW1kpvvZkXi/gak1voZ2l6dSHb3bmzfw9NS++juB0BXZ88Az/N3o
+D7//wtvdJXVt/umr/1k3mnO2OG1Lza6779fbV96v1o1cPtfTFt63JLM1ODQ8d+fu
+Grgm4fRkZW8ts/Ze2K7rM0r9im9dkD1kfcO18tCR8sDYrv5XLtT62p5of6fbDAZ6
+LkRcDY4jvnBZk54p/xfT5MOz
+=PSdC
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/spechide
+
+==================================================================
+

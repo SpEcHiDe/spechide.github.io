@@ -131,6 +131,7 @@ function sendemail(){
 		if (xhttp.readyState === 4) {
 			if (xhttp.status >= 200 && xhttp.status < 400) {
 				console.log(xhttp.responseText);
+				document.getElementsByClassName('form')[0].innerHTML='We will get back to you soon!';
 			} else {
 				console.log(new Error('Response returned with non-OK status'));
 			}

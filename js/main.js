@@ -149,4 +149,5 @@ function sendemail(){
     c.charset='utf-8';c.src='//rec.getsmartlook.com/bundle.js';s.parentNode.insertBefore(c,s);
     })(document);
     smartlook('init', '1ac5e95e104e844376d847433c5a60e3b7474a4a');
+    console.log("please visit https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature");
   }

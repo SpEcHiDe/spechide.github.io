@@ -139,3 +139,14 @@ function sendemail(){
 	};
 	xhttp.send();
 }
+
+  // respect user's privacy
+  if (navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && navigator.msDoNotTrack != "1") {
+    // paste analytics code here
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},s=d.getElementsByTagName('script')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.getsmartlook.com/bundle.js';s.parentNode.insertBefore(c,s);
+    })(document);
+    smartlook('init', '1ac5e95e104e844376d847433c5a60e3b7474a4a');
+  }

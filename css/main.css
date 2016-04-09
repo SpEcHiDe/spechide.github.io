@@ -2530,3 +2530,46 @@
 				}
 
 	}
+
+	/* -- Portfolio Section -- */
+	.portfolio {
+	  background: url("../img/bgimg.png");
+	  padding-bottom: 30px;
+	}
+
+	.portfolio .container {
+	  padding-top: 30px;
+	  text-align: center;
+	}
+
+	.portfolio-img {
+	  width: 100%;
+	  overflow: hidden;
+	}
+
+	.portfolio-img img {
+	  width: 100%;
+	}
+
+	.portfolio h3 {
+	  font-size: 20px;
+	  letter-spacing: 1px;
+	  margin: 0;
+	  padding: 10px 0 5px 0;
+	}
+
+	.portfolio .float-box {
+	  background-color: #fff;
+	  color: #000;
+	  display: inline-block;
+	  margin: 20px;
+	  padding: 20px;
+	  text-decoration: none;
+	  transition: all .2s ease-in-out;
+	  vertical-align: top;
+	  width: 23%;
+	}
+
+	.float-box:hover{
+	    transform:scale(1.1);
+	}

@@ -122,6 +122,10 @@ function sendemail(){
 	var sub = "message from contact form on shrimadhavuk.me!";
 	//console.log(sub);
 	var msg = document.getElementById('message').value;
+	if ((msg == null) || (msg == "")){
+		document.getElementsByClassName('form')[0].innerHTML='an error occured! please reload the page!!';
+		throw(new Error('invalid client error!'));
+	}
 	//console.log(msg);
 	var formdata = "from="+from+"&to="+to+"&sub="+sub+"&msg="+msg+"";
 	//console.log(formdata);

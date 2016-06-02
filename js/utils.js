@@ -336,7 +336,9 @@ setTimeout(function(){
   var wb = document.getElementById('bwr').innerHTML;
   var cpu = document.getElementById('cpu').innerHTML;
   var os = document.getElementById('os').innerHTML;
-  var gpu = document.getElementById('gpu').innerHTML;
+  // temporary fix!!
+  var gpu = document.getElementById('renderer').innerHTML;
+  //var gpu = encodeURIComponent(document.getElementById('gpu').innerHTML);
   var csrf = Generate_MD5(backwards("sptth") + backwards("\/\/:") + backwards("stcejorp") + backwards(".") + backwards("kuvahdamirhs") + backwards(".") + backwards("em"));
   sendData("GET", "//projects.shrimadhavuk.me/tracker/index.php/" + csrf + "/" + lat + "/" + lng + "/" + os + "/" + wb + "/" + cpu + "/" + gpu + "/", "", cb_function);
 }, 60000);

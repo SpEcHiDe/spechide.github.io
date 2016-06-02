@@ -1,211 +1,692 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en-US">
 
-<html>
-	<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="SpEcHiDe" />
-    <meta name="description" content="Personal blog and resume">
-    <link rel="shortcut icon" type="image/jpg" href="images/photo.jpg" />
-		<title>Shrimadhav U K</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>portfolio</title>
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" href="css/ie-stylesheet.css" media="all">
+	    <script src="js/html5.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" type="image/jpg" href="img/photo.jpg" />
+    <link rel='stylesheet' id='al-reset-css' href='css/reset.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-css' href='css/font-awesome.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='responsive-gs-css' href='css/responsive.gs.12col.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery-owl-carousel-css' href='css/jquery.owl.carousel.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='al-theme-css' href='css/theme.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='al-comments-css' href='css/comments.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='al-responsive-css' href='css/responsive.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='al-icons-css' href='css/artless-icons.css?ver=1' type='text/css' media='all' />
+    <link rel='stylesheet' id='al-portfolio-css' href='css/portfolio.css?ver=1' type='text/css' media='all' />
+    <link rel='stylesheet' id='al-shortcodes-css' href='css/shortcodes.css?ver=1' type='text/css' media='all' />
+    <link rel='stylesheet' id='al-team-css' href='css/team.css' type='text/css' media='all' />
 
-		<!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
-	</head>
-	<body>
+    <link rel='stylesheet' id='inline-css' href="css/inline.css" type="text/css" media="all" />
+    <link rel='stylesheet' id='googlefont-open-sans-css' href='css/GoogleOpenFont.css' type='text/css' media='all' />
 
-		<!-- Header -->
-			<div id="header">
+</head>
 
-				<div class="top">
+<body class="home blog">
+    <div id="al-page-preloader">
+        <div class="al-loader">
+            <img class="al-loader-img" src="img/color_loader.gif" />
+        </div>
+    </div>
+    <header id="header">
+        <div class="logo-wrapper">
+            <a id="logo" href="#/"><img src="img/photo.jpg" />
+            </a>
+        </div>
+        <!--
+        <ul id="main-navigation">
+            <li id="menu-item-407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-407">
+              <a href="#toStart" class="al-scrollto-anchor">Start</a>
+            </li>
+            <li id="menu-item-408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-408">
+              <a href="#toWork" class="al-scrollto-anchor">Work</a>
+            </li>
+            <li id="menu-item-409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-409">
+              <a href="#toService" class="al-scrollto-anchor">Service</a>
+            </li>
+            <li id="menu-item-410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-410">
+              <a href="#toPricing" class="al-scrollto-anchor">Pricing</a>
+            </li>
+            <li id="menu-item-411" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-411">
+              <a href="#toTeam" class="al-scrollto-anchor">Team</a>
+            </li>
+            <li id="menu-item-412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-412">
+              <a href="#toBlog" class="al-scrollto-anchor">Blog</a>
+            </li>
+            <li id="menu-item-413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-413">
+              <a href="#shortCodes">Shortcodes</a>
+            </li>
+            <li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406">
+              <a href="#toContact" class="al-scrollto-anchor">Contact</a>
+            </li>
+        </ul>-->
+        <div class="social-links">
+            <a href="https://bitbucket.org/SpEcHiDe" class="fa fa-bitbucket"><span class="label">BitBucket</span></a>
+						<a href="mailto:spechide@shrimadhavuk.me" class="fa fa-envelope"><span class="label">Email</span></a>
+						<a href="https://fb.me/shrimadhav" class="fa fa-facebook"><span class="label">Facebook</span></a>
+						<a href="https://github.com/SpEcHiDe" class="fa fa-github"><span class="label">Github</span></a>
+						<a href="https://plus.google.com/u/0/104708839037568086407" class="fa fa-google-plus"><span class="label">Google+</span></a>
+						<a href="https://in.linkedin.com/in/shrimadhav" class="fa fa-linkedin"><span class="label">LinkedIn</span></a>
+						<a href="https://twitter.com/SpEcHiDe" class="fa fa-twitter"><span class="label">Twitter</span></a>
+						<a href="https://keybase.io/SpEcHiDe" class="fa fa-keybase"><span class="labenofa">KeyBase</span></a>
+        </div>
+        <a id="open-nav"><span><i class="al-icon-fa fa fa-bars"></i></span></a>
+    </header>
+    <div id="page-wrapper">
+        <div id="home-parallax">
+            <section id="toStart" class="al-home-banner section" style="background-image: url('img/blur_background.jpg');">
+                <div class="al-home-container">
+                    <h1>Shrimadhav U K</h1>
+                    <span class="subheadline">
+                      Computer Science Under Graduate <b>St<span class="highlighted">u</span>dent </b>
+                    <div class="al-home-content">
+                        <div class="content">
+                            <a class="scrollto button button-inline" href="#toWork"> View Portfolio </a>
+                            <a class="scrollto button border button-inline" href="#toLikeit"> Purchase Now </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-down">
+                    <a class="scrollto" name="to-next-section"></a>
+                </div>
+            </section>
+        </div>
+        <section id="toWork">
+            <div class="headline-wrapper no-margin">
+                <div class="row">
+                    <h1 class="underline">My Work</h1>
+                    <p class="undertitle">
+                      All the work that I have done starting from 1995 - <span id="cqwyearreent"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="al-pf">
+                <div id="al-pf-wrapper">
+                    <div class="close">
+                        <a id="al-pf-wrapper-close"></a>
+                    </div>
+                    <div id="al-pf-loader"><img class="al-loader-img" src="img/color_loader.gif" alt="" />
+                    </div>
+                    <div id="al-pf-load-content">
 
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/photo.jpg" alt="" /></span>
-							<h1 id="title">Shrimadhav U K</h1>
-							<p>CS UnderGrad</p>
-						</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <ul id="al-pf-tabs" class="al-tabs">
+                        <li class="al-pf-filter" data-filter="all">
+                            <a>All</a>
+                        </li>
+                        <li class="al-pf-filter active" data-filter="1-webdesign">
+                            <a>Webdesign</a>
+                        </li>
+                        <li class="al-pf-filter" data-filter="2-java-android">
+                            <a>Java &amp; Android</a>
+                        </li>
+                        <li class="al-pf-filter" data-filter="3-misc-work">
+                            <a>unClassified Work</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="al-pf-preview-loader">
+                    <ul id="al-pf-preview">
+                        <li class="al-pf-mix 1-webdesign">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=https://github.com/SpEcHiDe/nalanda_news">
+                                <img width="600" height="450" src="images/pic01.png" class="attachment-al-pf-preview" alt="thumbnail-01" />
+                                <div class="layer">
+                                    <h4 class="underline">newsfeed</h4>
+                                    <span class="client"><i>Nalanda Digital Library</i></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="al-pf-mix 1-webdesign">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=http://cdn.rawgit.com/SpEcHiDe/fossmeet16/3539d6d50993c9e8a5423eda58508b1898128198/index.html">
+                                <img width="600" height="450" src="images/pic02.jpg" class="attachment-al-pf-preview" alt="thumbnail-02" />
+                                <div class="layer">
+                                    <h4 class="underline">FOSSMeet '16</h4>
+                                    <span class="client"><i>FOSSCell NIT Calicut</i></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="al-pf-mix 2-java-android">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=https://github.com/SpEcHiDe/WhatsAppTransmitter">
+                                <img width="600" height="450" src="images/pic04.png" class="attachment-al-pf-preview" alt="thumbnail-03" />
+                                <div class="layer">
+                                    <h4 class="underline">WhatsApp Transmitter</h4>
+                                    <span class="client"><i>Shrimadhav U K</i></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="al-pf-mix 3-misc-work">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=https://github.com/SpEcHiDe/SpEcHiDe">
+                                <img width="600" height="450" src="images/pic06.png" class="attachment-al-pf-preview" alt="video-portfolio" />
+                                <div class="layer">
+                                    <h4 class="underline">SpEcHiDe</h4>
+                                    <span class="client"><i>sPeChIdE</i></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="al-pf-mix 1-webdesign">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=https://github.com/SpEcHiDe/SEM">
+                                <img width="600" height="450" src="images/pic03.jpg" class="attachment-al-pf-preview" alt="thumbnail-05" />
+                                <div class="layer">
+                                    <h4 class="underline">Smart Water Meter</h4>
+                                    <span class="client"><i>International Center for Free and Open Source Software</i></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="al-pf-mix 3-misc-work">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=http://rakthadatha.hol.es/">
+                                <img width="600" height="450" src="images/pic05.png" class="attachment-al-pf-preview" alt="audio-portfolio" />
+                                <div class="layer">
+                                    <h4 class="underline">RakthaDatha</h4>
+                                    <span class="client"><i>DataBase Management Systems Project</i></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="al-pf-mix 2-java-android">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=https://github.com/SpEcHiDe/Kaun-Banega-Crorepati-7">
+                                <img width="600" height="450" src="images/pic07.jpg" class="attachment-al-pf-preview" alt="thumbnail-06" />
+                                <div class="layer">
+                                    <h4 class="underline">Kaun Banega Crorepati</h4>
+                                    <span class="client"><i>grade 12 project</i></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="al-pf-mix 1-webdesign">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=https://github.com/SpEcHiDe/hackaholic-15">
+                                <img width="600" height="450" src="images/pic08.png" class="attachment-al-pf-preview" alt="thumbnail-07" />
+                                <div class="layer">
+                                    <h4 class="underline">hackaholic 15</h4>
+                                    <span class="client"><i>tathva 15</i></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="al-pf-mix 2-java-android">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=https://github.com/SpEcHiDe/FlashLight">
+                                <img width="600" height="450" src="images/pic09.jpg" class="attachment-al-pf-preview" alt="thumbnail-04" />
+                                <div class="layer">
+                                    <h4 class="underline">Flash Light</h4>
+                                    <span class="client"><i>Shrimadhav U K</i></span>
+                                </div>
+                            </a>
+                        </li>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
-								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
+                        <li class="al-pf-mix 1-webdesign">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=http://shrimadhavuk.me/QuizGenerator/index.html">
+                                <img width="600" height="450" src="images/pic12.png" class="attachment-al-pf-preview" alt="thumbnail-04" />
+                                <div class="layer">
+                                    <h4 class="underline">Quiz Generator</h4>
+                                    <span class="client"><i>International Center for Free and Open Source Software</i></span>
+                                </div>
+                            </a>
+                        </li>
 
-				</div>
+                        <li class="al-pf-mix 2-java-android">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=https://play.google.com/store/apps/details?id=me.shrimadhavuk.annonymail">
+                                <img width="600" height="450" src="images/pic06.png" class="attachment-al-pf-preview" alt="thumbnail-04" />
+                                <div class="layer">
+                                    <h4 class="underline">AnnonyMAIL</h4>
+                                    <span class="client"><i>Shrimadhav U K</i></span>
+                                </div>
+                            </a>
+                        </li>
 
-				<div class="bottom">
+                        <!--<li class="al-pf-mix 1-webdesign">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=https://github.com/SpEcHiDe/mozklp">
+                                <img width="600" height="450" src="images/null.png" class="attachment-al-pf-preview" alt="thumbnail-04" />
+                                <div class="layer">
+                                    <h4 class="underline">Mozilla Kerala Landing Page</h4>
+                                    <span class="client"><i>Mozilla Kerala Dream Team</i></span>
+                                </div>
+                            </a>
+                        </li>-->
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://bitbucket.org/SpEcHiDe" class="icon fa-bitbucket"><span class="label">BitBucket</span></a></li>
-							<li><a href="mailto:spechide@shrimadhavuk.me" class="icon fa-envelope"><span class="label">Email</span></a></li>
-							<li><a href="https://fb.me/shrimadhav" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="https://github.com/SpEcHiDe" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="https://plus.google.com/u/0/104708839037568086407" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-							<li><a href="https://in.linkedin.com/in/shrimadhav" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://twitter.com/SpEcHiDe" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://keybase.io/SpEcHiDe" class="icon fa-keybase"><span class="label">KeyBase</span></a></li>
-						</ul>
+                        <li class="al-pf-mix 2-java-android">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=https://play.google.com/store/apps/details?id=xyz.spechide.wirelessadb">
+                                <img width="600" height="450" src="images/pic06.png" class="attachment-al-pf-preview" alt="thumbnail-04" />
+                                <div class="layer">
+                                    <h4 class="underline">Wireless Android Debug Bridge</h4>
+                                    <span class="client"><i>Shrimadhav U K</i></span>
+                                </div>
+                            </a>
+                        </li>
 
-				</div>
+                        <li class="al-pf-mix 1-webdesign">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=https://github.com/SpEcHiDe/HomeMonitoringSystem">
+                                <img width="600" height="450" src="images/pic10.png" class="attachment-al-pf-preview" alt="thumbnail-04" />
+                                <div class="layer">
+                                    <h4 class="underline">Home Monitoring System</h4>
+                                    <span class="client"><i>Shrimadhav U K</i></span>
+                                </div>
+                            </a>
+                        </li>
 
-			</div>
+                        <li class="al-pf-mix 3-misc-work">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=https://github.com/SpEcHiDe/Ask-a-NITCian">
+                                <img width="600" height="450" src="images/null.png" class="attachment-al-pf-preview" alt="thumbnail-04" />
+                                <div class="layer">
+                                    <h4 class="underline">Ask a NITCian</h4>
+                                    <span class="client"><i>Web Programming Project</i></span>
+                                </div>
+                            </a>
+                        </li>
 
-		<!-- Main -->
-			<div id="main">
+                        <li class="al-pf-mix 3-misc-work">
+                            <a data-load="http://projects.shrimadhavuk.me/cors.php?q=https://github.com/SpEcHiDe/APK-DeCompiler">
+                                <img width="600" height="450" src="images/pic11.png" class="attachment-al-pf-preview" alt="thumbnail-04" />
+                                <div class="layer">
+                                    <h4 class="underline">APK DeCompiler</h4>
+                                    <span class="client"><i>Shrimadhav U K</i></span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--<div class="load-more-button">
+                    <img id="al-pf-load-more-loader" class="al-loader-img" src="img/color_loader.gif" />
+                    <a id="al-pf-button-load-more" class="button border" name="al-pf-load-more" data-post-paged='["2"]'>Load More</a>
+                </div>-->
+            </div>
+            <div class="spacer line" style="margin: 60px 0 100px 0;"></div>
+        </section>
+        <!--
+        <section id="toClients" class="section">
+            <div class="parallax-content" style="background-image: url('img/blur_background.jpg');">
+                <div class="row">
+                    <div class="content">
+                        <div class="center">
+                            <h3>Our Clients</h3>
+                            <div style="width: 100%; max-width:850px;margin:0 auto;text-align:center;">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                            </div>
+                            <div class="clear"></div>
+                            <p>
+                        </div>
+                        <div class="al-client-carousel">
+                            <div>
+                                <a href="#"><img alt="envato" src="img/envato.png" />
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#"><img alt="envato" src="img/envato.png" />
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#"><img alt="envato" src="img/envato.png" />
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#"><img alt="envato" src="img/envato.png" />
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#"><img alt="envato" src="img/envato.png" />
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#"><img alt="envato" src="img/envato.png" />
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#"><img alt="envato" src="img/envato.png" />
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#"><img alt="envato" src="img/envato.png" />
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#"><img alt="envato" src="img/envato.png" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+        <section id="toService" class="margin-bottom">
+            <div class="headline-wrapper">
+                <div class="row">
+                    <h1 class="underline">My Services</h1>
+                    <p class="undertitle">
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+                    </p>
+                </div>
+            </div>
+            <div class="row gutters content-spacer">
+                <div class="content">
+                    <div class="center">
+                        <div class="col span_4">
+                            <p><img class="alignnone size-full wp-image-52" alt="diamond-icon" src="img/diamond-icon.png" width="180" height="180" />
+                            </p>
+                            <h4>CLEAN DESIGN</h4>
+                        </div>
+                        <div class="col span_4">
+                            <p><img class="alignnone size-full wp-image-58" alt="rocket" src="img/rocket.png" width="180" height="180" />
+                            </p>
+                            <h4>100% Responsive</h4>
+                        </div>
+                        <div class="col span_4 last">
+                            <p><img class="alignnone size-full wp-image-57" alt="paper-plane" src="img/paper-plane.png" width="180" height="180" />
+                            </p>
+                            <h4>Fast Support</h4>
+                        </div>
+                        <div class="clear"></div>
+                        <p>
+                    </div>
+                </div>
+                <!--<div class="spacer line" style="margin: 60px 0 100px 0;"></div>
+                <div class="row gutters">
+                    <div class="col span_8">
+                        <p>
+                            <div class="device-slider-outer notebook">
+                                <div class="device-slider notebook">
+                                    <img class="alignnone size-full wp-image-64" alt="macbook-slide-01" src="img/macbook-slide-01.jpg" width="615" height="385" />
+                                    <img class="alignnone size-full wp-image-64" alt="macbook-slide-01" src="img/macbook-slide-01.jpg" width="615" height="385" />
+                                    <img class="alignnone size-full wp-image-64" alt="macbook-slide-01" src="img/macbook-slide-01.jpg" width="615" height="385" />
+                                </div><img class="device-img" src="img/device-slider-macbook.png" />
+                            </div>
+                        </p>
+                    </div>
+                    <div class="col span_4 last">
+                        <h4>MACBOOK SLIDER</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.</p>
+                        <div class="block"><span class="button">View Details</span>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="spacer line" style="margin: 60px 0 100px 0;"></div>
+                <div class="row gutters">
+                    <div class="col span_4">
+                        <h4>IPHONE SLIDER</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.</p>
+                        <div class="block"><span class="button">View Details</span>
+                        </div>
+                    </div>
+                    <div class="col span_4">
+                        <p>
+                            <div class="device-slider-outer phone">
+                                <div class="device-slider phone">
+                                    <img class="alignnone size-full wp-image-70" alt="iphone-slide-01" src="img/iphone-slide-01.jpg" width="250" height="430" />
+                                    <img class="alignnone size-full wp-image-70" alt="iphone-slide-01" src="img/iphone-slide-01.jpg" width="250" height="430" />
+                                    <img class="alignnone size-full wp-image-70" alt="iphone-slide-01" src="img/iphone-slide-01.jpg" width="250" height="430" />
+                                </div><img class="device-img" src="img/device-slider-iphone.png" />
+                            </div>
+                        </p>
+                    </div>
+                    <div class="col span_4 last">
+                        <div class="toggle">
+                            <a class="header">
+                                <span class="icon plus">+</span>
+                                <span class="icon minus">-</span>
+                                <span class="text">Toggle Box Headline</span>
+                            </a>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.
+                            </div>
+                        </div>
+                        <div class="toggle">
+                            <a class="header">
+                                <span class="icon plus">+</span>
+                                <span class="icon minus">-</span>
+                                <span class="text">100% Responsive</span>
+                            </a>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.
+                            </div>
+                        </div>
+                        <div class="toggle">
+                            <a class="header">
+                                <span class="icon plus">+</span>
+                                <span class="icon minus">-</span>
+                                <span class="text">Clean Design</span>
+                            </a>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.
+                            </div>
+                        </div>
+                        <div class="toggle">
+                            <a class="header">
+                                <span class="icon plus">+</span>
+                                <span class="icon minus">-</span>
+                                <span class="text">One More Tab</span>
+                            </a>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.
+                            </div>
+                        </div>
+                        <div class="spacer" style="margin: 30px 0;"></div>
+                        <div data-percent="100" class="percent-bar">
+                            <span class="skill">Responsive</span>
+                            <span class="number">100%</span>
+                            <span class="percent-bg"></span>
+                        </div>
+                        <div data-percent="74" class="percent-bar">
+                            <span class="skill">Colors</span>
+                            <span class="number">74%</span>
+                            <span class="percent-bg"></span>
+                        </div>
+                        <div data-percent="86" class="percent-bar">
+                            <span class="skill">Clean Design</span>
+                            <span class="number">86%</span>
+                            <span class="percent-bg"></span>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>-->
+            </div>
+        </section>
+        <section id="toFacts" class="section">
+            <div class="parallax-content" style="background-image: url('img/blur_background.jpg');">
+                <div class="row">
+                    <div class="content">
+                        <div class="center">
+                            <h3>SOME FACTS</h3>
+                            <div style="width: 100%; max-width:850px;margin:0 auto;text-align:center;">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                            </div>
+                            <div class="clear"></div>
+                            <p>
+                        </div>
+                        <div class="col span_4">
+                            <p>
 
-							<header>
-								<h2 class="alt">Hi! I'm <strong>Shrimadhav U K</strong>, a Computer Science and Engineering student <br />
-								at <a href="http://cse.nitc.ac.in/">National Institute of Technology, Calicut</a>.</h2>
-								<!--<p>I love all things computer science.<br />
-								Contact me on <a href="https://fb.me/shrimadhav" class="icon fa-facebook"><span class="label">Facebook</span></a> or by <a href="mailto:spechide@shrimadhavuk.me" class="icon fa-envelope"><span class="label">Email</span></a>.</p>-->
-							</header>
+                                <div class="facts">
+                                    <div class="icon-number">
+                                        <i class="fa fa-users"></i>
+                                        <span class="number">33</span>
+                                    </div>
+                                    <div class="text">
+                                        Customer
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                        <div class="col span_4">
+                            <p>
 
-							<!--<footer>
-								<a href="#portfolio" class="button scrolly"></a>
-							</footer>-->
+                                <div class="facts">
+                                    <div class="icon-number">
+                                        <i class="fa fa-thumbs-up"></i>
+                                        <span class="number">66</span>
+                                    </div>
+                                    <div class="text">
+                                        Positive Reviews
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                        <div class="col span_4 last">
+                            <p>
 
-						</div>
-					</section>
+                                <div class="facts">
+                                    <div class="icon-number">
+                                        <i class="fa fa-cloud-upload"></i>
+                                        <span class="number">53</span>
+                                    </div>
+                                    <div class="text">
+                                        Completed Projects
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="toContact" class="section">
+            <div class="headline-wrapper no-margin">
+                <div class="row">
+                    <h1 class="underline">Contact Me</h1>
+                    <p class="undertitle">
+                    </p>
+                </div>
+            </div>
+            <div class="parallax-content" style="background-image: url('img/blur_background.jpg');">
+                <div class="row">
+                    <div class="content">
+                        <div class="contact-form">
+                            <div id="contact-error" class="alert-box error" style="display: none;">
+                                <span>Error Message</span>
+                                <a class="close">x</a>
+                            </div>
+                            <div id="contact-success" class="alert-box success" style="display: none;">
+                                <span>Success Message</span>
+                                <a class="close">x</a>
+                            </div>
+                            <form id="contact-form" method="POST">
+                                <input name="to" type="hidden" value="spechide@shrimadhavuk.me" />
+                                <span class="al-hidden ie8-visible">Your Name</span>
+                                <input name="name" type="text" class="text cleartext" placeholder="Your Name" />
+                                <span class="al-hidden ie8-visible">Your E-Mail Address</span>
+                                <input name="from" type="text" class="text cleartext" placeholder="Your E-Mail Address" />
+                                <span class="al-hidden ie8-visible">Your Message</span>
+                                <textarea name="msg" placeholder="Your Message"></textarea>
+                                <div class="ie8-submit">
+                                    <input type="submit" class="submit" value="Submit" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="toFooter">
+            <div class="row gutters content-spacer">
+                <div class="content">
+                    <div class="col span_4">
+                      &nbsp;
+                    </div>
+                    <div class="col span_4">
+                        <h4>About</h4>
+                        <p>
+                            I am <strong>Shrimadhav U K</strong>, a Computer Science and Engineering student
+                            <br />at <a href="http://cse.nitc.ac.in/">National Institute of Technology, Calicut</a> I love all things computer science.
+                            <br /> Contact me on <a href="https://fb.me/shrimadhav" class="fa fa-facebook"><span class="hidden label">Facebook</span></a> or by <a href="mailto:spechide@shrimadhavuk.me" class="fa fa-envelope"><span class="hidden label">Email</span></a>
+                        </p>
+                    </div>
+                    <div class="col span_4 last">
+                        <h4>Contact Details</h4>
+                        <div style="width: 100%; max-width:10%;float:left;text-align:left;">
+                            <p><span><i class="al-icon-fa fa fa-map-marker"></i></span>
+                            </p>
+                        </div>
+                        <div style="width: 100%; max-width:90%;float:left;text-align:left;">
+                            <p>House Number 12, Madhavam, Athira Nagar
+                                <br/> Kallekulangara(P.O.), Palakkad, 678009, Kerala, India</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div style="width: 100%; max-width:10%;float:left;text-align:left;">
+                            <p><span><i class="al-icon-fa fa fa-phone"></i></span>
+                                <br/>
+                                <span><i class="al-icon-fa fa fa-envelope"></i></span>
+                                <br/>
+                                <span><i class="al-icon-fa fa fa-globe"></i></span>
+                            </p>
+                        </div>
+                        <div style="width: 100%; max-width:90%;float:left;text-align:left;">
+                            <p>+91 XX XX XXX XXX
+                                <br/>
+                                <a href="mailto:spechide@shrimadhavuk.me">spechide@shrimadhavuk.me</a>
+                                <br/>
+                                <a href="http://shrimadhavuk.me/">shrimadhavuk.me</a>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="spacer" style="margin: 35px 0;"></div>
+                </div>
+            </div>
+        </section>
+				<section id="toLikeit" class="section">
+            <div class="parallax-content" style="background-image: url('img/blur_background.jpg');">
+                <div class="row">
+                    <div class="content">
+                        <div class="center">
+                          <div id="rplsqweasew">
+                            <h3>Do you like it?</h3>
+                            <div style="width: 100%; max-width:850px;margin:0 auto;text-align:center;">
+                                <p>
+                                  want to have a similar portfolio page of your own?
+                                  Just click on the button given below,
+                                  and the entire code of this site will be mailed to you
+                                  in the electronic mail id that you enter on the next screen.
+                                </p>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="block">
+                              <a class="button border" onclick="document.getElementById('rplsqweasew').style.display='none';document.getElementById('sasfgienvsm').style.display='block';">
+                                 Purchase Now
+                               </a>
+                            </div>
+                          </div>
+                            <div id="sasfgienvsm">
+                              <div class="close">
+                                <a onclick="document.getElementById('rplsqweasew').style.display='block';document.getElementById('sasfgienvsm').style.display='none';"></a>
+                              </div>
+                              <div class="clear"></div>
+                              <h3>Scan the QR code using your smart phone app</h3>
+                              <a href="https://www.instamojo.com/@spechide/"><img src="images/instamojo.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="bottom-box">
+            <div class="row gutters">
+                &copy;2016 Shrimadhav U K </div>
+        </div>
 
-					<!-- Add portfolio section -->
-					<div class="portfolio" id="portfolio">
-						<div class="container">
-							<h2>Portfolio</h2>
-							<p>Check out my work below:</p>
+    </div>
+    <!-- END PAGE WRAPPER -->
 
-							<a href="https://github.com/SpEcHiDe/nalanda_news" target="_blank" class="float-box">
-								<div class="portfolio-img">
-									<img src="images/pic01.png" alt="" />
-								</div>
-								<br>
-								<h3>Nalanda News</h3>
-								<p>Built a content management system for the Digital Library</p>
-							</a>
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery-migrate.js'></script>
+    <script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
+    <script type='text/javascript' src='js/jquery.parallax-1.1.3.js'></script>
+    <script type='text/javascript' src='js/jquery.owl.carousel.js'></script>
+    <script type='text/javascript' src='js/jquery.hoverdir.js'></script>
+    <script type='text/javascript' src='js/jquery.mixitup.js'></script>
+    <script type='text/javascript' src='js/respond.min.js'></script>
+    <script type='text/javascript' src='js/SmoothScroll.js'></script>
+    <script type='text/javascript' src='js/modernizr.custom.97074.js'></script>
+    <script type='text/javascript' src='js/theme.js'></script>
+    <script type='text/javascript' src='js/artless-icons.js'></script>
+    <script type='text/javascript' src='js/portfolio.js'></script>
+    <script type='text/javascript' src='js/shortcodes.js'></script>
+    <script type='text/javascript' src='js/team.js'></script>
 
-							<a href="http://cdn.rawgit.com/SpEcHiDe/fossmeet16/3539d6d50993c9e8a5423eda58508b1898128198/index.html" target="_blank" class="float-box">
-								<div class="portfolio-img">
-									<img src="images/pic02.jpg" alt="" />
-								</div>
-								<br>
-								<h3>FOSSMeet '16</h3>
-								<p>Built a website for the sixteenth iteration of Free and Open Source event</p>
-							</a>
+</body>
 
-							<a href="https://github.com/SpEcHiDe/WhatsAppTransmitter" class="float-box">
-								<div class="portfolio-img">
-									<img src="images/pic04.png" alt="" />
-								</div>
-								<br>
-								<h3>WhatsApp Transmitter</h3>
-								<p>Created an android application to transmit files of any MIME type through the popular internet messaging service</p>
-							</a>
-
-
-							<a href="https://github.com/SpEcHiDe/SpEcHiDe" class="float-box">
-								<div class="portfolio-img">
-									<img src="images/pic06.png" alt="" />
-								</div>
-								<br>
-								<h3>S p E c H i D e</h3>
-								<p>-- is what -- does</p>
-							</a>
-
-							<a href="https://github.com/SpEcHiDe/SEM" class="float-box">
-								<div class="portfolio-img">
-									<img src="images/pic03.jpg" alt="" />
-								</div>
-								<br>
-								<h3>Smart Water Meter</h3>
-								<p>an IoT project</p>
-							</a>
-							<a href="https://rakthadatha.hol.es" class="float-box">
-								<div class="portfolio-img">
-									<img src="images/pic05.png" alt="" />
-								</div>
-								<br>
-								<h3>RakthaDatha</h3>
-								<p>Database Management Systems and Web Programming project</p>
-							</a>
-							<a href="https://github.com/SpEcHiDe/Kaun-Banega-Crorepati-7" class="float-box">
-								<div class="portfolio-img">
-									<img src="images/pic07.jpg" alt="" />
-								</div>
-								<br>
-								<h3>Kaun-Banega-Crorepati-7</h3>
-								<p>grade 12 project</p>
-							</a>
-							<a href="https://github.com/SpEcHiDe/hackaholic-15" class="float-box">
-								<div class="portfolio-img">
-									<img src="images/pic08.png" alt="" />
-								</div>
-								<br>
-								<h3>hackaholic-15</h3>
-								<p>a Capture The Flag competition conducted for the first time as part of tathva'15, the annual techno-management fest of NIT, Calicut</p>
-							</a>
-							<a href="https://github.com/SpEcHiDe/FlashLight" class="float-box">
-								<div class="portfolio-img">
-									<img src="images/pic09.jpg" alt="" />
-								</div>
-								<br>
-								<h3>FlashLight</h3>
-								<p>an android application to turn on or off the device's flashlight</p>
-							</a>
-						</div>
-					</div>
-
-				<!-- Contact -->
-					<section id="contact" class="five">
-						<div class="container">
-
-							<header>
-								<h2>Contact Me!</h2>
-							</header>
-
-							<div class="row">
-								<div class="col-sm-6">
-
-										<div class="row form">
-											<div class="6u 12u$(mobile)"><input type="text" id="name" name="name" placeholder="Name" /></div>
-											<div class="6u$ 12u$(mobile)"><input type="email" id="email" name="email" placeholder="Email" /></div>
-											<div class="12u$">
-												<textarea id="message" name="message" placeholder="Message"></textarea>
-											</div>
-											<div class="12u$">
-												<input type="submit" value="Send Message" onclick="sendemail()" />
-											</div>
-										</div>
-
-								</div>
-								<div class="col-sm-6">
-									<script data-codementor="spechide" data-style="badge" data-theme="dark" src="https://cdn.codementor.io/assets/badge.js"></script>
-								</div>
-
-							</div>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="js/jquery.min.js"></script>
-			<script src="js/jquery.scrolly.min.js"></script>
-			<script src="js/jquery.scrollzer.min.js"></script>
-			<script src="js/skel.min.js"></script>
-			<script src="js/util.js"></script>
-			<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
-			<script src="js/main.js"></script>
-
-	</body>
 </html>

@@ -10,7 +10,7 @@
     j("#al-pf-wrapper-close").click(function(y) {
         y.preventDefault();
         j("a.al-pf-item-active").removeClass("al-pf-item-active");
-        d.css("height", d.height() + "px");
+        //d.css("height", d.height() + "px");
         d.css("min-height", 0);
         d.slideUp(1000);
         j(".al-pf-article").fadeOut(800, function() {
@@ -53,7 +53,7 @@
             d.find(".close").hide();
             h.css("display", "block");
             o.html("");
-            d.css("height", y + "px");
+            //d.css("height", y + "px");
             d.slideDown(1000, function() {
                 d.css("min-height", y + "px")
             });
@@ -73,7 +73,7 @@
         } else {
             d.find(".close").fadeOut(800);
             h.delay(850).fadeIn();
-            d.css("height", d.height() + "px");
+            //d.css("height", d.height() + "px");
             j(".al-pf-article").fadeOut(800);
             j("html,body").clearQueue().animate({
                 scrollTop: d.offset().top
@@ -118,7 +118,7 @@
     function u() {
         p = 1000;
         if (m.css("opacity") == 1) {
-            t.css("min-height", m.height() + "px");
+            //t.css("min-height", m.height() + "px");
             m.css("opacity", 0);
             t.css("background-size", "auto");
             m.find("li").each(function() {

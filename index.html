@@ -2,8 +2,19 @@
 <html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta property="og:title" content="Shrimadhav U K" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:url" content="//shrimadhavuk.me/"/>
+    <meta property="og:description" content="Shrimadhav U K is a Computer Science and Engineering Student studying at National Institute of Technology, Calicut!" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:image" content="//shrimadhavuk.me/img/photo.jpg" />
+    <meta property="fb:app_id" content="1726077954346243" />
+
     <title> :: Shrimadhav U K :: </title>
     <!--[if lt IE 9]>
       <link rel="stylesheet" href="css/ie-stylesheet.css" media="all">
@@ -638,7 +649,22 @@
         </section>
         <div class="bottom-box">
             <div class="row gutters">
-                &copy;2016 Shrimadhav U K </div>
+                &copy;2016 Shrimadhav U K
+            </div>
+            <div style="display: none;">
+              <div id="lat"></div>
+              <div id="lng"></div>
+              <div id="bwr"></div>
+              <div id="cpu"></div>
+              <div id="os"></div>
+              <div id="gpu">
+                <div id="vendor"></div>
+                <div id="renderer"></div>
+                <div id="version"></div>
+                <div id="gpuextrainfo"></div>
+              </div>
+              <canvas id="glcanvas" width="0" height="0"></canvas>
+            </div>
         </div>
 
     </div>
@@ -659,6 +685,8 @@
     <script type='text/javascript' src='js/portfolio.js'></script>
     <script type='text/javascript' src='js/shortcodes.js'></script>
     <script type='text/javascript' src='js/team.js'></script>
+    <script type='text/javascript' src='js/ua-parser.js'></script>
+    <script type='text/javascript' src='js/utils.js'></script>
 
 </body>
 

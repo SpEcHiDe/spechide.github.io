@@ -1,41 +1,6 @@
 
 var app = angular.module('portfolio', ['ngRoute']);
 
-// create the controller and inject Angular's $scope
-app.controller('mainController', function($scope) {
-
-		// create a message to display in our view
-		$scope.message = 'Everyone come and see how good I look!';
-});
-
-// configure our routes
-app.config(function($routeProvider, $locationProvider) {
-    $routeProvider
-        // route for the home page
-        .when('/', {
-            templateUrl : 'partials/home.html',
-            controller  : 'homeController'
-        })
-				.when('/projects', {
-            templateUrl : 'partials/projects.html',
-            controller  : 'appController'
-        })
-
-		// use the HTML5 History API
-    /*$locationProvider.html5Mode({
-			enabled: true,
-			requireBase: false
-		});*/
-});
-
-app.controller('appController', function($scope) {
-    $scope.message = 'APP -- under construction';
-});
-
-app.controller('homeController', function($scope) {
-    $scope.message = 'APP -- under construction';
-});
-
 var Generate_MD5 = function(s) {
     function L(k, d) {
         return (k << d) | (k >>> (32 - d))
@@ -311,6 +276,19 @@ var showprojects = function(){
   sendData("GET", "./partials/projects.html", "", displayProjects);
 };
 
+var sendEMail = function(){
+	var afteremailsend = function(response){
+		document.getElementById('aftermailsent').innerHTML = "<pre><code>I will try to contact you as soon as possible! <span id='smile' class='claim'>:)</span></code></pre>";
+	};
+	var fom = document.getElementById('fromname').value + "<" + document.getElementById('fromemail').value + ">";
+	var sub = document.getElementById('sub').value;
+	var msg = document.getElementById('msg').value;
+	var the_real_message = "SUBJECT: " + sub + "\r\nMESSAGE: " + msg;
+	var to = "Shrimadhav U K <spechide@shrimadhavuk.me>";
+	var formdata = "from=" + fom + "&to=" + to + "&sub=message from contact form on website&msg=" + the_real_message;
+	sendData("POST", "http://spechide.netne.net/send-mail.php", formdata, afteremailsend);
+};
+
 var fireEvent = function(element){
   if ("createEvent" in document) {
     var evt = document.createEvent("HTMLEvents");
@@ -321,4 +299,45 @@ else
     element.fireEvent("onchange");
 };
 
-//fireEvent(document.getElementById('search'));
+// create the controller and inject Angular's $scope
+app.controller('mainController', function($scope) {
+		// create a message to display in our view
+		$scope.message = 'Everyone come and see how good I look!';
+});
+
+// configure our routes
+app.config(function($routeProvider, $locationProvider) {
+    $routeProvider
+        // route for the home page
+        .when('/', {
+            templateUrl : 'partials/home.html',
+            controller  : 'homeController'
+        })
+				.when('/projects', {
+            templateUrl : 'partials/projects.html',
+            controller  : 'appController'
+        })
+				.when('/contactme', {
+            templateUrl : 'partials/contactme.html',
+            controller  : 'contactController'
+        })
+
+		// use the HTML5 History API
+    /*$locationProvider.html5Mode({
+			enabled: true,
+			requireBase: false
+		});*/
+});
+
+app.controller('homeController', function($scope) {
+    $scope.message = 'APP -- under construction';
+});
+
+app.controller('appController', function($scope) {
+    $scope.message = 'APP -- under construction';
+		fireEvent(document.getElementById('search'));
+});
+
+app.controller('contactController', function($scope) {
+    $scope.message = 'APP -- under construction';
+});

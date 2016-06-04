@@ -1,0 +1,39 @@
+
+<div class="jumbotron text-center">
+
+  <h3>Contact me using the <strong>contact form</strong> on the left or by <strong>snail mail</strong> using the address on the right!</h3>
+
+    <div class="row">
+      <div class="col-sm-6 text-center">
+    <div id="aftermailsent" class="panel-body">
+        <form role="form" method="POST" accept-charset="UTF-8" onsubmit="sendEMail(); return false;" enctype="multipart/form-data" ng-validate>
+          <fieldset>
+            <div class='form-group'>
+                <input type="text" placeholder="Your NAME" class="form-control" id="fromname" name="fromname">
+            </div>
+            <div class='form-group'>
+                <input type="email" placeholder="ELECTRONIC MAIL ID" class="form-control" id="fromemail" name="fromemail">
+            </div>
+            <div class='form-group'>
+                <input type="text" placeholder="Subject" class="form-control" id="sub" name="sub">
+            </div>
+            <div class='form-group'>
+                <textarea placeholder="A Brief Message" class="form-control" id="msg" name="msg" cols="40" rows="5"></textarea>
+            </div>
+            <button type="submit" name='emailBtn' class='btn btn-lg btn-block waves-effect waves-light'>Send Message</button>
+          </fieldset>
+        </form>
+    </div>
+      </div>
+      <div class="col-sm-6 text-center" style="padding-top: 15px;">
+
+          <pre><code>
+            House Number 12, Madhavam,
+            Athira Nagar, Kallekulangara(P.O.),
+            Palakkad - 678009, Kerala
+            India
+          </code></pre>
+
+      </div>
+    </div>
+</div>

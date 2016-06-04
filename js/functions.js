@@ -1,3 +1,41 @@
+
+var app = angular.module('portfolio', ['ngRoute']);
+
+// create the controller and inject Angular's $scope
+app.controller('mainController', function($scope) {
+
+		// create a message to display in our view
+		$scope.message = 'Everyone come and see how good I look!';
+});
+
+// configure our routes
+app.config(function($routeProvider, $locationProvider) {
+    $routeProvider
+        // route for the home page
+        .when('/', {
+            templateUrl : 'partials/home.html',
+            controller  : 'homeController'
+        })
+				.when('/projects', {
+            templateUrl : 'partials/projects.html',
+            controller  : 'appController'
+        })
+
+		// use the HTML5 History API
+    /*$locationProvider.html5Mode({
+			enabled: true,
+			requireBase: false
+		});*/
+});
+
+app.controller('appController', function($scope) {
+    $scope.message = 'APP -- under construction';
+});
+
+app.controller('homeController', function($scope) {
+    $scope.message = 'APP -- under construction';
+});
+
 var Generate_MD5 = function(s) {
     function L(k, d) {
         return (k << d) | (k >>> (32 - d))
@@ -265,6 +303,14 @@ var searchProjects = function(){
   sendData("POST", url, formdata, afterFetch);
 };
 
+var showprojects = function(){
+  var displayProjects = function(response){
+    document.getElementsByTagName('header')[0].style.display = "none";
+    document.getElementById('projects').innerHTML = response;
+  };
+  sendData("GET", "./partials/projects.html", "", displayProjects);
+};
+
 var fireEvent = function(element){
   if ("createEvent" in document) {
     var evt = document.createEvent("HTMLEvents");
@@ -275,4 +321,4 @@ else
     element.fireEvent("onchange");
 };
 
-fireEvent(document.getElementById('search'));
+//fireEvent(document.getElementById('search'));

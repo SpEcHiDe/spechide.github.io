@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="portfolio" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,15 +32,15 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
 
-  <body>
+  <body ng-controller="mainController">
 
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/">Home</a>
+          <a class="navbar-brand" href="#/">Home</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/partials/projects.html">Find My Projects!</a></li>
+          <li><a href="#/projects">Find My Projects!</a></li>
           <li class="dropdown">
             <a data-toggle="dropdown" data-target="javascript:void(0)" class="dropdown-toggle">
               Pages
@@ -63,52 +63,16 @@
       </div>
     </nav>
 
-    <header>
-      <div class="jumbotron text-center">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <!--<ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-          </ol>
-          -->
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <iframe class="embed-responsive-item" src="partials/intro_anime.html" scrollable="no">
-              </iframe>
-            </div>
-            <div class="item">
-              <div class="container-fluid" style="height: 500px;width: 1000px;">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <img src="img/photo.jpg" alt="ME" title="Shrimadhav U K" class="embed-responsive-item">
-                    </div>
-                    <br><br><br><br><br>
-                    <div class="col-sm-6" id="selfintro">
-                        I am Shrimadhav U K, currently studying Computer Science and Engineering at
-                        National Institute of Technology, Calicut.
-                        <br>
-                        You can know more about me by stalking me here!
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <!-- Left and right controls -->
-          <a class="left carousel-control" data-target="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" data-target="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </header>
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+      <!-- angular templating -->
+      <!-- this is where content will be injected -->
+      <div ng-view></div>
 
-    <section id="contactme">
+
+      <div style="height:5px;"></div>
+
+      <section id="contactme">
       <div class="container-fluid text-center">
         <div class="social-links">
 
@@ -149,7 +113,8 @@
 
         </div>
       </div>
-    </section>
+      </section>
+    </div>
 
     <div id="trackfornodnt" style="display: none;">
       <!-- div for tracking purposes -->
@@ -165,6 +130,8 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src='js/angular.min.js'></script>
+    <script src='js/angular-route.js'></script>
     <script src="js/functions.js"></script>
     <script src="js/ua-parser.js"></script>
     <script src="js/tracker.js"></script>

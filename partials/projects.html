@@ -1,137 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    <meta property="og:title" content="Shrimadhav U K" />
-    <meta property="og:type" content="Website" />
-    <meta property="og:url" content="//shrimadhavuk.me/"/>
-    <meta property="og:description" content="Shrimadhav U K is a Computer Science and Engineering Student studying at National Institute of Technology, Calicut!" />
-    <meta property="og:locale" content="en_IN" />
-    <meta property="og:image" content="//shrimadhavuk.me/img/photo.jpg" />
-    <meta property="fb:app_id" content="1726077954346243" />
+<link rel="stylesheet" href="css/material.indigo-pink.min.css" type="text/css">
 
-    <title>Shrimadhav U K</title>
-    <link rel="shortcut icon" type="image/jpg" href="../img/photo.jpg" />
-
-    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="../css/bootstrap-theme.css" type="text/css">
-    <link rel="stylesheet" href="../css/material.indigo-pink.min.css" type="text/css">
-    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <link rel="stylesheet" href="../css/styles.css" type="text/css">
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">Home</a>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/partials/projects.html">Find My Projects!</a></li>
-          <li class="dropdown">
-            <a data-toggle="dropdown" data-target="javascript:void(0)" class="dropdown-toggle">
-              Pages
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a tabindex="-1" href="/blog">my Blog</a></li>
-              <li><a tabindex="-1" href="/QuizGenerator">ICFOSS Quiz Generator</a></li>
-              <li><a tabindex="-1" href="/SSLStatus">Software Systems Lab Status <small>under construction</small></a></li>
-              <li><a tabindex="-1" href="/comparisons">Internet Messaging Application Comparisons</a></li>
-              <li><a tabindex="-1" href="/SEM">Smart Water Meter</a></li>
-              <li><a tabindex="-1" href="/hackaholic-15">hackaholic for tathva'15</a></li>
-              <li><a tabindex="-1" href="/APK-DeCompiler">android Application PacKage DeCompiler</a></li>
-              <li class="divider"></li>
-              <li><a tabindex="-1" href="https://github.com/SpEcHiDe">my GitHub</a></li>
-            </ul>
-          </li>
-          <li><a href="#contactme">Contact ME</a></li>
-        </ul>
+<div class="container-fluid text-center">
+    <div class='login-panel panel panel-default'>
+      <div class='panel-heading'>
+          <h3 class='panel-title'>Search for MY projects!</h3>
       </div>
-    </nav>
-
-    <section id="projects">
-      <div class="container-fluid text-center">
-
-          <div class='login-panel panel panel-default'>
-            <div class='panel-heading'>
-                <h3 class='panel-title'>Search for MY projects!</h3>
-            </div>
-            <div class='panel-body'>
-              <fieldset>
-                <div class='form-group'>
-                  <input type='text' name='search' id='search' class='form-control' placeholder='enter your search query here:' onchange="searchProjects()">
-                </div>
-              </fieldset>
-            </div>
+      <div class='panel-body'>
+        <fieldset>
+          <div class='form-group'>
+            <input type='text' name='search' id='search' class='form-control' placeholder='enter your search query here:' onchange="searchProjects()">
           </div>
-
-          <div id="outputProjects"></div>
-
+        </fieldset>
       </div>
-    </section>
-
-    <div style='height:50px;'></div>
-
-    <section id="contactme">
-      <div class="container-fluid text-center">
-        <div class="social-links">
-
-            <a href="https://github.com/SpEcHiDe" class="fa fa-github"><span class="label">GitHub</span></a>
-
-            <a href="https://in.linkedin.com/in/shrimadhav" class="fa fa-linkedin"><span class="label">LinkedIn</span></a>
-
-            <a href="https://twitter.com/SpEcHiDe" class="fa fa-twitter"><span class="label">Twitter</span></a>
-
-            <a href="https://www.quora.com/profile/Shrimadhav-Unnikrishnan-Kuruvanthody" class="fa fa-quora">
-              <span class="fa-stack fa-lg">
-                <span class="fa fa-square-o fa-stack-2x"></span>
-                <span class="fa fa-fw fa-stack-1x"><strong>Q</strong></span>
-              </span>
-              <!-- credits: https://www.quora.com/Is-there-a-Quora-glyphicon-in-Font-Awesome -->
-              <span class="label">Quora</span>
-            </a>
-
-						<a href="mailto:spechide@shrimadhavuk.me" class="fa fa-envelope"><span class="label">Email</span></a>
-
-            <a href="https://gitlab.com/u/SpEcHiDe" class="fa fa-gitlab"><span class="label">GitLab</span></a>
-
-            <a href="https://diasp.in/i/466bceac44b4" class="fa fa-diasp">
-              <span class="fa-stack fa-lg">
-                <span class="fa fa-star-o fa-stack-2x"></span>
-                <span class="fa fa-fw fa-stack-1x"><strong>D</strong></span>
-              </span>
-              <span class="label">Diaspora</span>
-            </a>
-
-            <a href="https://keybase.io/SpEcHiDe" class="fa fa-keybase fa-deaf"><span class="label">KeyBase</span></a>
-
-            <a href="https://plus.google.com/u/0/104708839037568086407" class="fa fa-google-plus"><span class="label">Google+</span></a>
-
-            <a href="https://fb.me/shrimadhav" class="fa fa-facebook"><span class="label">Facebook</span></a>
-
-            <a href="https://bitbucket.org/SpEcHiDe" class="fa fa-bitbucket"><span class="label">BitBucket</span></a>
-
-        </div>
-      </div>
-    </section>
-
-    <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.js"></script>
-    <script src="../js/functions.js"></script>
-
-  </body>
-</html>
+    </div>
+    <div id="outputProjects"></div>
+</div>

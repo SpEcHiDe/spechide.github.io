@@ -1,0 +1,30 @@
+
+.jumbotron{
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
+iframe{
+  height: 500px;
+  width: 1000px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px){
+  .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev{
+    width: 75px;
+    height: 75px;
+    margin-top: -30px;
+    font-size: 30px;
+  }
+}
+#selfintro{
+  text-align: right;
+  align-content: center;
+}
+.social-links > a{
+  text-decoration: none;
+  padding-right: 1em;
+  color: #337ab7;
+}
+.fa > .label {
+  display: none;
+}

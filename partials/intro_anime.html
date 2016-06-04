@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="stylesheet" href="../css/bootstrap.css" type="text/css">
+		<style>
+	#intro {
+	position: absolute;
+	top: 45%;
+	left: 40%;
+	margin: -160px 0 0 -390px;
+	}
+
+	#intro h1 {
+	margin-top: 34px;
+	cursor: default;
+	}
+
+	#intro span {
+	opacity: 0;
+	}
+
+	span.claim {
+	font-family: "Arial";
+	font-size: 300px;
+	line-height: 226px;
+	color: #06afa2;
+	letter-spacing: -3px;
+	float: left;
+	margin-right: 20px;
+	cursor: default;
+	}
+
+	h1 {
+	font-family: "TitilliumText22LThThin";
+	font-weight: 100;
+	font-size: 45px;
+	line-height: 51px;
+	color: #999;
+	letter-spacing: -3px;
+	float: left;
+	}
+
+	h3 {
+	font-family: "TitilliumText22LThThin";
+	font-weight: 100;
+	font-size: 35px;
+	line-height: 51px;
+	color: #845;
+	letter-spacing: -3px;
+	float: left;
+	}
+
+	.grey {
+	color: #333;
+	}
+
+	.green {
+	color: #06afa2;
+	}
+
+	a {
+	font-family: "Abel", "HelveticaNeue Light", "TitilliumText22LThThin",
+		"Lucida Grande";
+	text-decoration: none;
+	color: blue;
+	}
+
+	strong {
+	color: #666;
+	}
+
+	a:hover {
+	cursor: pointer;
+	}
+
+	@font-face {
+	font-family: 'Abel';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Abel'), local('Abel-Regular'),
+		url(http://themes.googleusercontent.com/static/fonts/abel/v4/EAqh528fFdbUek8UOky4sA.woff)
+		format('woff');
+	}
+</style>
+
+<script src="../js/jquery.js"></script>
+
+<script>
+	$(init);
+	function init() {
+		animation.homepage();
+	};
+	animation = {
+		homepage: function(){
+			var delaysHome = [200, 800, 1300, 1800, 2200, 2600, 3000, 3500, 4200, 4500, 5000, 5600, 6200, 7000, 7500, 8000, 8500, 9000, 9500];
+			$('#intro span').each(function (i) {
+				setTimeout(function (li) {
+					li.animate({opacity: 1}).delay(9500).queue(function(n) {
+						$("#smile").html(";)"); n();
+					});
+				}, delaysHome[i], $(this));
+			});
+		},
+	}
+	var h_gl=$(window).height();
+	var w_hd=1920,h_hd=1080,h;
+	var animating=0;
+
+	function resize(){
+		var w=$(window).width();
+		h=(w*h_hd)/w_hd;
+		var fs=(w*6)/w_hd+'em';
+		var magna=(w*4)/w_hd+'em';
+		var t_ar,t_sec;
+		/* scroll-wrap adjustment */
+		$("#scroll_wrap").css({'margin-top':7*h});
+		$(".wrap_inner>span").css({'top':(h-180)/2});
+		/* scroll-wrap-inner adjustment */
+		$(".circle").css({'margin-top':(h-250)/2});
+		/* fix height adjustment */
+		$(".fix").css({'height':h});
+		/* section height adjustment */
+		$('section').each(function(){
+			$(this).css({'height':h});
+		});
+		/* window height adjustment */
+		$('.window').css({'height':(h/2)});
+		/* font adjustments */
+		$('body').css({'font-size':fs});
+		/* sec wrap adjustment */
+		$('.sec_wrap').each(function(){
+			$(this).css({'margin-top':(h-$(this).height())/2});
+		});
+	}
+	$(document).ready(function(){
+		$('#speakers_icon').click(function(){
+			$('html, body').stop().animate({
+				scrollTop:$('#speakers_tab').offset().top
+			},1500,function(){animating=0;});
+		});
+		$('.wait').click(function(){
+			$('html, body').stop().animate({
+				scrollTop:13*h/2
+			},1500,function(){animating=0;});
+		});
+		$('#sponsors_icon').click(function(){
+			$('html, body').stop().animate({
+				scrollTop:$('#sponsors').offset().top
+			},1500,function(){animating=0;});
+		});
+		$('#contacts_icon').click(function(){
+			$('html, body').stop().animate({
+				scrollTop:$('#footer').offset().top
+			},1500,function(){animating=0;});
+		});
+		$('.lg').click(function(){
+			$('html, body').stop().animate({
+				scrollTop:0
+			},1500,function(){animating = 0;});
+		});
+		resize();
+		//day and night
+		var d = new Date();
+		if((d.getHours() > 6)&&(d.getHours() < 18))
+			$('#footer').css({'background-position':'100% 0'});
+		else
+			$('#footer').css({'background-position':'0 0'});
+	});
+	$(document).ready(function(){
+		resize();
+	});
+	$(window).resize(function(){
+		resize();
+	});
+</script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="wrapper">
+	<div id="load" class="index">
+		<div id="intro">
+			<span class="claim">(</span>
+			<h1>
+				<span class="green">Hi!</span>
+				<span>I am </span>
+				<span class="green">Shrimadhav U K</span>
+				<span>.</span>
+				<span> I love all things </span>
+				<br>
+				<span class="green">Computer Science</span>
+				<span>,</span>
+				<span> and this is my</span>
+				<br>
+				<span class="green"> personal</span>
+				<span> home page!</span>
+			</h1>
+			<span id="smile" class="claim">:)</span>
+		</div>
+	</div>
+</div>
+</div>
+
+</body>
+</html>

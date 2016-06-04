@@ -20,7 +20,7 @@ iframe{
   text-align: right;
   align-content: center;
 }
-.social-links > a{
+.fixedlocation a{
   text-decoration: none;
   padding-right: 1em;
   color: #337ab7;
@@ -29,7 +29,7 @@ iframe{
   display: none;
 }
 .fixedlocation {
-  z-index: 1;
+  z-index: 51;
   position: fixed;
   background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.8);
   color: #fff;

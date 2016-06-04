@@ -317,9 +317,17 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl : 'partials/projects.html',
             controller  : 'appController'
         })
-				.when('/contactme', {
+        .when('/contactme', {
             templateUrl : 'partials/contactme.html',
             controller  : 'contactController'
+        })
+        .when('/termsandconditions', {
+            templateUrl : 'partials/tnc.html',
+            controller  : 'tncController'
+        })
+        .when('/privacypolicy', {
+            templateUrl : 'partials/pp.html',
+            controller  : 'ppController'
         })
 
 		// use the HTML5 History API
@@ -339,5 +347,13 @@ app.controller('appController', function($scope) {
 });
 
 app.controller('contactController', function($scope) {
+    $scope.message = 'APP -- under construction';
+});
+
+app.controller('tncController', function($scope) {
+    $scope.message = 'APP -- under construction';
+});
+
+app.controller('ppController', function($scope) {
     $scope.message = 'APP -- under construction';
 });

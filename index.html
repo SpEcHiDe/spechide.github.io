@@ -41,6 +41,11 @@
 
   <body ng-controller="mainController">
 
+    <div class="fixedlocation" id="cookiewarning">
+      By using this webpage, you agree that you have read the <a href="#/termsandconditions">terms and conditions</a> and the <a href="#/privacypolicy">privacy policy</a>, and also agree to abide by it.
+           <a onclick="document.getElementById('cookiewarning').style.display='none';"><strong>OK</strong></a>
+    </div>
+
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -79,7 +84,7 @@
 
       <div style="height:5px;"></div>
 
-      <section id="contactme">
+      <section class="fixedlocation" id="contactme" style="bottom: 0px;">
       <div class="container-fluid text-center">
         <div class="social-links">
 

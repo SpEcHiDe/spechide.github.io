@@ -28,3 +28,13 @@ iframe{
 .fa > .label {
   display: none;
 }
+.fixedlocation {
+  z-index: 1;
+  position: fixed;
+  background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.8);
+  color: #fff;
+  width: 100%;
+  left: 0px;
+  padding: 1em;
+  text-align: center;
+}

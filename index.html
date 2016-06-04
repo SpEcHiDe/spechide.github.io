@@ -38,7 +38,7 @@
 
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="manifest" href="manifest.json">
-    
+
   </head>
 
   <body ng-controller="mainController">
@@ -140,6 +140,35 @@
       <div id="gpu"><div id="vendor"></div><div id="renderer"></div><div id="version"></div><div id="gpuextrainfo" style="display: none;"></div></div>
       <canvas id="glcanvas" width="0" height="0"></canvas>
       <!-- div for tracking purposes! -->
+      <!--
+      // was trying this: https://developer.mozilla.org/en/docs/Web/API/Push_API/Using_the_Push_API
+      BUT i failed Miserably !! :(
+      <code>
+        <div class="controls">
+          <p>This demo aims to demonstrate Push notifications in the simplest way possible.</p>
+          <form id="formtester">
+            <p>
+              <label for="name-input">Enter your name</label>:
+              <input type="text" id="name-input" placeholder="Bob">
+            </p>
+          </form>
+          <button class="subscribe" disabled>Subscribe to Push notifications</button><br>
+        </div>
+        <div class="outputs">
+          <div class="subscribers">
+            <p>Subscriber list</p>
+            <ul>
+
+            </ul>
+          </div>
+          <div class="messages">
+            <p>Messages</p>
+            <ul>
+            </ul>
+          </div>
+        </div>
+      </code>
+      -->
     </div>
 
     <script src="js/jquery.js"></script>

@@ -1,0 +1,13 @@
+{
+  "name": "Shrimadhav",
+  "short_name": "S U K P",
+  "icons": [{
+        "src": "img/photo.jpg",
+        "sizes": "332x331",
+        "type": "image/jpg"
+      }],
+  "start_url": "/index.html",
+  "display": "browser",
+  "orientation": "portrait",
+  "gcm_sender_id": "1000634472750"
+}

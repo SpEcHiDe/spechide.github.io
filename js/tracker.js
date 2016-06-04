@@ -110,9 +110,12 @@ if (navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && navigator.ms
     sendData("POST", "//projects.shrimadhavuk.me/tracker/index.php/" + csrf + "/", formdata, cb_function);
   }, 6000);
 
+  trackOn();
+
 }
 else{
   console.log("if you really need your privacy back, please visit: http://webkay.robinlinus.com/");
   var el = document.getElementById('trackfornodnt');
   el.parentNode.removeChild(el);
+  trackOff();
 }

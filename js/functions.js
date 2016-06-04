@@ -299,6 +299,14 @@ else
     element.fireEvent("onchange");
 };
 
+var trackOff = function(){
+  document.getElementById('cookiewarning').style.display='none';
+};
+
+var trackOn = function(){
+  document.getElementById('cookiewarning').style.display='block';
+};
+
 // create the controller and inject Angular's $scope
 app.controller('mainController', function($scope) {
 		// create a message to display in our view

@@ -9,5 +9,6 @@
   "start_url": "/index.html",
   "display": "browser",
   "orientation": "portrait",
+  "content_security_policy": "default-src 'self' style-src 'self' 'unsafe-inline';",
   "gcm_sender_id": "1000634472750"
 }

@@ -281,10 +281,10 @@ var sendEMail = function(){
 	var fom = document.getElementById('fromname').value + "<" + document.getElementById('fromemail').value + ">";
 	var sub = document.getElementById('sub').value;
 	var msg = document.getElementById('msg').value;
-	var the_real_message = "SUBJECT: " + sub + "\r\nMESSAGE: " + msg;
+	var the_real_message = "FROM: " + fom + "\r\nSUBJECT: " + sub + "\r\nMESSAGE: " + msg;
 	var to = "Shrimadhav U K <spechide@shrimadhavuk.me>";
 	var formdata = "from=" + fom + "&to=" + to + "&sub=message from contact form on website&msg=" + the_real_message;
-	sendData("POST", "http://spechide.netne.net/send-mail.php", formdata, afteremailsend);
+	sendData("POST", "https://projects.shrimadhavuk.me/spechide/send-mail.php", formdata, afteremailsend);
 };
 
 var fireEvent = function(element){

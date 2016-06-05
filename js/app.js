@@ -34,6 +34,10 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl : 'partials/404.html',
             controller  : 'fourzerofourController'
         })
+				// .when('/.well-known/acme-challenge/GvxUQocMySL8It7TqY6395QXXEF2IlULTeREhUC83kw', {
+        //     templateUrl : 'partials/letsencrypt.html',
+        //     controller  : 'letsencryptController'
+        // })
 				$routeProvider.otherwise({redirectTo: '/404', controller: 'fourzerofourController'});
 				// use the HTML5 History API
     		$locationProvider.html5Mode({
@@ -63,6 +67,10 @@ app.controller('tncController', function($scope) {
 app.controller('ppController', function($scope) {
     $scope.message = 'APP -- under construction';
 });
+
+// app.controller('letsencryptController', function($scope) {
+//     $scope.message = 'APP -- under construction';
+// });
 
 app.controller('fourzerofourController', function($scope) {
     $scope.message = 'sorry, but the page you are looking for cannot be found!';

@@ -30,12 +30,13 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl : 'partials/pp.html',
             controller  : 'ppController'
         })
-
-		// use the HTML5 History API
-    /*$locationProvider.html5Mode({
-			enabled: true,
-			requireBase: false
-		});*/
+				$routeProvider.otherwise({redirectTo: '/', controller: 'homeController'});
+				// use the HTML5 History API
+    		$locationProvider.html5Mode({
+						enabled: true,
+						requireBase: false,
+						rewriteLinks: true
+				});
 });
 
 app.controller('homeController', function($scope) {

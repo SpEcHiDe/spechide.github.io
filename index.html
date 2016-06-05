@@ -65,13 +65,13 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/projects">Find My Projects!</a></li>
+          <li><a href="/blog">my Blog</a></li>
           <li class="dropdown">
             <a data-toggle="dropdown" data-target="javascript:void(0)" class="dropdown-toggle">
               Pages
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-              <li><a tabindex="-1" href="/blog">my Blog</a></li>
               <li><a tabindex="-1" href="/QuizGenerator">ICFOSS Quiz Generator</a></li>
               <li><a tabindex="-1" href="/SSLStatus">Software Systems Lab Status <small>under construction</small></a></li>
               <li><a tabindex="-1" href="/comparisons">Internet Messaging Application Comparisons</a></li>
@@ -92,7 +92,9 @@
       <!-- angular templating -->
       <!-- this is where content will be injected -->
       <div ng-view>
-        <h1>This website uses a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> framework, called <a href="https://angularjs.org/">AngularJS</a>!</h1>
+        <div class="container-fluid">
+          <h1>This website uses a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> framework, called <a href="https://angularjs.org/">AngularJS</a>!</h1>
+        </div>
       </div>
 
 

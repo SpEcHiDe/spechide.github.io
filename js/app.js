@@ -26,11 +26,15 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl : 'partials/tnc.html',
             controller  : 'tncController'
         })
-        .when('/privacypolicy', {
+				.when('/privacypolicy', {
             templateUrl : 'partials/pp.html',
             controller  : 'ppController'
         })
-				$routeProvider.otherwise({redirectTo: '/', controller: 'homeController'});
+				.when('/404', {
+            templateUrl : 'partials/404.html',
+            controller  : 'fourzerofourController'
+        })
+				$routeProvider.otherwise({redirectTo: '/404', controller: 'fourzerofourController'});
 				// use the HTML5 History API
     		$locationProvider.html5Mode({
 						enabled: true,
@@ -58,4 +62,8 @@ app.controller('tncController', function($scope) {
 
 app.controller('ppController', function($scope) {
     $scope.message = 'APP -- under construction';
+});
+
+app.controller('fourzerofourController', function($scope) {
+    $scope.message = 'sorry, but the page you are looking for cannot be found!';
 });

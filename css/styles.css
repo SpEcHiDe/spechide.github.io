@@ -39,3 +39,6 @@ iframe{
   text-align: center;
   opacity: 0.8;
 }
+body {
+  font-family: 'Open Sans', Lucida Grande, Lucida Sans, Tahoma, sans-serif;
+}

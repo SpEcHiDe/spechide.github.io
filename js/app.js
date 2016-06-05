@@ -40,11 +40,11 @@ app.config(function($routeProvider, $locationProvider) {
         // })
 				$routeProvider.otherwise({redirectTo: '/404', controller: 'fourzerofourController'});
 				// use the HTML5 History API
-    		// $locationProvider.html5Mode({
-				// 		enabled: true,
-				// 		requireBase: false,
-				// 		rewriteLinks: true
-				// });
+    		$locationProvider.html5Mode({
+						enabled: true,
+						requireBase: false,
+						rewriteLinks: true
+				});
 });
 
 app.controller('homeController', function($scope) {
@@ -69,7 +69,7 @@ app.controller('ppController', function($scope) {
 });
 
 // app.controller('letsencryptController', function($scope) {
-//     $scope.message = 'APP -- under construction';
+//     $scope.message = 'GvxUQocMySL8It7TqY6395QXXEF2IlULTeREhUC83kw.ppPVj7qXtTwSPxLm7keAclB7fKbfLj4_2E8eM3i0xSg';
 // });
 
 app.controller('fourzerofourController', function($scope) {

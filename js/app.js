@@ -9,30 +9,23 @@ app.controller('mainController', function($scope) {
 // configure our routes
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
-        // route for the home page
         .when('/', {
-            templateUrl : 'partials/home.html',
-            controller  : 'homeController'
+            templateUrl : 'partials/home.html'
         })
 				.when('/projects', {
-            templateUrl : 'partials/projects.html',
-            controller  : 'appController'
+            templateUrl : 'partials/projects.html'
         })
         .when('/contactme', {
-            templateUrl : 'partials/contactme.html',
-            controller  : 'contactController'
+            templateUrl : 'partials/contactme.html'
         })
         .when('/termsandconditions', {
-            templateUrl : 'partials/tnc.html',
-            controller  : 'tncController'
+            templateUrl : 'partials/tnc.html'
         })
 				.when('/privacypolicy', {
-            templateUrl : 'partials/pp.html',
-            controller  : 'ppController'
+            templateUrl : 'partials/pp.html'
         })
 				.when('/404', {
-            templateUrl : 'partials/404.html',
-            controller  : 'fourzerofourController'
+            templateUrl : 'partials/404.html'
         })
 				$routeProvider.otherwise({redirectTo: '/404', controller: 'fourzerofourController'});
 				// use the HTML5 History API
@@ -41,29 +34,4 @@ app.config(function($routeProvider, $locationProvider) {
 						requireBase: false,
 						rewriteLinks: true
 				});
-});
-
-app.controller('homeController', function($scope) {
-    $scope.message = 'APP -- under construction';
-});
-
-app.controller('appController', function($scope) {
-    $scope.message = 'APP -- under construction';
-		fireEvent(document.getElementById('search'));
-});
-
-app.controller('contactController', function($scope) {
-    $scope.message = 'APP -- under construction';
-});
-
-app.controller('tncController', function($scope) {
-    $scope.message = 'APP -- under construction';
-});
-
-app.controller('ppController', function($scope) {
-    $scope.message = 'APP -- under construction';
-});
-
-app.controller('fourzerofourController', function($scope) {
-    $scope.message = 'sorry, but the page you are looking for cannot be found!';
 });

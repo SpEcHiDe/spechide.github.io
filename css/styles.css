@@ -42,3 +42,6 @@ iframe{
 body {
   font-family: 'Open Sans', Lucida Grande, Lucida Sans, Tahoma, sans-serif;
 }
+.carousel-control{
+  top: 50%;
+}

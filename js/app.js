@@ -35,3 +35,5 @@ app.config(function($routeProvider, $locationProvider) {
 						rewriteLinks: true
 				});
 });
+
+WhatsApp();

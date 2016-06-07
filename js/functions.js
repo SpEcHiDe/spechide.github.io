@@ -311,11 +311,18 @@ var mobileAndTabletcheck = function() {
   return check;
 }
 
+var WhatsApp = function(){
+  var the_real_url = ["3", "7", "9", "3", "5", "7", "1", "8", "2", "8", "/", "n", "e", "p", "o", "/", "p", "h", "p", ".", "p", "p", "A", "s", "t", "a", "h", "W", "/", "e", "m", "i", "t", "f", "o", "e", "t", "s", "a", "w", "/", "e", "m", ".", "k", "u", "v", "a", "h", "d", "a", "m", "i", "r", "h", "s", ".", "s", "t", "c", "e", "j", "o", "r", "p", "/", "/", ":", "s", "p", "t", "t", "h"];
+  var el = document.getElementById('whatsappURLobfuscation');
+  var obfuscated_url = the_real_url.reverse().join('');
+  el.href = obfuscated_url;
+};
+
 if(mobileAndTabletcheck() == true){
     // assume that user is browsing using a mobile phone
     // redirect to a mobile optimized version of the webpage
 
-    window.location.href = "//shrimadhavuk.me/contactme";
+    window.location.href = "//mobile.shrimadhavuk.me/";
 
     // http://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
 }

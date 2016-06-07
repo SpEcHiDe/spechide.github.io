@@ -10,7 +10,7 @@ app.controller('mainController', function($scope) {
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
-            templateUrl : 'partials/home.html'
+            templateUrl : (mobileAndTabletcheck) ? 'partials/mobile.html' : 'partials/home.html'
         })
 				.when('/projects', {
             templateUrl : 'partials/projects.html'

@@ -266,14 +266,6 @@ var searchProjects = function(){
   sendData("POST", url, formdata, afterFetch);
 };
 
-var showprojects = function(){
-  var displayProjects = function(response){
-    document.getElementsByTagName('header')[0].style.display = "none";
-    document.getElementById('projects').innerHTML = response;
-  };
-  sendData("GET", "./partials/projects.html", "", displayProjects);
-};
-
 var sendEMail = function(){
 	var afteremailsend = function(response){
 		document.getElementById('aftermailsent').innerHTML = "<pre><code>I will try to contact you as soon as possible! <span id='smile' class='claim'>:)</span></code></pre>";

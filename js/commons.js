@@ -1,5 +1,5 @@
 
-var header = `
+var meta_tags = `
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +40,7 @@ var header = `
 <link rel="manifest" href="manifest.json">
 `;
 
-var footer = `
+var the_real_body = `
 <section class="fixedlocation" id="cookiewarning">
   By using this webpage, you agree that you have read the <a href="/termsandconditions">terms and conditions</a> and the <a href="/privacypolicy">privacy policy</a>, and also agree to abide by it.
        <a onclick="trackOff()"><strong>OK</strong></a>
@@ -199,18 +199,8 @@ var footer = `
   </code>
   -->
 </div>
-
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src='js/angular.min.js'></script>
-<script src='js/angular-route.js'></script>
-<script src="js/ua-parser.js"></script>
-<script src="js/functions.js"></script>
-<script src="js/tracker.js"></script>
-<script src="js/app.js"></script>
-<!--<script src="js/chrome.js"></script>-->
 `;
 
-document.getElementsByTagName('head')[0].innerHTML = header;
+document.getElementsByTagName('head')[0].innerHTML = meta_tags;
 
-document.getElementsByTagName('body')[0].innerHTML = footer;
+document.getElementsByTagName('body')[0].innerHTML = the_real_body;

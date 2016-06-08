@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/ -->
+    <script>
+      sessionStorage.redirect = location.href;
+      var meta = document.createElement('meta');
+      meta.httpEquiv = "refresh";
+      meta.content = "0;URL='//shrimadhavuk.me'";
+      document.getElementsByTagName('head')[0].appendChild(meta);
+    </script>
+    <!-- http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/ -->
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

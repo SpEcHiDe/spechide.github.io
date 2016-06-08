@@ -88,8 +88,6 @@ var the_real_body = `
 <!-- MAIN CONTENT AND INJECTED VIEWS -->
 <div id="main">
 
-  <div id="particles-js">
-    
     <!-- angular templating -->
     <!-- this is where content will be injected -->
     <div ng-view>
@@ -99,8 +97,6 @@ var the_real_body = `
     </div>
 
     <div style="height:5px;"></div>
-
-  </div>
 
   <section class="fixedlocation" id="contactme" style="bottom: 0px;">
   <div class="container-fluid text-center">

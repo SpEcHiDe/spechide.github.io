@@ -309,3 +309,14 @@ var WhatsApp = function(){
   var obfuscated_url = the_real_url.reverse().join('');
   el.href = obfuscated_url;
 };
+
+// open external links in new tabs
+var host = window.location.hostname;
+$("body").on("click", "a", function() {
+  if (this.protocol.indexOf("http") == 0 && this.hostname != host) {
+    window.open(this.href, "_blank");
+    return false;
+  } else {
+    return true;
+  }
+});

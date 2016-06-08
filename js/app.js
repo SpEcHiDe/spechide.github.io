@@ -36,4 +36,5 @@ app.config(function($routeProvider, $locationProvider) {
 				});
 });
 
+// JavaScript to obfuscate my WhatsApp contact number
 WhatsApp();

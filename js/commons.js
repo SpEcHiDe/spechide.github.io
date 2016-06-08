@@ -138,7 +138,7 @@ var the_real_body = `
             <span class="fa fa-square-o fa-stack-2x"></span>
             <span class="fa fa-fw fa-stack-1x"><strong>Q</strong></span>
           </span>
-          <!-- credits: https://www.quora.com/Is-there-a-Quora-glyphicon-in-Font-Awesome -->
+          <!-- credits: https:\/\/www.quora.com\/Is-there-a-Quora-glyphicon-in-Font-Awesome -->
           <span class="label">Quora</span>
         </a>
 

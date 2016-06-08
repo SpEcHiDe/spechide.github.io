@@ -37,6 +37,7 @@ var meta_tags = `
 
 <link rel="stylesheet" href="css/styles.css" type="text/css">
 <link rel="stylesheet" href="css/404.css" type="text/css">
+<link rel="stylesheet" href="css/material.indigo-pink.min.css" type="text/css">
 <link rel="manifest" href="manifest.json">
 `;
 

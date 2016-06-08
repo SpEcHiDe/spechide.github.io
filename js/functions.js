@@ -309,3 +309,7 @@ var WhatsApp = function(){
   var obfuscated_url = the_real_url.reverse().join('');
   el.href = obfuscated_url;
 };
+
+particlesJS.load('particles-js', 'img/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});

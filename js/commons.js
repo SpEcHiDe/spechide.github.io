@@ -87,6 +87,9 @@ var the_real_body = `
 
 <!-- MAIN CONTENT AND INJECTED VIEWS -->
 <div id="main">
+
+  <div id="particles-js"></div>
+  
   <!-- angular templating -->
   <!-- this is where content will be injected -->
   <div ng-view>
@@ -94,7 +97,6 @@ var the_real_body = `
       <h1>This website uses a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> framework, called <a href="https://angularjs.org/">AngularJS</a>!</h1>
     </div>
   </div>
-
 
   <div style="height:5px;"></div>
 

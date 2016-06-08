@@ -29,11 +29,11 @@ app.config(function($routeProvider, $locationProvider) {
         })
 				$routeProvider.otherwise({redirectTo: '/404', controller: 'fourzerofourController'});
 				// use the HTML5 History API
-    		$locationProvider.html5Mode({
-						enabled: true,
-						requireBase: false,
-						rewriteLinks: true
-				});
+    		// $locationProvider.html5Mode({
+				// 		enabled: true,
+				// 		requireBase: false,
+				// 		rewriteLinks: true
+				// });
 });
 
 WhatsApp();

@@ -320,3 +320,37 @@ $("body").on("click", "a", function() {
     return true;
   }
 });
+
+// respect user's privacy
+//if (navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && navigator.msDoNotTrack != "1") {
+  function loadScript(url, callback){
+    // Adding the script tag to the head as suggested before
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+    // Then bind the event to the callback function.
+    // There are several events for cross browser compatibility.
+    script.onreadystatechange = callback;
+    script.onload = callback;
+    // Fire the loading
+    head.appendChild(script);
+  }
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-78771890-1', 'auto');
+  ga('send', 'pageview');
+
+  var infolinkanalytics = function(){
+    var infolinks_pid = 2795540;
+    var infolinks_wsid = 0;
+  }
+
+  //resources.infolinks.com/js/infolinks_main.js
+  loadScript("//resources.infolinks.com/js/infolinks_main.js", infolinkanalytics);
+  //resources.infolinks.com/js/infolinks_main.js
+  
+//}

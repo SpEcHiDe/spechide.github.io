@@ -353,6 +353,27 @@ if (!(navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && navigator.
   loadScript("//resources.infolinks.com/js/infolinks_main.js", infolinkanalytics);
   //resources.infolinks.com/js/infolinks_main.js
 
+  sa_client = "94c732f75083abcdc4b3c63809a9ad5d";
+  sa_code = "129e32cee27bfc79a12ce88fbf3e96fb";
+  sa_protocol = ("https:"==document.location.protocol)?"https":"http";
+  sa_pline = "0";
+  sa_maxads = "2";
+  sa_bgcolor = "FFFFFF";
+  sa_bordercolor = "BDD631";
+  sa_superbordercolor = "BDD631";
+  sa_linkcolor = "001EB5";
+  sa_desccolor = "000000";
+  sa_urlcolor = "788300";
+  sa_b = "0";
+  sa_format = "banner_468x60";
+  sa_width = "468";
+  sa_height = "60";
+  sa_location = "0";
+  sa_radius = "0";
+  sa_borderwidth = "1";
+  sa_font = "0";
+  document.write(unescape("%3cscript type='text/javascript' src='"+sa_protocol+"://sa.entireweb.com/sense2.js'%3e%3c/script%3e"));
+
   trackOn();
 
 }

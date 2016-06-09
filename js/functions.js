@@ -311,15 +311,16 @@ var WhatsApp = function(){
 };
 
 // open external links in new tabs
-var host = window.location.hostname;
-$("body").on("click", "a", function() {
-  if (this.protocol.indexOf("http") == 0 && this.hostname != host) {
-    window.open(this.href, "_blank");
-    return false;
-  } else {
-    return true;
-  }
-});
+// var host = window.location.hostname;
+// $("body").on("click", "a", function() {
+//   if (this.protocol.indexOf("http") == 0 && this.hostname != host) {
+//     window.open(this.href, "_blank");
+//     return false;
+//   } else {
+//     return true;
+//   }
+// });
+// the above thing does not work on Mozilla FireFox!
 
 // respect user's privacy
 if (!(navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && navigator.msDoNotTrack != "1")) {

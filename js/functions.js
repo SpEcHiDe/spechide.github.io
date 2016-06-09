@@ -322,7 +322,7 @@ $("body").on("click", "a", function() {
 });
 
 // respect user's privacy
-//if (navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && navigator.msDoNotTrack != "1") {
+if !(navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && navigator.msDoNotTrack != "1") {
   function loadScript(url, callback){
     // Adding the script tag to the head as suggested before
     var head = document.getElementsByTagName('head')[0];
@@ -352,5 +352,11 @@ $("body").on("click", "a", function() {
   //resources.infolinks.com/js/infolinks_main.js
   loadScript("//resources.infolinks.com/js/infolinks_main.js", infolinkanalytics);
   //resources.infolinks.com/js/infolinks_main.js
-  
-//}
+
+  trackOn();
+
+}
+else{
+
+  trackOff();
+}

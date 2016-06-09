@@ -47,3 +47,6 @@ body {
 .carousel-control{
   top: 50%;
 }
+.navbar{
+  margin-bottom: 0px;
+}

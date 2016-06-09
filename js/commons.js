@@ -98,7 +98,7 @@ var the_real_body = `
       </div>
     </div>
 
-    <div style="height:5px;"></div>
+    <!-- <div style="height:5px;"></div> -->
 
   <section class="fixedlocation" id="contactme" style="bottom: 0px;">
   <div class="container-fluid text-center">

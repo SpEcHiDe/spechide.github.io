@@ -1,28 +1,5 @@
 
 var meta_tags = `
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="apple-mobile-web-app-capable" content="yes" />
-
-<meta property="og:title" content="Shrimadhav U K" />
-<meta property="og:type" content="Website" />
-<meta property="og:url" content="//shrimadhavuk.me/"/>
-<meta property="og:description" content="Shrimadhav U K is a Computer Science and Engineering Student studying at National Institute of Technology, Calicut!" />
-<meta property="og:locale" content="en_IN" />
-<meta property="og:image" content="//shrimadhavuk.me/img/photo.jpg" />
-<meta property="fb:app_id" content="1726077954346243" />
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@SpEcHiDe">
-<meta name="twitter:creator" content="@SpEcHiDe">
-<meta name="twitter:title" content="Shrimadhav U K">
-<meta name="twitter:description" content="Shrimadhav U K is a Computer Science and Engineering Student studying at National Institute of Technology, Calicut!">
-<meta name="twitter:image" content="//shrimadhavuk.me/img/photo.jpg">
-<meta name="twitter:image:alt" content="Shrimadhav U K">
-
-<meta name="google-site-verification" content="Rs1iNFExcFMqfInZt-tVShUQsd34bYyMDjolY-ebalo" />
-
 <title>Shrimadhav U K</title>
 <link rel="shortcut icon" type="image/jpg" href="img/photo.jpg" />
 

@@ -21,6 +21,8 @@ var meta_tags = `
 <meta name="twitter:image" content="//shrimadhavuk.me/img/photo.jpg">
 <meta name="twitter:image:alt" content="Shrimadhav U K">
 
+<meta name="google-site-verification" content="Rs1iNFExcFMqfInZt-tVShUQsd34bYyMDjolY-ebalo" />
+
 <title>Shrimadhav U K</title>
 <link rel="shortcut icon" type="image/jpg" href="img/photo.jpg" />
 

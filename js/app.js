@@ -30,6 +30,9 @@ app.config(function($routeProvider, $locationProvider) {
 				.when('/education', {
             templateUrl : 'partials/education.html'
         })
+				.when('/mobile', {
+            templateUrl : 'partials/mobile.html'
+        })
 				$routeProvider.otherwise({redirectTo: '/404', controller: 'fourzerofourController'});
 				// use the HTML5 History API
     		$locationProvider.html5Mode({

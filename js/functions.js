@@ -304,7 +304,7 @@ var mobileAndTabletcheck = (function() {
 })();
 
 var WhatsApp = function(){
-  var the_real_url = ["3", "7", "9", "3", "5", "7", "1", "8", "2", "8", "/", "n", "e", "p", "o", "/", "p", "h", "p", ".", "p", "p", "A", "s", "t", "a", "h", "W", "/", "e", "m", "i", "t", "f", "o", "e", "t", "s", "a", "w", "/", "e", "m", ".", "k", "u", "v", "a", "h", "d", "a", "m", "i", "r", "h", "s", ".", "s", "t", "c", "e", "j", "o", "r", "p", "/", "/", ":", "s", "p", "t", "t", "h"];
+  var the_real_url = ["e", "D", "i", "H", "c", "E", "p", "S", "/", "!", "#", "/", "e", "m", ".", "p", "p", "a", "t", "a", "h", "w", "/", "/", ":", "s", "p", "t", "t", "h"];
   var el = document.getElementById('whatsappURLobfuscation');
   var obfuscated_url = the_real_url.reverse().join('');
   el.href = obfuscated_url;
@@ -322,8 +322,8 @@ var WhatsApp = function(){
 // });
 // the above thing does not work on Mozilla FireFox!
 
-// respect user's privacy
-if (!(navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && navigator.msDoNotTrack != "1")) {
+var analytics_and_adsense = function(){
+
   function loadScript(url, callback){
     // Adding the script tag to the head as suggested before
     var head = document.getElementsByTagName('head')[0];
@@ -375,13 +375,19 @@ if (!(navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && navigator.
   sa_font = "0";
   document.write(unescape("%3cscript type='text/javascript' src='"+sa_protocol+"://sa.entireweb.com/sense2.js'%3e%3c/script%3e"));
 
-  trackOn();
+};
 
+// respect user's privacy
+if (navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && navigator.msDoNotTrack != "1") {
+  // => analytics and adsense code HERE
+  trackOn();
 }
 else{
-
+  // => please do not ue the tracking and adesnse codes here
   trackOff();
 }
+
+analytics_and_adsense();
 
 $(window).bind('keydown', function(event) {
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery
@@ -389,11 +395,11 @@ $(window).bind('keydown', function(event) {
         switch (String.fromCharCode(event.which).toLowerCase()) {
         case 's':
             event.preventDefault();
-            alert('please do not hard code this link');
+            window.location.href = "//shrimadhavuk.me/mobile";
             break;
         case 'f':
             event.preventDefault();
-            alert('please do not hard code this link');
+            window.location.href = "//shrimadhavuk.me/projects";
             break;
         }
     }

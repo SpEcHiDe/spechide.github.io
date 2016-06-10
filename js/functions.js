@@ -382,3 +382,20 @@ else{
 
   trackOff();
 }
+
+$(window).bind('keydown', function(event) {
+  // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery
+    if (event.ctrlKey || event.metaKey) {
+        switch (String.fromCharCode(event.which).toLowerCase()) {
+        case 's':
+            event.preventDefault();
+            alert('please do not hard code this link');
+            break;
+        case 'f':
+            event.preventDefault();
+            alert('please do not hard code this link');
+            break;
+        }
+    }
+  // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery
+});

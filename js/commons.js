@@ -40,6 +40,7 @@ var the_real_body = `
     <!-- http://stackoverflow.com/questions/16837704/angularjs-normal-links-with-html5mode -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="/education">My Timeline</a></li>
         <li><a href="/projects">Find My Projects!</a></li>
         <li><a href="/blog" target="_self">my Blog</a></li>
         <li class="dropdown">

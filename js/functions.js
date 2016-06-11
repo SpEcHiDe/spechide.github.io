@@ -401,6 +401,14 @@ $(window).bind('keydown', function(event) {
             event.preventDefault();
             window.location.href = "//shrimadhavuk.me/projects";
             break;
+        case 'm':
+            event.preventDefault();
+            window.location.href = "//shrimadhavuk.me/contactme";
+            break;
+        case 'e':
+            event.preventDefault();
+            window.location.href = "//shrimadhavuk.me/education";
+            break;
         }
     }
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery

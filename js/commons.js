@@ -68,6 +68,8 @@ var the_real_body = `
 <!-- MAIN CONTENT AND INJECTED VIEWS -->
 <div id="main">
 
+    <div style="height:50px;"></div>
+
     <!-- angular templating -->
     <!-- this is where content will be injected -->
     <div ng-view>

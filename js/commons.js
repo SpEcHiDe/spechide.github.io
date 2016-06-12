@@ -66,7 +66,7 @@ var the_real_body = `
 </nav>
 
 <!-- MAIN CONTENT AND INJECTED VIEWS -->
-<div id="main">
+<div class="container" id="main">
 
     <div style="height:50px;"></div>
 

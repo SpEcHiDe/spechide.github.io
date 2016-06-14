@@ -389,6 +389,15 @@ else{
 
 analytics_and_adsense();
 
+var AlwaysHTTPS = function(){
+  var host = "shrimadhavuk.me";
+  if ((host == window.location.host) && (window.location.protocol != "https:")){
+    window.location.protocol = "https";
+  }
+};
+
+AlwaysHTTPS();
+
 $(window).bind('keydown', function(event) {
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery
     if (event.ctrlKey || event.metaKey) {

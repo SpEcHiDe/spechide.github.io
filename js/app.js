@@ -10,7 +10,7 @@ app.controller('mainController', function($scope) {
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
-            templateUrl : (mobileAndTabletcheck) ? 'partials/mobile.html' : 'partials/home.html'
+            templateUrl : 'partials/home.html'
         })
 				.when('/projects', {
             templateUrl : 'partials/projects.html'
@@ -34,13 +34,4 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl : 'partials/mobile.html'
         })
 				$routeProvider.otherwise({redirectTo: '/404', controller: 'fourzerofourController'});
-				// use the HTML5 History API
-    		$locationProvider.html5Mode({
-						enabled: true,
-						requireBase: false,
-						rewriteLinks: true
-				});
 });
-
-// JavaScript to obfuscate my WhatsApp contact number
-WhatsApp();

@@ -35,31 +35,30 @@ var the_real_body = `
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Home</a>
+      <a class="navbar-brand" href="#/">Home</a>
     </div>
-    <!-- http://stackoverflow.com/questions/16837704/angularjs-normal-links-with-html5mode -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/education">My Timeline</a></li>
-        <li><a href="/projects">Find My Projects!</a></li>
-        <li><a href="/blog" target="_self">my Blog</a></li>
+        <li><a href="#/education">My Timeline</a></li>
+        <li><a href="#/projects">Find My Projects!</a></li>
+        <li><a href="/blog">my Blog</a></li>
         <li class="dropdown">
           <a data-toggle="dropdown" data-target="javascript:void(0)" class="dropdown-toggle">
             Pages
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a tabindex="-1" href="/QuizGenerator" target="_self">ICFOSS Quiz Generator</a></li>
-            <li><a tabindex="-1" href="/SSLStatus" target="_self">Software Systems Lab Status <small>under construction</small></a></li>
-            <li><a tabindex="-1" href="/comparisons" target="_self">Internet Messaging Application Comparisons</a></li>
-            <li><a tabindex="-1" href="/SEM" target="_self">Smart Water Meter</a></li>
-            <li><a tabindex="-1" href="/hackaholic-15" target="_self">hackaholic for tathva'15</a></li>
-            <li><a tabindex="-1" href="/APK-DeCompiler" target="_self">android Application PacKage DeCompiler</a></li>
+            <li><a tabindex="-1" href="/QuizGenerator">ICFOSS Quiz Generator</a></li>
+            <li><a tabindex="-1" href="/SSLStatus">Software Systems Lab Status <small>under construction</small></a></li>
+            <li><a tabindex="-1" href="/comparisons">Internet Messaging Application Comparisons</a></li>
+            <li><a tabindex="-1" href="/SEM">Smart Water Meter</a></li>
+            <li><a tabindex="-1" href="/hackaholic-15">hackaholic for tathva'15</a></li>
+            <li><a tabindex="-1" href="/APK-DeCompiler">android Application PacKage DeCompiler</a></li>
             <li class="divider"></li>
             <li><a tabindex="-1" href="https://github.com/SpEcHiDe">my GitHub</a></li>
           </ul>
         </li>
-        <li><a href="/contactme">Contact ME</a></li>
+        <li><a href="#/contactme">Contact ME</a></li>
       </ul>
     </div>
   </div>
@@ -181,6 +180,31 @@ var the_real_body = `
   </code>
   -->
 </div>
+
+<!-- modal for displaying help contents -->
+<div class="modal fade" id="helpMeModal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">What is this?</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          <small>This website is an attempt to monitor all your keystrokes.</small>
+          <br>
+          The idea is inspired from <a href="http://webkay.robinlinus.com/">What every Browser knows about you</a>.
+          <br>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 `;
 
 document.getElementsByTagName('head')[0].innerHTML = meta_tags;

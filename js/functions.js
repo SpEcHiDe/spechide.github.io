@@ -377,6 +377,9 @@ var analytics_and_adsense = function(){
 
 };
 
+// JavaScript to obfuscate my WhatsApp contact number
+WhatsApp();
+
 // respect user's privacy
 if (navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && navigator.msDoNotTrack != "1") {
   // => analytics and adsense code HERE
@@ -404,19 +407,23 @@ $(window).bind('keydown', function(event) {
         switch (String.fromCharCode(event.which).toLowerCase()) {
         case 's':
             event.preventDefault();
-            window.location.href = "//shrimadhavuk.me/mobile";
+            window.location.href = "//shrimadhavuk.me/#/mobile";
             break;
         case 'f':
             event.preventDefault();
-            window.location.href = "//shrimadhavuk.me/projects";
+            window.location.href = "//shrimadhavuk.me/#/projects";
             break;
         case 'm':
             event.preventDefault();
-            window.location.href = "//shrimadhavuk.me/contactme";
+            window.location.href = "//shrimadhavuk.me/#/contactme";
             break;
         case 'e':
             event.preventDefault();
-            window.location.href = "//shrimadhavuk.me/education";
+            window.location.href = "//shrimadhavuk.me/#/education";
+            break;
+        case 'a':
+            event.preventDefault();
+            $($("#helpMeModal").modal());
             break;
         }
     }

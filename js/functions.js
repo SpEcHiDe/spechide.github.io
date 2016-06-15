@@ -256,32 +256,35 @@ $('.carousel').carousel({
   interval: 10000
 });
 
-var dispProjSFn = function(name, desc, sd, ed){
+var dispProjSFn = function(name, desc, url, sd, ed, img){
   document.getElementById('dispProjSModal_H4').innerHTML = name;
   document.getElementById('dispProjSModal_DESC').innerHTML = desc;
   document.getElementById('dispProjSModal_SD').innerHTML = sd;
   document.getElementById('dispProjSModal_ED').innerHTML = ed;
+  document.getElementById('dispProjSModal_URL').innerHTML = "<a href='" + url + "'>" + url + "</a>";
+  document.getElementById('dispProjSModal_IMG').src = img;
   $("#dispProjSModal").modal();
+};
+
+var afterFetch = function(response){
+  var jsonobj = JSON.parse(response);
+  var rsp = "<table class='table table-hover'><thead><tr><th>IMAGE</th><th>PROJECT NAME</th><th>PROJECT CATEGORY</th><th>PROJECT URL</th></tr></thead><tbody>";
+  for(var i = 0; i < jsonobj.length; i++){
+    rsp += "<tr onclick=\"dispProjSFn(\'" + jsonobj[i].NAME + "\', \'" + jsonobj[i].DESCRIPTION + "\', \'" + jsonobj[i].URL + "\', \'" + jsonobj[i].STARTDATE + "\', \'" + jsonobj[i].ENDDATE + "\', \'" + jsonobj[i].IMG + "\')\">";
+    rsp += "<td><img width='5em' height='2.5em' src='" + jsonobj[i].IMG + "' /></td>";
+    rsp += "<td>" + jsonobj[i].NAME + "</td>";
+    rsp += "<td>" + jsonobj[i].CATEGORY + "</td>";
+    rsp += "<td><a href=" + jsonobj[i].URL + ">" + jsonobj[i].URL + "</a></td>";
+    rsp += "</tr>";
+  }
+  rsp += "</tbody></table>";
+  document.getElementById('outputProjects').innerHTML = rsp;
 };
 
 var searchProjects = function(){
   var querystring = document.getElementById('search').value;
-  var url = "//projects.shrimadhavuk.me/spechide/projects.php";
+  var url = "https://projects.shrimadhavuk.me/spechide/projects.php";
   var formdata = "search=" + querystring;
-  var afterFetch = function(response){
-    var jsonobj = JSON.parse(response);
-    var rsp = "<table class='table table-hover'><thead><tr><th>IMAGE</th><th>PROJECT NAME</th><th>PROJECT CATEGORY</th><th>PROJECT URL</th></tr></thead><tbody>";
-    for(var i = 0; i < jsonobj.length; i++){
-      rsp += "<tr onclick=\"dispProjSFn(\'" + jsonobj[i].NAME + "\', \'" + jsonobj[i].DESCRIPTION + "\', \'" + jsonobj[i].STARTDATE + "\', \'" + jsonobj[i].ENDDATE + "\')\">";
-      rsp += "<td><img width='5em' height='2.5em' src='" + jsonobj[i].IMG + "' /></td>";
-      rsp += "<td>" + jsonobj[i].NAME + "</td>";
-      rsp += "<td>" + jsonobj[i].CATEGORY + "</td>";
-      rsp += "<td><a href=" + jsonobj[i].URL + ">" + jsonobj[i].URL + "</a></td>";
-      rsp += "</tr>";
-    }
-    rsp += "</tbody></table>";
-    document.getElementById('outputProjects').innerHTML = rsp;
-  };
   sendData("POST", url, formdata, afterFetch);
 };
 

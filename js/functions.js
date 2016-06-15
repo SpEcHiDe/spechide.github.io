@@ -268,7 +268,7 @@ var dispProjSFn = function(name, desc, url, sd, ed, img){
 
 var afterFetch = function(response){
   var jsonobj = JSON.parse(response);
-  var rsp = "<table class='table table-hover'><thead><tr><th>IMAGE</th><th onclick='searchProjectsByType(\'NAME\')'>PROJECT NAME</th><th onclick='searchProjectsByType(\'CATEGORY\')'>PROJECT CATEGORY</th><th onclick='searchProjectsByType(\'URL\')'>PROJECT URL</th></tr></thead><tbody>";
+  var rsp = "<table class='table table-hover'><thead><tr><th>IMAGE</th><th onclick=\"searchProjectsByType(\'NAME\')\">PROJECT NAME</th><th onclick=\"searchProjectsByType(\'CATEGORY\')\">PROJECT CATEGORY</th><th onclick=\"searchProjectsByType(\'URL\')\">PROJECT URL</th></tr></thead><tbody>";
   for(var i = 0; i < jsonobj.length; i++){
     rsp += "<tr onclick=\"dispProjSFn(\'" + jsonobj[i].NAME + "\', \'" + jsonobj[i].DESCRIPTION + "\', \'" + jsonobj[i].URL + "\', \'" + jsonobj[i].STARTDATE + "\', \'" + jsonobj[i].ENDDATE + "\', \'" + jsonobj[i].IMG + "\')\">";
     rsp += "<td><img width='5em' height='2.5em' src='" + jsonobj[i].IMG + "' /></td>";

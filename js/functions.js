@@ -268,7 +268,7 @@ var dispProjSFn = function(name, desc, url, sd, ed, img){
 
 var afterFetch = function(response){
   var jsonobj = JSON.parse(response);
-  var rsp = "<table class='table table-hover'><thead><tr><th>IMAGE</th><th>PROJECT NAME</th><th>PROJECT CATEGORY</th><th>PROJECT URL</th></tr></thead><tbody>";
+  var rsp = "<table class='table table-hover'><thead><tr><th>IMAGE</th><th onclick='searchProjectsByType(\'NAME\')'>PROJECT NAME</th><th onclick='searchProjectsByType(\'CATEGORY\')'>PROJECT CATEGORY</th><th onclick='searchProjectsByType(\'URL\')'>PROJECT URL</th></tr></thead><tbody>";
   for(var i = 0; i < jsonobj.length; i++){
     rsp += "<tr onclick=\"dispProjSFn(\'" + jsonobj[i].NAME + "\', \'" + jsonobj[i].DESCRIPTION + "\', \'" + jsonobj[i].URL + "\', \'" + jsonobj[i].STARTDATE + "\', \'" + jsonobj[i].ENDDATE + "\', \'" + jsonobj[i].IMG + "\')\">";
     rsp += "<td><img width='5em' height='2.5em' src='" + jsonobj[i].IMG + "' /></td>";
@@ -283,8 +283,15 @@ var afterFetch = function(response){
 
 var searchProjects = function(){
   var querystring = document.getElementById('search').value;
-  var url = "https://projects.shrimadhavuk.me/spechide/projects.php";
+  var url = "//projects.shrimadhavuk.me/spechide/projects.php";
   var formdata = "search=" + querystring;
+  sendData("POST", url, formdata, afterFetch);
+};
+
+var searchProjectsByType = function(argone){
+  var querystring = document.getElementById('search').value;
+  var url = "//projects.shrimadhavuk.me/spechide/projects.php";
+  var formdata = "search=" + querystring + "&orderby=" + argone;
   sendData("POST", url, formdata, afterFetch);
 };
 
@@ -298,7 +305,7 @@ var sendEMail = function(){
 	var the_real_message = "FROM: " + fom + "\r\nSUBJECT: " + sub + "\r\nMESSAGE: " + msg;
 	var to = "Shrimadhav U K <spechide@shrimadhavuk.me>";
 	var formdata = "from=" + fom + "&to=" + to + "&sub=message from contact form on website&msg=" + the_real_message;
-	sendData("POST", "https://projects.shrimadhavuk.me/spechide/send-mail.php", formdata, afteremailsend);
+	sendData("POST", "//projects.shrimadhavuk.me/spechide/send-mail.php", formdata, afteremailsend);
 };
 
 var fireEvent = function(element){

@@ -256,12 +256,31 @@ $('.carousel').carousel({
   interval: 10000
 });
 
+var dispProjSFn = function(name, desc, sd, ed){
+  document.getElementById('dispProjSModal_H4').innerHTML = name;
+  document.getElementById('dispProjSModal_DESC').innerHTML = desc;
+  document.getElementById('dispProjSModal_SD').innerHTML = sd;
+  document.getElementById('dispProjSModal_ED').innerHTML = ed;
+  $("#dispProjSModal").modal();
+};
+
 var searchProjects = function(){
   var querystring = document.getElementById('search').value;
   var url = "//projects.shrimadhavuk.me/spechide/projects.php";
   var formdata = "search=" + querystring;
   var afterFetch = function(response){
-    document.getElementById('outputProjects').innerHTML = response;
+    var jsonobj = JSON.parse(response);
+    var rsp = "<table class='table table-hover'><thead><tr><th>IMAGE</th><th>PROJECT NAME</th><th>PROJECT CATEGORY</th><th>PROJECT URL</th></tr></thead><tbody>";
+    for(var i = 0; i < jsonobj.length; i++){
+      rsp += "<tr onclick=\"dispProjSFn(\'" + jsonobj[i].NAME + "\', \'" + jsonobj[i].DESCRIPTION + "\', \'" + jsonobj[i].STARTDATE + "\', \'" + jsonobj[i].ENDDATE + "\')\">";
+      rsp += "<td><img src='" + jsonobj[i].IMG + "' /></td>";
+      rsp += "<td>" + jsonobj[i].NAME + "</td>";
+      rsp += "<td>" + jsonobj[i].CATEGORY + "</td>";
+      rsp += "<td><a href=" + jsonobj[i].URL + ">" + jsonobj[i].URL + "</a></td>";
+      rsp += "</tr>";
+    }
+    rsp += "</tbody></table>";
+    document.getElementById('outputProjects').innerHTML = rsp;
   };
   sendData("POST", url, formdata, afterFetch);
 };

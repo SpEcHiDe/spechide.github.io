@@ -1,8 +1,8 @@
 https://shrimadhavuk.me/
-https://shrimadhavuk.me/projects
-https://shrimadhavuk.me/contactme
-https://shrimadhavuk.me/privacypolicy
-https://shrimadhavuk.me/termsandconditions
+https://shrimadhavuk.me/#/projects
+https://shrimadhavuk.me/#/contactme
+https://shrimadhavuk.me/#/privacypolicy
+https://shrimadhavuk.me/#/termsandconditions
 http://shrimadhavuk.me/blog/
 http://shrimadhavuk.me/QuizGenerator/
 http://shrimadhavuk.me/SSLStatus/

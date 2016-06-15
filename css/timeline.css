@@ -28,7 +28,8 @@
 
 body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
-    background: #c2edf4;
+    /*background: #c2edf4;*/
+		background: #fff;
     font-weight: 300;
     font-size: 14px;
     color: #333;
@@ -167,6 +168,7 @@ a {
 	top: 0;
 	left: 165px;
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJUlEQVQIW2NkQAP/gYARWQwkAOLDBeECjEAAkkEWAKtEFwAJAgAZEBP+oM1IkwAAAABJRU5ErkJggg==);
+	background-color: #c2edf4;
 }
 
 .event {
@@ -215,7 +217,7 @@ a {
 }
 
 .user-1 {
-	background-image: url(../img/);
+	background-image: url(../img/iitbkg.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 5em 5em;

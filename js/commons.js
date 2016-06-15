@@ -18,6 +18,8 @@ var meta_tags = `
 <link rel="stylesheet" href="css/404.css" type="text/css">
 <link rel="stylesheet" href="css/material.indigo-pink.min.css" type="text/css">
 <link rel="manifest" href="manifest.json">
+<link rel="stylesheet" type="text/css" href="css/timeline.css" />
+<!--[if lte IE 7]><style>.support-note .note-ie{display:block;}</style><![endif]-->
 `;
 
 var the_real_body = `

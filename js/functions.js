@@ -273,7 +273,7 @@ var searchProjects = function(){
     var rsp = "<table class='table table-hover'><thead><tr><th>IMAGE</th><th>PROJECT NAME</th><th>PROJECT CATEGORY</th><th>PROJECT URL</th></tr></thead><tbody>";
     for(var i = 0; i < jsonobj.length; i++){
       rsp += "<tr onclick=\"dispProjSFn(\'" + jsonobj[i].NAME + "\', \'" + jsonobj[i].DESCRIPTION + "\', \'" + jsonobj[i].STARTDATE + "\', \'" + jsonobj[i].ENDDATE + "\')\">";
-      rsp += "<td><img src='" + jsonobj[i].IMG + "' /></td>";
+      rsp += "<td><img width='5em' height='2.5em' src='" + jsonobj[i].IMG + "' /></td>";
       rsp += "<td>" + jsonobj[i].NAME + "</td>";
       rsp += "<td>" + jsonobj[i].CATEGORY + "</td>";
       rsp += "<td><a href=" + jsonobj[i].URL + ">" + jsonobj[i].URL + "</a></td>";

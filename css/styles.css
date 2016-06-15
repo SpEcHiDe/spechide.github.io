@@ -50,3 +50,7 @@ body {
 .navbar{
   margin-bottom: 0px;
 }
+
+.table > thead > tr > th {
+    text-align: center;
+}

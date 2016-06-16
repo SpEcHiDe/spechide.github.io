@@ -411,6 +411,7 @@ WhatsApp();
 
 // respect user's privacy
 if (navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && navigator.msDoNotTrack != "1") {
+  analytics_and_adsense();
   // => analytics and adsense code HERE
   trackOn();
 }
@@ -419,16 +420,12 @@ else{
   trackOff();
 }
 
-analytics_and_adsense();
-
 var AlwaysHTTPS = function(){
   var host = "shrimadhavuk.me";
   if ((host == window.location.host) && (window.location.protocol != "https:")){
     window.location.protocol = "https";
   }
 };
-
-// AlwaysHTTPS();
 
 $(window).bind('keydown', function(event) {
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery

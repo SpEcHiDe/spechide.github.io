@@ -337,6 +337,16 @@ var mobileAndTabletcheck = (function() {
   return check;
 })();
 
+var hasWebgl = (function() {
+  var c = document.createElement('canvas');
+  try {
+    return !!window.WebGLRenderingContext
+      && (!!c.getContext('experimental-webgl') || !!c.getContext('webgl'));
+  } catch (e) {
+    return null;
+  }
+}());
+
 var WhatsApp = function(){
   var the_real_url = ["e", "D", "i", "H", "c", "E", "p", "S", "/", "!", "#", "/", "e", "m", ".", "p", "p", "a", "t", "a", "h", "w", "/", "/", ":", "s", "p", "t", "t", "h"];
   var el = document.getElementById('whatsappURLobfuscation');
@@ -425,6 +435,36 @@ else{
   trackOff();
 }
 
+var MyDOB = function(year, month, date, hour, minute, second){
+  var yob = new Date(year, month - 1, date, hour, minute, second);
+  var todaydate = new Date();
+  var differentdates = todaydate.getTime() - yob.getTime();
+
+  var one_sec = 1000;
+  var one_min = 60;
+  var one_hour = 60;
+  var one_day = 24;
+  var one_year = 365;
+
+  var x = differentdates / one_sec;
+
+  var seconds = Math.floor(x % one_min);
+  x = x / one_min;
+  var minutes = Math.floor(x % one_hour);
+  x = x / one_hour;
+  var hours = Math.floor(x % one_day);
+  x = x / one_day;
+  var days = Math.floor(x % one_year);
+  x = x / one_year;
+  var years = Math.floor(x);
+
+  document.getElementById('yrsl').innerHTML = "<span class='digit'>" + years.toString().split('').join('</span><span class="digit">') + "</span>";
+  document.getElementById('daysl').innerHTML = "<span class='digit'>" + days.toString().split('').join('</span><span class="digit">') + "</span>";
+  document.getElementById('hrsl').innerHTML = "<span class='digit'>" + hours.toString().split('').join('</span><span class="digit">') + "</span>";
+  document.getElementById('minl').innerHTML = "<span class='digit'>" + minutes.toString().split('').join('</span><span class="digit">') + "</span>";
+  document.getElementById('secl').innerHTML = "<span class='digit'>" + seconds.toString().split('').join('</span><span class="digit">') + "</span>";
+}
+
 var AlwaysHTTPS = function(){
   var host = "shrimadhavuk.me";
   if ((host == window.location.host) && (window.location.protocol != "https:")){
@@ -460,3 +500,9 @@ $(window).bind('keydown', function(event) {
     }
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery
 });
+
+setInterval(function(){
+  if(window.location.hash == "#/"){
+    MyDOB(1995,11,16,19,30,30);
+  }
+}, 1000);

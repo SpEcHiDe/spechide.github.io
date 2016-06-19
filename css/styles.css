@@ -2,20 +2,20 @@ html{
   overflow-x: hidden;
 }
 .jumbotron{
-  padding-top: 5px;
-  padding-bottom: 0px;
+  padding-top: 1.25em;
+  padding-bottom: 0em;
 }
 iframe{
-  height: 500px;
-  width: 1000px;
+  height: 40em;
+  width: 70em;
   overflow: hidden;
 }
 @media screen and (min-width: 768px){
   .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev{
-    width: 75px;
-    height: 75px;
-    margin-top: -30px;
-    font-size: 30px;
+    width: 75em;
+    height: 75em;
+    margin-top: -3em;
+    font-size: 3em;
   }
 }
 #selfintro{
@@ -31,24 +31,22 @@ iframe{
   display: none;
 }
 .fixedlocation {
-  z-index: 51;
+  z-index: 512;
+  /* always stay on top */
   position: fixed;
   background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.8);
   color: #fff;
   width: 100%;
-  left: 0px;
+  left: 0em;
   padding: 1em;
   text-align: center;
   opacity: 0.8;
-}
-body {
-  font-family: 'Open Sans', Lucida Grande, Lucida Sans, Tahoma, sans-serif;
 }
 .carousel-control{
   top: 50%;
 }
 .navbar{
-  margin-bottom: 0px;
+  margin-bottom: 0em;
 }
 
 .table > thead > tr > th {

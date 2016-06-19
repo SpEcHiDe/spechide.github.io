@@ -535,3 +535,7 @@ setInterval(function(){
     MyDOB(1995,11,16,19,30,30);
   }
 }, 1000);
+
+$('.navbar-collapse a').click(function(){
+    $(".navbar-collapse").collapse('hide');
+});

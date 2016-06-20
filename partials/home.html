@@ -1,7 +1,7 @@
 <style>
-  html{
-    overflow-y: hidden;
-  }
+body{
+  overflow-y: hidden !important;
+}
 </style>
 
 <div class="jumbotron text-center">
@@ -10,7 +10,7 @@
         <div class="carousel-inner" role="listbox">
 
             <div class="item active">
-                <div class="container" style="height: 500px;width: 1000px;">
+                <div class="container" style="width: 1000px;">
                     <div class="row">
                         <div class="col-sm-4">
                             <img src="img/photo.jpg" alt="ME" title="Shrimadhav U K" class="embed-responsive-item">
@@ -19,85 +19,6 @@
                         <div class="col-sm-4" id="selfintro">
                             <br> I am Shrimadhav U K, currently studying Computer Science and Engineering at National Institute of Technology, Calicut.
                             <br>
-                        </div>
-
-                        <div class="col-sm-4">
-
-                            <div id="time_countdown" class="time-count-container">
-
-                                <div class="col-sm-2">
-                                    <div class="time-box">
-                                        <div class="time-box-inner dash years_dash animated">
-                                              <span class="time-number" id="yrsl">
-                                              <span class="digit">0</span>
-                                              <span class="digit">0</span>
-                                            </span>
-                                            <span class="time-name">Years</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-2">
-                                    <div class="time-box">
-                                        <div class="time-box-inner dash days_dash animated">
-                                            <span class="time-number" id="daysl">
-                                              <span class="digit">0</span>
-                                              <span class="digit">0</span>
-                                              <span class="digit">0</span>
-                                            </span>
-                                            <span class="time-name">Days</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-2">
-                                    <div class="time-box">
-                                        <div class="time-box-inner dash months_dash animated">
-                                            <span class="time-number" id="monthsl">
-                                              <span class="digit">&nbsp;</span>
-                                              <span class="digit">:</span>
-                                              <span class="digit">&nbsp;</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-2">
-                                    <div class="time-box">
-                                        <div class="time-box-inner dash hours_dash animated">
-                                            <span class="time-number" id="hrsl">
-                  								            <span class="digit">0</span>
-                                              <span class="digit">0</span>
-                                            </span>
-                                            <span class="time-name">Hours</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-2">
-                                    <div class="time-box">
-                                        <div class="time-box-inner dash minutes_dash animated">
-                                            <span class="time-number" id="minl">
-                                              <span class="digit">0</span>
-                                              <span class="digit">0</span>
-                                            </span>
-                                            <span class="time-name">Minutes</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-2">
-                                    <div class="time-box">
-                                        <div class="time-box-inner dash seconds_dash animated">
-                                            <span class="time-number" id="secl">
-                                              <span class="digit">0</span>
-                                              <span class="digit">0</span>
-                                            </span>
-                                            <span class="time-name">Seconds</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -118,4 +39,81 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
+    <div id="time_countdown" class="time-count-container">
+
+        <div class="col-sm-2">
+            <div class="time-box">
+                <div class="time-box-inner dash years_dash animated">
+                      <span class="time-number" id="yrsl">
+                      <span class="digit">0</span>
+                      <span class="digit">0</span>
+                    </span>
+                    <span class="time-name">Years</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <div class="time-box">
+                <div class="time-box-inner dash days_dash animated">
+                    <span class="time-number" id="daysl">
+                      <span class="digit">0</span>
+                      <span class="digit">0</span>
+                      <span class="digit">0</span>
+                    </span>
+                    <span class="time-name">Days</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <div class="time-box">
+                <div class="time-box-inner dash months_dash animated">
+                    <span class="time-number" id="monthsl">
+                      <span class="digit">&nbsp;</span>
+                      <span class="digit">:</span>
+                      <span class="digit">&nbsp;</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <div class="time-box">
+                <div class="time-box-inner dash hours_dash animated">
+                    <span class="time-number" id="hrsl">
+                      <span class="digit">0</span>
+                      <span class="digit">0</span>
+                    </span>
+                    <span class="time-name">Hours</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <div class="time-box">
+                <div class="time-box-inner dash minutes_dash animated">
+                    <span class="time-number" id="minl">
+                      <span class="digit">0</span>
+                      <span class="digit">0</span>
+                    </span>
+                    <span class="time-name">Minutes</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <div class="time-box">
+                <div class="time-box-inner dash seconds_dash animated">
+                    <span class="time-number" id="secl">
+                      <span class="digit">0</span>
+                      <span class="digit">0</span>
+                    </span>
+                    <span class="time-name">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

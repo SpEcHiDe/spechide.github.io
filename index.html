@@ -35,24 +35,25 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.js"></script>
     <![endif]-->
 
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="stylesheet" href="css/404.css" type="text/css">
-    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" type="text/css" href="css/timeline.css" />
     <!--[if lte IE 7]><style>.support-note .note-ie{display:block;}</style><![endif]-->
     <link rel="stylesheet" type="text/css" href="css/countdown.css" />
+
+    <link rel="manifest" href="manifest.json">
 
   </head>
 
   <body ng-controller="mainController">
 
     <section class="fixedlocation" id="cookiewarning">
-      By using this webpage, you agree that you have read the <a href="/termsandconditions">terms and conditions</a> and the <a href="/privacypolicy">privacy policy</a>, and also agree to abide by it.
-           <a onclick="trackOff()"><strong>OK</strong></a>
+      By using this webpage, you agree that you have read the <a href="#/termsandconditions">terms and conditions</a> and the <a href="#/privacypolicy">privacy policy</a>, and also agree to abide by it.
+      <a onclick="trackOff()"><strong>OK</strong></a>
     </section>
 
     <nav class="navbar navbar-default navbar-fixed-top">

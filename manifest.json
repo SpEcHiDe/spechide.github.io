@@ -1,13 +1,13 @@
 {
   "name": "Shrimadhav",
-  "short_name": "S U K P",
+  "short_name": "SpEcHiDe",
   "icons": [{
         "src": "img/photo.jpg",
         "sizes": "332x331",
         "type": "image/jpg"
       }],
   "start_url": "/index.html",
-  "display": "browser",
+  "display": "standalone",
   "orientation": "portrait",
   "content_security_policy": "default-src 'self' style-src 'self' 'unsafe-inline';",
   "gcm_sender_id": "1000634472750"

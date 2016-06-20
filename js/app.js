@@ -33,5 +33,5 @@ app.config(function($routeProvider, $locationProvider) {
 				.when('/mobile', {
             templateUrl : 'partials/mobile.html'
         })
-				$routeProvider.otherwise({redirectTo: '/404', controller: 'fourzerofourController'});
+				$routeProvider.otherwise({redirectTo: '/404'});
 });

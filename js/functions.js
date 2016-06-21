@@ -27,7 +27,7 @@ var sendData = function(type, URL, formData, callBack){
   var xhr = new XMLHttpRequest();
   // open the XHR object in asynchronous mode
   xhr.open(type, URL, true);
-  //xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=ISO-8859-1')
+  xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=ISO-8859-1')
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
       // OK! we have a successful response.
@@ -91,9 +91,8 @@ var afterFetch = function(response){
   document.getElementById('outputProjects').innerHTML = rsp;
 };
 
-var searchProjects = function(){
-  var querystring = document.getElementById('search').value;
-  var url = "//projects.shrimadhavuk.me/spechide/projects.php";
+var searchProjects = function(querystring){
+  var url = "https://projects.shrimadhavuk.me/spechide/projects.php";
   var formdata = "search=" + querystring;
   sendData("POST", url, formdata, afterFetch);
 };

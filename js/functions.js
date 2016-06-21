@@ -307,24 +307,31 @@ $(window).bind('keydown', function(event) {
               event.preventDefault();
               $($("#helpMeModal").modal());
               break;
-          // => http://stackoverflow.com/a/5597114/4723940
-          case 37:
-              event.preventDefault();
-              alert("left");
-              break;
-          case 38:
-              event.preventDefault();
-              alert("up");
-              break;
-          case 39:
-              event.preventDefault();
-              alert("right");
-              break;
-          case 40:
-              event.preventDefault();
-              alert("down");
-              break;
         }
+    }
+    else{
+      switch(event.which){
+        /*
+        // => http://stackoverflow.com/a/5597114/4723940
+        case 37:
+            event.preventDefault();
+            alert("left");
+            break;
+        case 38:
+            //event.preventDefault();
+            alert("up");
+            break;
+        case 39:
+            event.preventDefault();
+            alert("right");
+            break;
+        case 40:
+            //event.preventDefault();
+            alert("down");
+            break;
+        // => http://stackoverflow.com/a/6011119/4723940
+        */
+      }
     }
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery
 });

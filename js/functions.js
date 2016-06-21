@@ -287,26 +287,43 @@ $(window).bind('keydown', function(event) {
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery
     if (event.ctrlKey || event.metaKey) {
         switch (String.fromCharCode(event.which).toLowerCase()) {
-        case 's':
-            event.preventDefault();
-            window.location.hash = "#/mobile";
-            break;
-        case 'f':
-            event.preventDefault();
-            window.location.hash = "#/projects";
-            break;
-        case 'm':
-            event.preventDefault();
-            window.location.hash = "#/contactme";
-            break;
-        case 'e':
-            event.preventDefault();
-            window.location.hash = "#/education";
-            break;
-        case 'a':
-            event.preventDefault();
-            $($("#helpMeModal").modal());
-            break;
+          case 's':
+              event.preventDefault();
+              window.location.hash = "#/mobile";
+              break;
+          case 'f':
+              event.preventDefault();
+              window.location.hash = "#/projects";
+              break;
+          case 'm':
+              event.preventDefault();
+              window.location.hash = "#/contactme";
+              break;
+          case 'e':
+              event.preventDefault();
+              window.location.hash = "#/education";
+              break;
+          case 'a':
+              event.preventDefault();
+              $($("#helpMeModal").modal());
+              break;
+          // => http://stackoverflow.com/a/5597114/4723940
+          case 37:
+              event.preventDefault();
+              alert("left");
+              break;
+          case 38:
+              event.preventDefault();
+              alert("up");
+              break;
+          case 39:
+              event.preventDefault();
+              alert("right");
+              break;
+          case 40:
+              event.preventDefault();
+              alert("down");
+              break;
         }
     }
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery

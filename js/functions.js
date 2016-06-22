@@ -150,13 +150,6 @@ var hasWebgl = (function() {
   }
 }());
 
-var WhatsApp = function(){
-  var the_real_url = ["e", "D", "i", "H", "c", "E", "p", "S", "/", "!", "#", "/", "e", "m", ".", "p", "p", "a", "t", "a", "h", "w", "/", "/", ":", "s", "p", "t", "t", "h"];
-  var el = document.getElementById('whatsappURLobfuscation');
-  var obfuscated_url = the_real_url.reverse().join('');
-  el.href = obfuscated_url;
-};
-
 // open external links in new tabs
 // var host = window.location.hostname;
 // $("body").on("click", "a", function() {
@@ -223,9 +216,6 @@ var analytics_and_adsense = function(){
   document.write(unescape("%3cscript type='text/javascript' src='"+sa_protocol+"://sa.entireweb.com/sense2.js'%3e%3c/script%3e"));
 
 };
-
-// JavaScript to obfuscate my WhatsApp contact number
-WhatsApp();
 
 // respect user's privacy
 if (navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && navigator.msDoNotTrack != "1") {
@@ -304,26 +294,24 @@ $(window).bind('keydown', function(event) {
     }
     else{
       switch(event.which){
-        /*
         // => http://stackoverflow.com/a/5597114/4723940
         case 37:
             event.preventDefault();
-            alert("left");
+            console.log("left")
             break;
         case 38:
             //event.preventDefault();
-            alert("up");
+            //alert("up");
             break;
         case 39:
             event.preventDefault();
-            alert("right");
+            console.log("right");
             break;
         case 40:
             //event.preventDefault();
-            alert("down");
+            //alert("down");
             break;
         // => http://stackoverflow.com/a/6011119/4723940
-        */
       }
     }
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery
@@ -334,3 +322,72 @@ setInterval(function(){
     MyDOB(1995,11,16,19,30,30);
   }
 }, 1000);
+
+var hoverPattern = function(){
+
+  // Create a new SVG pattern with Trianglify.
+  var pattern = Trianglify({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    cell_size: 80,
+    variance: 1,
+    stroke_width: 1
+  }).svg(); // Render as SVG.
+
+  // Add pattern to DOM.
+  var container = document.querySelector('.trianglify');
+  container.insertBefore(pattern, container.firstChild);
+
+  // Get all pattern polygons.
+  var polyArray = [].slice.call(pattern.children);
+
+  // Get polygon coords and hide them.
+  var polyPoints = polyArray.map(function(poly) {
+    poly.classList.add('poly', 'invisible');
+    var rect = poly.getBoundingClientRect();
+    var point = {
+      x: rect.left + rect.width / 2,
+      y: rect.top + rect.height / 2
+    };
+    return point;
+  });
+
+  // Get circle for hover.
+  var circle = document.querySelector('.circle');
+
+  circle.addEventListener('mouseenter', function() {
+    document.addEventListener('mousemove', onMouseMove);
+  });
+
+  circle.addEventListener('mouseout', function() {
+    document.removeEventListener('mousemove', onMouseMove);
+  });
+
+  function onMouseMove(e) {
+    var radius = circle.clientWidth / 2;
+    var center = {
+      x: e.clientX,
+      y: e.clientY
+    };
+    circle.style.left = center.x - radius;
+    circle.style.top = center.y - radius;
+    polyPoints.forEach(function(point, i) {
+      if (detectPointInCircle(point, radius, center)) {
+        polyArray[i].classList.remove('invisible');
+      } else {
+        polyArray[i].classList.add('invisible');
+      }
+    });
+  };
+
+  function detectPointInCircle(point, radius, center) {
+    var xp = point.x;
+    var yp = point.y;
+    var xc = center.x;
+    var yc = center.y;
+    var d = radius * radius;
+    var isInside = Math.pow(xp - xc, 2) + Math.pow(yp - yc, 2) <= d;
+    return isInside;
+  };
+
+};

@@ -68,7 +68,7 @@ $('.carousel').carousel({
 
 var afterFetch = function(response){
   var jsonobj = JSON.parse(response);
-  var rsp = "<div class='cd-projects-wrapper'><ul class='cd-slider'>";
+  var rsp = "<div class='projects-wrapper'><ul class='slider'>";
   for(var i = 0; i < jsonobj.length; i++){
     var id = jsonobj[i].ID;
     var name = jsonobj[i].NAME;
@@ -78,9 +78,9 @@ var afterFetch = function(response){
     var ed = jsonobj[i].ENDDATE;
     var img = jsonobj[i].IMG;
     var catgry = jsonobj[i].CATEGORY;
-    rsp += "<li><a href='#project-" + id + "'><img src='" + img + "' alt='" + catgry + "'><div class='project-info'><h2>" + name + "</h2><p>" + desc + "</p></div></a></li>";
+    rsp += "<li><a href='" + url + "'><img src='" + img + "' width='600px' height='450px'><div class='project-info'><h2>" + name + "</h2><p>" + desc + "</p></div></a></li>";
   }
-  rsp += "</ul><ul class='cd-slider-navigation cd-img-replace'><li><a href='#0' class='prev inactive'>Prev</a></li><li><a href='#0' class='next'>Next</a></li></ul></div>";
+  rsp += "</ul></div>";
   document.getElementById('outputProjects').innerHTML = rsp;
   console.log(rsp);
 };

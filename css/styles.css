@@ -1,3 +1,14 @@
+@font-face {
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 html{
   overflow-x: hidden;
 }
@@ -5,6 +16,7 @@ html{
   padding-top: 1.25em;
   padding-bottom: 0em;
   margin-bottom: 0em;
+  background-color: inherit;
 }
 iframe{
   height: 300px;
@@ -66,9 +78,6 @@ img{
 .circle {
   width: 100%;
   min-height: 100vh;
-  border-radius: 50%;
-  /*background: white;*/
-  /*opacity: 0.2;*/
   position: absolute;
   top: 0;
   left: 0;

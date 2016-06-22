@@ -5,28 +5,22 @@
 
     <div class="row">
       <div class="col-sm-6 text-center">
-        <div id="aftermailsent" class="panel-body">
-            <form role="form" method="POST" accept-charset="UTF-8" onsubmit="sendEMail(); return false;" enctype="multipart/form-data" ng-validate>
-              <fieldset>
-                <div class='form-group'>
-                    <input type="text" placeholder="Your NAME" class="form-control" id="fromname" name="fromname">
-                </div>
-                <strong>
-                  due to some technical limitations, please provide a way for me to contact you in the message body!
-                </strong>
-                <div class='form-group'>
-                    <input type="email" placeholder="ELECTRONIC MAIL ID" value="spechide@shrimadhavuk.me" class="form-control" id="fromemail" name="fromemail" disabled="true">
-                </div>
-                <div class='form-group'>
-                    <input type="text" placeholder="Subject" class="form-control" id="sub" name="sub">
-                </div>
-                <div class='form-group'>
-                    <textarea class="form-control" id="msg" name="msg" cols="40" rows="5">message from ____ using the contact form </textarea>
-                </div>
-                <button type="submit" name='emailBtn' class='btn btn-lg btn-block waves-effect waves-light'>Send Message</button>
-              </fieldset>
-            </form>
-        </div>
+          <div class="container" style="margin-top: 5px;" id="aftermailsent">
+      			<div class="clearfix" style="max-width: 50em;">
+      				<form id="nl-form" class="nl-form" method="POST" accept-charset="UTF-8" onsubmit="sendEMail(); return false;" enctype="multipart/form-data">
+      					My name is
+      					<input type="text" value="" name="NAME" id="name" placeholder="[your name]" data-subline="please input your name" />.
+      					You can contact me at
+      					<input type="email" value="" name="EMAIL" id="email" placeholder="[email id]" data-subline="please enter a valid electronic mail id" />,
+      					and I would like to tell you that
+      					<input type="text" value="" name="MSG" id="msg" placeholder="[your message]"/>
+      					<div class="nl-submit-wrap">
+      						<button class="nl-submit" type="submit">Send Message</button>
+      					</div>
+      					<div class="nl-overlay"></div>
+      				</form>
+      			</div>
+      		</div>
       </div>
       <div class="col-sm-6 text-center" style="padding-top: 15px;">
 
@@ -57,3 +51,7 @@
       </strong>
     </small>
 </div>
+
+<script>
+  var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+</script>

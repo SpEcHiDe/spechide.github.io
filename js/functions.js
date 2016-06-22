@@ -102,8 +102,8 @@ var sendEMail = function(){
 	var afteremailsend = function(response){
 		document.getElementById('aftermailsent').innerHTML = "<pre><code>I will try to contact you as soon as possible! <span id='smile' class='claim'>:)</span></code></pre>";
 	};
-	var fom = document.getElementById('fromname').value + "<" + document.getElementById('fromemail').value + ">";
-	var sub = document.getElementById('sub').value;
+	var fom = document.getElementById('name').value + "<" + document.getElementById('email').value + ">";
+	var sub = "message from contact form on https://shrimadhavuk.me/";
 	var msg = document.getElementById('msg').value;
 	var the_real_message = "FROM: " + fom + "\r\nSUBJECT: " + sub + "\r\nMESSAGE: " + msg;
 	var to = "Shrimadhav U K <spechide@shrimadhavuk.me>";

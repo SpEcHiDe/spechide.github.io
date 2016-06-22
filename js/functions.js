@@ -86,7 +86,7 @@ var afterFetch = function(response){
 };
 
 var searchProjects = function(querystring){
-  var url = "https://projects.shrimadhavuk.me/spechide/projects.php";
+  var url = "//projects.shrimadhavuk.me/spechide/projects.php";
   var formdata = "search=" + querystring;
   sendData("POST", url, formdata, afterFetch);
 };

@@ -66,29 +66,23 @@ $('.carousel').carousel({
   interval: 10000
 });
 
-var dispProjSFn = function(name, desc, url, sd, ed, img){
-  document.getElementById('dispProjSModal_H4').innerHTML = name;
-  document.getElementById('dispProjSModal_DESC').innerHTML = desc;
-  document.getElementById('dispProjSModal_SD').innerHTML = sd;
-  document.getElementById('dispProjSModal_ED').innerHTML = ed;
-  document.getElementById('dispProjSModal_URL').innerHTML = "<a href='" + url + "'>" + url + "</a>";
-  document.getElementById('dispProjSModal_IMG').src = img;
-  $("#dispProjSModal").modal();
-};
-
 var afterFetch = function(response){
   var jsonobj = JSON.parse(response);
-  var rsp = "<table class='table table-hover'><thead><tr><th>IMAGE</th><th onclick=\"searchProjectsByType(\'NAME\')\">PROJECT NAME</th><th onclick=\"searchProjectsByType(\'CATEGORY\')\">PROJECT CATEGORY</th><th onclick=\"searchProjectsByType(\'URL\')\">PROJECT URL</th></tr></thead><tbody>";
+  var rsp = "<div class='cd-projects-wrapper'><ul class='cd-slider'>";
   for(var i = 0; i < jsonobj.length; i++){
-    rsp += "<tr onclick=\"dispProjSFn(\'" + jsonobj[i].NAME + "\', \'" + jsonobj[i].DESCRIPTION + "\', \'" + jsonobj[i].URL + "\', \'" + jsonobj[i].STARTDATE + "\', \'" + jsonobj[i].ENDDATE + "\', \'" + jsonobj[i].IMG + "\')\">";
-    rsp += "<td><img width='5em' height='2.5em' src='" + jsonobj[i].IMG + "' /></td>";
-    rsp += "<td>" + jsonobj[i].NAME + "</td>";
-    rsp += "<td>" + jsonobj[i].CATEGORY + "</td>";
-    rsp += "<td><a href=" + jsonobj[i].URL + ">" + jsonobj[i].URL + "</a></td>";
-    rsp += "</tr>";
+    var id = jsonobj[i].ID;
+    var name = jsonobj[i].NAME;
+    var desc = jsonobj[i].DESCRIPTION;
+    var url = jsonobj[i].URL;
+    var sd = jsonobj[i].STARTDATE;
+    var ed = jsonobj[i].ENDDATE;
+    var img = jsonobj[i].IMG;
+    var catgry = jsonobj[i].CATEGORY;
+    rsp += "<li><a href='#project-" + id + "'><img src='" + img + "' alt='" + catgry + "'><div class='project-info'><h2>" + name + "</h2><p>" + desc + "</p></div></a></li>";
   }
-  rsp += "</tbody></table>";
+  rsp += "</ul><ul class='cd-slider-navigation cd-img-replace'><li><a href='#0' class='prev inactive'>Prev</a></li><li><a href='#0' class='next'>Next</a></li></ul></div>";
   document.getElementById('outputProjects').innerHTML = rsp;
+  console.log(rsp);
 };
 
 var searchProjects = function(querystring){

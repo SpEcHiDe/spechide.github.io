@@ -111,10 +111,10 @@ var sendEMail = function(){
 	sendData("POST", "//projects.shrimadhavuk.me/spechide/send-mail.php", formdata, afteremailsend);
 };
 
-var fireEvent = function(element){
+var fireOnKeyUpEvent = function(element){
   if ("createEvent" in document) {
     var evt = document.createEvent("HTMLEvents");
-    evt.initEvent("change", false, true);
+    evt.initEvent("keyup", false, true);
     element.dispatchEvent(evt);
   }
   else{

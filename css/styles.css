@@ -73,24 +73,3 @@ img{
 .navbar-fixed-top{
   z-index: 256;
 }
-
-/* hoverPattern */
-.circle {
-  width: 100%;
-  min-height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 128;
-}
-path {
-  fill: transparent;
-  transform-origin: center bottom;
-  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
-}
-.invisible {
-  opacity: 0;
-  transform: scale(0);
-}
-
-/* hoverPattern */

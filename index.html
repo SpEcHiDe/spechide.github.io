@@ -40,6 +40,8 @@
 
     <title>Shrimadhav U K</title>
 
+    <link rel="stylesheet" href="css/please-wait.css" type="text/css">
+
     <!-- css files -->
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">
@@ -133,7 +135,7 @@
 
         <!-- angular templating -->
         <!-- this is where content will be injected -->
-        <div ng-view>
+        <div class="inner" ng-view>
           <div class="container-fluid">
             <h1>This website uses a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> framework, called <a href="https://angularjs.org/">AngularJS</a>!</h1>
           </div>
@@ -211,6 +213,14 @@
       </div>
     </div>
 
+    <script src="js/please-wait.js"></script>
+    <script type="text/javascript">
+      window.loading_screen = window.pleaseWait({
+        logo: "img/spechide.png",
+        backgroundColor: '#fff',
+        loadingHtml: "<p class='loading-message'><blockquote><p>Rules of Optimization:<br>Rule 1: Don't do it.<br>Rule 2 (for experts only): Don't do it yet.</p><footer>Michael A. Jackson</footer></blockquote></p>"
+      });
+    </script>
     <script src="js/jquery.js"></script>
     <script src='js/angular.min.js'></script>
     <script src='js/angular-route.js'></script>
@@ -219,6 +229,9 @@
     <script src="js/functions.js"></script>
     <script src="js/app.js"></script>
     <script src="js/chrome.js"></script>
+    <script type="text/javascript">
+      window.loading_screen.finish();
+    </script>
 
   </body>
 </html>

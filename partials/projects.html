@@ -1,16 +1,5 @@
 
-<div class="container-fluid text-center">
-    <div class='login-panel panel panel-default'>
-      <div class='panel-body'>
-        <fieldset>
-          <div class='form-group'>
-            <input type='text' name='search' id='search' class='form-control' placeholder=' | Search for MY projects! | enter your search query here: ' onkeyup="searchProjects(this.value)">
-          </div>
-        </fieldset>
-      </div>
-    </div>
-    <div id="outputProjects"></div>
-</div>
+<div class="container" id="outputProjects"></div>
 
 <script>
   fireOnKeyUpEvent(document.getElementById('search'));

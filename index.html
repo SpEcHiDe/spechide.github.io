@@ -46,6 +46,8 @@
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -116,7 +118,7 @@
           <div class="col-sm-3 col-md-3 pull-left">
             <form class="navbar-form" role="search">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term" onkeyup="search(this.value)">
                 <div class="input-group-btn">
                     <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                 </div>
@@ -225,10 +227,12 @@
     <script src='js/angular.min.js'></script>
     <script src='js/angular-route.js'></script>
     <script src="js/bootstrap.js"></script>
+
     <script src="js/contactme.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/app.js"></script>
     <script src="js/chrome.js"></script>
+
     <script type="text/javascript">
       window.loading_screen.finish();
     </script>

@@ -98,6 +98,12 @@ var searchProjectsByType = function(argone){
   sendData("POST", url, formdata, afterFetch);
 };
 
+var search = function(querystring){
+  if(window.location.hash == "#/projects"){
+    searchProjects(querystring);
+  }
+};
+
 var sendEMail = function(){
 	var afteremailsend = function(response){
 		document.getElementById('aftermailsent').innerHTML = "<pre><code>I will try to contact you as soon as possible! <span id='smile' class='claim'>:)</span></code></pre>";

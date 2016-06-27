@@ -1,13 +1,4 @@
 <style>
-body {
-    -webkit-text-size-adjust: none;
-    /*background: #ffcc00;
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;*/
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 1.4em;
-    padding: 3em;
-}
 a {
     text-decoration: none;
     color: #333;
@@ -47,10 +38,14 @@ a {
 }
 .tile .front h3 {
     font-size: 2em;
-    color: white;
+    color: #000;
     text-shadow: 0 0 5px #000;
     margin-top: -1.5em;
     margin-bottom: 1.5em;
+}
+.tile .front img{
+  border-radius: 50%;
+  overflow: hidden;
 }
 .tile .back {
     /*background: #e6b800;*/
@@ -80,7 +75,7 @@ a {
 }
 </style>
 
-<div class='container wrapper' id='outputProjects'></div>
+<div class='wrapper' id='outputProjects'></div>
 
 <script>
   fireOnKeyUpEvent(document.getElementById('srch-term'));

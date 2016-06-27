@@ -68,7 +68,7 @@ $('.carousel').carousel({
 
 var afterFetch = function(response){
   var jsonobj = JSON.parse(response);
-  var rsp = "<div class='projects-wrapper'><ul class='slider'>";
+  var rsp = "";
   for(var i = 0; i < jsonobj.length; i++){
     var id = jsonobj[i].ID;
     var name = jsonobj[i].NAME;
@@ -78,11 +78,17 @@ var afterFetch = function(response){
     var ed = jsonobj[i].ENDDATE;
     var img = jsonobj[i].IMG;
     var catgry = jsonobj[i].CATEGORY;
-    rsp += "<li><a href='" + url + "'><img src='" + img + "' width='600px' height='450px'><div class='project-info'><h2>" + name + "</h2><p>" + desc + "</p></div></a></li>";
+    rsp += "<div class='card transition'>";
+    rsp += "<h2 class='transition'>" + name + "</h2>";
+    rsp += "<p>" + desc + "</p>";
+    rsp += "<div class='cta-container transition'>";
+    rsp += "<a href='" + url + "' class='cta'>View Source Code</a>";
+    rsp += "</div>";
+    rsp += "<div class='card_circle transition' style='background-image: url(" + img + ");'></div>";
+    rsp += "</div>";
   }
-  rsp += "</ul></div>";
+  rsp += "";
   document.getElementById('outputProjects').innerHTML = rsp;
-  console.log(rsp);
 };
 
 var searchProjects = function(querystring){

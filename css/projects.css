@@ -1,0 +1,76 @@
+a {
+    text-decoration: none;
+    color: #333;
+}
+.tile {
+    width: 250px;
+    height: 350px;
+    margin: 2em;
+    position: relative;
+    float: left;
+}
+.tile .front,
+.tile .back {
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 250px;
+    height: 350px;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+}
+.tile h3,
+.tile p,
+.tile a {
+    padding: 0 20px;
+}
+.tile img {
+    max-height: 130px;
+}
+.tile .front {
+    background: #fff;
+    transition: all .5s ease-in-out;
+    z-index: 2;
+}
+.tile .front h3 {
+    font-size: 2em;
+    color: #000;
+    text-shadow: 0 0 5px #000;
+    margin-top: -1.5em;
+    margin-bottom: 1.5em;
+}
+.tile .front img{
+  /*border-radius: 50%;*/
+  overflow: hidden;
+  width: 600px;
+  height: 450px;
+}
+.tile .back {
+    /*background: #e6b800;*/
+    /*color: white;*/
+    z-index: 1;
+    padding-top: 50px;
+    height: 300px;
+}
+.tile .back h3 {
+    font-size: 1.5em;
+    /*color: white;*/
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.tile .back a {
+    display: block;
+    font-size: 1.2em;
+    /*color: white;*/
+    border-top: 1px solid #000;
+    margin: 0 20px;
+    padding: .5em 0;
+    text-decoration: none;
+}
+.tile:hover .front {
+    top: -300px;
+    transform: rotate(2deg);
+}

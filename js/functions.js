@@ -74,17 +74,23 @@ var afterFetch = function(response){
     var name = jsonobj[i].NAME;
     var desc = jsonobj[i].DESCRIPTION;
     var url = jsonobj[i].URL;
+    var dispurl = "View GitHub Source";
     var sd = jsonobj[i].STARTDATE;
     var ed = jsonobj[i].ENDDATE;
     var img = jsonobj[i].IMG;
     var catgry = jsonobj[i].CATEGORY;
-    rsp += "<div class='card transition'>";
-    rsp += "<h2 class='transition'>" + name + "</h2>";
+    rsp += "<div class='tile job-bucket'>";
+    rsp += "<div class='front'>";
+    rsp += "<div class='contents'>";
+    rsp += "<img src='" + img + "' />";
+    rsp += "<h3>" + name + "</h3>";
     rsp += "<p>" + desc + "</p>";
-    rsp += "<div class='cta-container transition'>";
-    rsp += "<a href='" + url + "' class='cta'>View Source Code</a>";
     rsp += "</div>";
-    rsp += "<div class='card_circle transition' style='background-image: url(" + img + ");'></div>";
+    rsp += "</div>";
+    rsp += "<div class='back'>";
+    rsp += "<h3>" + name + "</h3>";
+    rsp += "<a href='" + url + "'>" + dispurl  + "</a>";
+    rsp += "</div>";
     rsp += "</div>";
   }
   rsp += "";

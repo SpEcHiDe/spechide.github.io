@@ -19,10 +19,7 @@ var displayNonPersistent = function(title, options) {
     } catch (e) {
       console.log(e);
       if(e.name == 'TypeError'){
-        displayPersistent(title, {
-          body: message,
-          icon: 'img/favicon/favicon.ico'
-        });
+        displayPersistent(title, options);
       }
       return resolve();
     }

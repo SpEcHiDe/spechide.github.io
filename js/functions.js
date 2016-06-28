@@ -2,28 +2,18 @@
 navigator.serviceWorker.register('js/sw.js');
 
 var notifyUSER = function(title, message) {
-  function isNewNotificationSupported() {
-      if (!window.Notification || !Notification.requestPermission){
-          return false;
-      }
-      try {
-          new Notification(message);
-      } catch (e) {
-          if (e.name == 'TypeError')
-              return false;
-      }
-      return true;
-  }
-  if(!!isNewNotificationSupported()){
-    // If the user accepts, let's create a notification
-    navigator.serviceWorker.ready.then(function(registration) {
-      // https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification
-      registration.showNotification(title, {
-        body: message,
-        icon: 'img/favicon/android-chrome-192x192.png'
+  Notification.requestPermission(function(result) {
+    if(result === 'granted'){
+      // If the user accepts, let's create a notification
+      navigator.serviceWorker.ready.then(function(registration) {
+        // https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification
+        registration.showNotification(title, {
+          body: message,
+          icon: 'img/favicon/android-chrome-192x192.png'
+        });
       });
-    });
-  }
+    }
+  });
   // Finally, if the user has denied notifications and you
   // want to be respectful there is no need to bother them any more.
 };

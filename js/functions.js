@@ -9,10 +9,24 @@ var displayPersistent = function(title, options) {
   }).catch(function(exception) { console.log(exception); });
 };
 
-var notifyUSER = function(title, message){
-  displayPersistent(title, {
-    body: message,
-    icon: 'img/photo.jpg'
+// Displays a non-persistent notification using the Notification constructor,
+// and returns a Promise that will be settled when the operation is complete.
+var displayNonPersistent = function(title, options) {
+  return new Promise(function(resolve) {
+    var notification = null;
+    try {
+      notification = new Notification(title, options);
+    } catch (exception) {
+      console.log(exception);
+      return resolve();
+    }
+    notification.addEventListener('show', function() {
+      resolve();
+    });
+    notification.addEventListener('error', function(error) {
+      console.log(error);
+      resolve();
+    });
   });
 };
 
@@ -334,3 +348,18 @@ setInterval(function(){
     MyDOB(1995,11,16,19,30,30);
   }
 }, 1000);
+
+var notifyUSER = function(title, message){
+  if(mobileAndTabletcheck){
+    displayPersistent(title, {
+      body: message,
+      icon: 'img/photo.jpg'
+    });
+  }
+  else{
+    displayNonPersistent(title, {
+      body: message,
+      icon: 'img/photo.jpg'
+    });
+  }
+};

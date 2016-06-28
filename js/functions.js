@@ -1,6 +1,22 @@
 
+navigator.serviceWorker.register('js/sw.js');
+
+function isNewNotificationSupported() {
+    if (!window.Notification || !Notification.requestPermission)
+        return false;
+    if (Notification.permission == 'granted')
+        throw new Error('You must only call this \*before\* calling Notification.requestPermission(), otherwise this feature detect would bug the user with an actual notification!');
+    try {
+        new Notification('');
+    } catch (e) {
+        if (e.name == 'TypeError')
+            return false;
+    }
+    return true;
+}
+
 var notifyUSER = function(data) {
-  navigator.serviceWorker.register('js/sw.js');
+/*
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
     console.log("This browser does not support system notifications");
@@ -26,6 +42,12 @@ var notifyUSER = function(data) {
   }
   // Finally, if the user has denied notifications and you
   // want to be respectful there is no need to bother them any more.
+*/
+  if(isNewNotificationSupported()){
+    navigator.serviceWorker.ready.then(function(registration) {
+      registration.showNotification(data);
+    });
+  }
 };
 
 var sendData = function(type, URL, formData, callBack){

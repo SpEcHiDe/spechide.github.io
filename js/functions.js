@@ -1,21 +1,20 @@
 
 navigator.serviceWorker.register('js/sw.js');
 
-function isNewNotificationSupported() {
-    if (!window.Notification || !Notification.requestPermission){
-        return false;
-    }
-    try {
-        new Notification('');
-    } catch (e) {
-        if (e.name == 'TypeError')
-            return false;
-    }
-    return true;
-}
-
 var notifyUSER = function(title, message) {
-  if(isNewNotificationSupported()){
+  function isNewNotificationSupported() {
+      if (!window.Notification || !Notification.requestPermission){
+          return false;
+      }
+      try {
+          new Notification(message);
+      } catch (e) {
+          if (e.name == 'TypeError')
+              return false;
+      }
+      return true;
+  }
+  if(!!isNewNotificationSupported()){
     // If the user accepts, let's create a notification
     navigator.serviceWorker.ready.then(function(registration) {
       // https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification

@@ -2,18 +2,34 @@
 navigator.serviceWorker.register('js/sw.js');
 
 var notifyUSER = function(title, message) {
-  Notification.requestPermission(function(result) {
-    if(result === 'granted'){
+  // Let's check if the browser supports notifications
+  if (!("Notification" in window)) {
+    console.log("This browser does not support system notifications");
+  }
+  // Otherwise, we need to ask the user for permission
+  else if (Notification.permission !== 'denied') {
+    Notification.requestPermission(function (permission) {
       // If the user accepts, let's create a notification
-      navigator.serviceWorker.ready.then(function(registration) {
-        // https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification
-        registration.showNotification(title, {
-          body: message,
-          icon: 'img/favicon/android-chrome-192x192.png'
-        });
-      });
-    }
-  });
+      if (permission === "granted") {
+        try{
+          var notification = new Notification(title, {
+            body: message,
+            icon: 'img/favicon/android-chrome-192x192.png'
+          });
+        }
+        catch (e) {
+          if (e.name == 'TypeError'){
+            navigator.serviceWorker.ready.then(function(registration) {
+              registration.showNotification(title, {
+                body: message,
+                icon: 'img/favicon/android-chrome-192x192.png'
+              });
+            });
+          }
+        }
+      }
+    });
+  }
   // Finally, if the user has denied notifications and you
   // want to be respectful there is no need to bother them any more.
 };

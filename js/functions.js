@@ -7,6 +7,7 @@ function isNewNotificationSupported() {
     }
     if (Notification.permission == 'granted'){
       //  throw new Error('You must only call this \*before\* calling Notification.requestPermission(), otherwise this feature detect would bug the user with an actual notification!');
+      console.log("ok");
     }
     try {
         new Notification('');

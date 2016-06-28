@@ -1,5 +1,34 @@
-
+// => https://github.com/beverloo/peter.sh
 navigator.serviceWorker.register('js/sw.js');
+
+// Displays a persistent notification on the active Service Worker registration,
+// and returns a Promise that will be settled when the operation is complete.
+var displayPersistent = function(title, options) {
+  return navigator.serviceWorker.ready.then(function(serviceWorker) {
+    return serviceWorker.showNotification(title, options);
+  }).catch(function(exception) { console.log(exception); });
+};
+
+// Displays a non-persistent notification using the Notification constructor,
+// and returns a Promise that will be settled when the operation is complete.
+var displayNonPersistent = function(title, options) {
+  return new Promise(function(resolve) {
+    var notification = null;
+    try {
+      notification = new Notification(title, options);
+    } catch (exception) {
+      console.log(exception);
+      return resolve();
+    }
+    notification.addEventListener('show', function() {
+      resolve();
+    });
+    notification.addEventListener('error', function(error) {
+      console.log(error);
+      resolve();
+    });
+  });
+};
 
 var notifyUSER = function(title, message) {
   // Let's check if the browser supports notifications
@@ -11,22 +40,14 @@ var notifyUSER = function(title, message) {
     Notification.requestPermission(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
-        try{
-          var notification = new Notification(title, {
-            body: message,
-            icon: 'img/favicon/android-chrome-192x192.png'
-          });
-        }
-        catch (e) {
-          if (e.name == 'TypeError'){
-            navigator.serviceWorker.ready.then(function(registration) {
-              registration.showNotification(title, {
-                body: message,
-                icon: 'img/favicon/android-chrome-192x192.png'
-              });
-            });
-          }
-        }
+        displayNonPersistent(title, {
+          body: message,
+          icon: 'img/favicon/favicon.ico'
+        });
+        displayPersistent(title, {
+          body: message,
+          icon: 'img/favicon/favicon.ico'
+        });
       }
     });
   }

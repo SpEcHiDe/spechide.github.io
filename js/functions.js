@@ -16,8 +16,14 @@ var displayNonPersistent = function(title, options) {
     var notification = null;
     try {
       notification = new Notification(title, options);
-    } catch (exception) {
-      console.log(exception);
+    } catch (e) {
+      console.log(e);
+      if(e.name == 'TypeError'){
+        displayPersistent(title, {
+          body: message,
+          icon: 'img/favicon/favicon.ico'
+        });
+      }
       return resolve();
     }
     notification.addEventListener('show', function() {
@@ -47,12 +53,7 @@ var notifyUSER = function(title, message) {
           });
         }
         catch(e){
-          if(e.name == 'TypeError'){
-            displayPersistent(title, {
-              body: message,
-              icon: 'img/favicon/favicon.ico'
-            });
-          }
+          console.log(e);
         }
       }
     });

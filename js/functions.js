@@ -5,10 +5,6 @@ function isNewNotificationSupported() {
     if (!window.Notification || !Notification.requestPermission){
         return false;
     }
-    if (Notification.permission == 'granted'){
-      //  throw new Error('You must only call this \*before\* calling Notification.requestPermission(), otherwise this feature detect would bug the user with an actual notification!');
-      console.log("ok");
-    }
     try {
         new Notification('');
     } catch (e) {
@@ -18,39 +14,19 @@ function isNewNotificationSupported() {
     return true;
 }
 
-var notifyUSER = function(data) {
-/*
-  // Let's check if the browser supports notifications
-  if (!("Notification" in window)) {
-    console.log("This browser does not support system notifications");
-  }
-  // Let's check whether notification permissions have already been granted
-  else if (Notification.permission === "granted") {
-    // If it's okay let's create a notification
-    var notification = new Notification(data);
-  }
-  // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== 'denied') {
-    Notification.requestPermission(function (permission) {
-      // If the user accepts, let's create a notification
-      if (permission === "granted") {
-        // this thing does not work on Mobile browsers!
-        // var notification = new Notification(data);
-        // ^-- this thing does not work on Mobile browsers!
-        navigator.serviceWorker.ready.then(function(registration) {
-          registration.showNotification(data);
-        });
-      }
+var notifyUSER = function(title, message) {
+  if(isNewNotificationSupported()){
+    // If the user accepts, let's create a notification
+    navigator.serviceWorker.ready.then(function(registration) {
+      // https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification
+      registration.showNotification(title, {
+        body: message,
+        icon: 'img/favicon/android-chrome-192x192.png'
+      });
     });
   }
   // Finally, if the user has denied notifications and you
   // want to be respectful there is no need to bother them any more.
-*/
-  if(isNewNotificationSupported()){
-    navigator.serviceWorker.ready.then(function(registration) {
-      registration.showNotification(data);
-    });
-  }
 };
 
 var sendData = function(type, URL, formData, callBack){

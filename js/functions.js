@@ -1,5 +1,6 @@
 
 var notifyUSER = function(data) {
+  navigator.serviceWorker.register('js/sw.js');
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
     console.log("This browser does not support system notifications");
@@ -14,7 +15,12 @@ var notifyUSER = function(data) {
     Notification.requestPermission(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
-        var notification = new Notification(data);
+        // this thing does not work on Mobile browsers!
+        // var notification = new Notification(data);
+        // ^-- this thing does not work on Mobile browsers!
+        navigator.serviceWorker.ready.then(function(registration) {
+          registration.showNotification(data);
+        });
       }
     });
   }

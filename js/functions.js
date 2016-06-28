@@ -1,4 +1,4 @@
-// => https://github.com/beverloo/peter.sh
+
 navigator.serviceWorker.register('js/sw.js');
 
 // Displays a persistent notification on the active Service Worker registration,
@@ -9,54 +9,11 @@ var displayPersistent = function(title, options) {
   }).catch(function(exception) { console.log(exception); });
 };
 
-// Displays a non-persistent notification using the Notification constructor,
-// and returns a Promise that will be settled when the operation is complete.
-var displayNonPersistent = function(title, options) {
-  return new Promise(function(resolve) {
-    var notification = null;
-    try {
-      notification = new Notification(title, options);
-    } catch (e) {
-      console.log(e);
-      if(e.name == 'TypeError'){
-        displayPersistent(title, options);
-      }
-      return resolve();
-    }
-    notification.addEventListener('show', function() {
-      resolve();
-    });
-    notification.addEventListener('error', function(error) {
-      console.log(error);
-      resolve();
-    });
+var notifyUSER = function(title, message){
+  displayPersistent(title, {
+    body: message,
+    icon: 'img/photo.jpg'
   });
-};
-
-var notifyUSER = function(title, message) {
-  // Let's check if the browser supports notifications
-  if (!("Notification" in window)) {
-    console.log("This browser does not support system notifications");
-  }
-  // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== 'denied') {
-    Notification.requestPermission(function (permission) {
-      // If the user accepts, let's create a notification
-      if (permission === "granted") {
-        try{
-          displayNonPersistent(title, {
-            body: message,
-            icon: 'img/favicon/favicon.ico'
-          });
-        }
-        catch(e){
-          console.log(e);
-        }
-      }
-    });
-  }
-  // Finally, if the user has denied notifications and you
-  // want to be respectful there is no need to bother them any more.
 };
 
 var sendData = function(type, URL, formData, callBack){

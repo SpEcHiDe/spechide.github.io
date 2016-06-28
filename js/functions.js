@@ -40,14 +40,20 @@ var notifyUSER = function(title, message) {
     Notification.requestPermission(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
-        displayNonPersistent(title, {
-          body: message,
-          icon: 'img/favicon/favicon.ico'
-        });
-        displayPersistent(title, {
-          body: message,
-          icon: 'img/favicon/favicon.ico'
-        });
+        try{
+          displayNonPersistent(title, {
+            body: message,
+            icon: 'img/favicon/favicon.ico'
+          });
+        }
+        catch(e){
+          if(e.name == 'TypeError'){
+            displayPersistent(title, {
+              body: message,
+              icon: 'img/favicon/favicon.ico'
+            });
+          }
+        }
       }
     });
   }

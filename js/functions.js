@@ -6,7 +6,10 @@ navigator.serviceWorker.register('js/sw.js');
 var displayPersistent = function(title, options) {
   return navigator.serviceWorker.ready.then(function(serviceWorker) {
     return serviceWorker.showNotification(title, options);
-  }).catch(function(exception) { console.log(exception); });
+  }).catch(function(exception) {
+      console.log(exception);
+      displayNonPersistent(title, options);
+  });
 };
 
 // Displays a non-persistent notification using the Notification constructor,
@@ -27,6 +30,13 @@ var displayNonPersistent = function(title, options) {
       console.log(error);
       resolve();
     });
+  });
+};
+
+var notifyUSER = function(title, message){
+  displayPersistent(title, {
+    body: message,
+    icon: 'img/photo.jpg'
   });
 };
 
@@ -348,18 +358,3 @@ setInterval(function(){
     MyDOB(1995,11,16,19,30,30);
   }
 }, 1000);
-
-var notifyUSER = function(title, message){
-  if(mobileAndTabletcheck){
-    displayPersistent(title, {
-      body: message,
-      icon: 'img/photo.jpg'
-    });
-  }
-  else{
-    displayNonPersistent(title, {
-      body: message,
-      icon: 'img/photo.jpg'
-    });
-  }
-};

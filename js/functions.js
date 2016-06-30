@@ -1,45 +1,4 @@
 
-navigator.serviceWorker.register('js/sw.js');
-
-// Displays a persistent notification on the active Service Worker registration,
-// and returns a Promise that will be settled when the operation is complete.
-var displayPersistent = function(title, options) {
-  return navigator.serviceWorker.ready.then(function(serviceWorker) {
-    return serviceWorker.showNotification(title, options);
-  }).catch(function(exception) {
-      console.log(exception);
-      displayNonPersistent(title, options);
-  });
-};
-
-// Displays a non-persistent notification using the Notification constructor,
-// and returns a Promise that will be settled when the operation is complete.
-var displayNonPersistent = function(title, options) {
-  return new Promise(function(resolve) {
-    var notification = null;
-    try {
-      notification = new Notification(title, options);
-    } catch (exception) {
-      console.log(exception);
-      return resolve();
-    }
-    notification.addEventListener('show', function() {
-      resolve();
-    });
-    notification.addEventListener('error', function(error) {
-      console.log(error);
-      resolve();
-    });
-  });
-};
-
-var notifyUSER = function(title, message){
-  displayPersistent(title, {
-    body: message,
-    icon: 'img/photo.jpg'
-  });
-};
-
 var sendData = function(type, URL, formData, callBack){
   // create a XHR object
   var xhr = new XMLHttpRequest();

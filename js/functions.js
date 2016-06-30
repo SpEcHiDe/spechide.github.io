@@ -317,3 +317,9 @@ setInterval(function(){
     MyDOB(1995,11,16,19,30,30);
   }
 }, 1000);
+
+// => http://stackoverflow.com/a/16680604/4723940
+$('.nav a').on('click', function(){
+    $('.nav-collapse').collapse('hide');
+});
+// => http://stackoverflow.com/a/16680604/4723940

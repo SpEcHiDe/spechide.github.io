@@ -36,6 +36,8 @@ iframe{
   width: 1000px;
   overflow: hidden;
   max-width: 100%;
+}
+iframe #intro_anime{
   max-height: 25%;
 }
 @media screen and (min-width: 768px){

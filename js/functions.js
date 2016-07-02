@@ -114,12 +114,16 @@ var getFiles = function(){
       var gid = jsonobj[i].GID;
       var type = jsonobj[i].TypeOfID;
       var url = jsonobj[i].URL;
-      rspN += "<li><a id='" + gid + "' onclick='ViewFiles(\"" + url + "\")'>" + type + "</a></li>";
+      if(gid == ""){
+        rspN += "<!--<li><a id='" + gid + "' onclick='ViewFiles(\"" + url + "\")'>" + type + "</a></li>-->";
+      }
+      else{
+        rspN += "<li><a id='" + gid + "' onclick='ViewFiles(\"" + url + "\")'>" + type + "</a></li>";
+      }
     }
     document.getElementById('navOutputFILES').innerHTML = rspN;
   });
 };
-
 var ViewFiles = function(url){
   sendData("POST", BASE_URL + "viewer.php", "q="+url+"&t=g", function(esnopser){
     document.getElementById('pageOutputFILES').innerHTML = esnopser;

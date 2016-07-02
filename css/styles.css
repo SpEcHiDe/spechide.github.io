@@ -32,13 +32,16 @@ html{
   background-color: inherit;
 }
 iframe{
-  height: 300px;
-  width: 1000px;
   overflow: hidden;
   max-width: 100%;
 }
 iframe #intro_anime{
   max-height: 25%;
+  width: 1000px;
+  height: 300px;
+}
+#pageOutputFILES > iframe {
+  height: 450px;
 }
 @media screen and (min-width: 768px){
   .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev{
@@ -87,4 +90,18 @@ img{
 }
 .navbar-fixed-top{
   z-index: 256;
+}
+
+/*
+  I do not know what these things do?
+  neverthless ...
+*/
+#theFILEnav{
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(top, #fff 0%, #fff 100%);
+  background-image: -o-linear-gradient(top, #fff 0%, #fff 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+  background-image: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  border-color: #fff;
+  box-shadow: none;
 }

@@ -1,10 +1,4 @@
 
-/* ALL CONFIG VALUES BELOW THIS LINE */
-
-var BASE_URL = "//projects.shrimadhavuk.me/spechide/";
-
-/* ^^^ ALL CONFIG VALUES ABOVE THIS LINE */
-
 var sendData = function(type, URL, formData, callBack){
   // create a XHR object
   var xhr = new XMLHttpRequest();

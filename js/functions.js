@@ -1,4 +1,10 @@
 
+/* ALL CONFIG VALUES BELOW THIS LINE */
+
+var BASE_URL = "//projects.shrimadhavuk.me/spechide/";
+
+/* ^^^ ALL CONFIG VALUES ABOVE THIS LINE */
+
 var sendData = function(type, URL, formData, callBack){
   // create a XHR object
   var xhr = new XMLHttpRequest();
@@ -75,14 +81,14 @@ var afterFetch = function(response){
 };
 
 var searchProjects = function(querystring){
-  var url = "//projects.shrimadhavuk.me/spechide/projects.php";
+  var url = BASE_URL + "projects.php";
   var formdata = "search=" + querystring;
   sendData("POST", url, formdata, afterFetch);
 };
 
 var searchProjectsByType = function(argone){
   var querystring = document.getElementById('search').value;
-  var url = "//projects.shrimadhavuk.me/spechide/projects.php";
+  var url = BASE_URL + "projects.php";
   var formdata = "search=" + querystring + "&orderby=" + argone;
   sendData("POST", url, formdata, afterFetch);
 };
@@ -103,7 +109,27 @@ var sendEMail = function(){
 	var the_real_message = "FROM: " + fom + "\r\nSUBJECT: " + sub + "\r\nMESSAGE: " + msg;
 	var to = "Shrimadhav U K <spechide@shrimadhavuk.me>";
 	var formdata = "from=" + fom + "&to=" + to + "&sub=message from contact form on website&msg=" + the_real_message;
-	sendData("POST", "//projects.shrimadhavuk.me/spechide/send-mail.php", formdata, afteremailsend);
+	sendData("POST", BASE_URL + "send-mail.php", formdata, afteremailsend);
+};
+
+var getFiles = function(){
+  sendData("GET", BASE_URL + "files.php", "", function(response){
+    var jsonobj = JSON.parse(response);
+    var rspN = "";
+    for(var i = 0; i < jsonobj.length; i++){
+      var gid = jsonobj[i].GID;
+      var type = jsonobj[i].TypeOfID;
+      var url = jsonobj[i].URL;
+      rspN += "<li><a id='" + gid + "' onclick='ViewFiles(\"" + url + "\")'>" + type + "</a></li>";
+    }
+    document.getElementById('navOutputFILES').innerHTML = rspN;
+  });
+};
+
+var ViewFiles = function(url){
+  sendData("POST", BASE_URL + "viewer.php", "q="+url+"&t=g", function(esnopser){
+    document.getElementById('pageOutputFILES').innerHTML = esnopser;
+  });
 };
 
 var fireOnKeyUpEvent = function(element){
@@ -259,7 +285,7 @@ var MyDOB = function(year, month, date, hour, minute, second){
   document.getElementById('hrsl').innerHTML = "<span class='digit'>" + hours.toString().split('').join('</span><span class="digit">') + "</span>";
   document.getElementById('minl').innerHTML = "<span class='digit'>" + minutes.toString().split('').join('</span><span class="digit">') + "</span>";
   document.getElementById('secl').innerHTML = "<span class='digit'>" + seconds.toString().split('').join('</span><span class="digit">') + "</span>";
-}
+};
 
 $(window).bind('keydown', function(event) {
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery

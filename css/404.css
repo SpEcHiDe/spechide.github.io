@@ -19,7 +19,7 @@ h1 {
 
 p, ul {
   line-height: 1.6em;
-  max-width: 600px;
+  /*max-width: 600px;*/
   margin: 0 auto 20px auto;
 }
 

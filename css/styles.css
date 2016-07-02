@@ -104,6 +104,5 @@ img{
   background-image: linear-gradient(to bottom, #fff 0%, #fff 100%);
   border-color: #fff;
   box-shadow: none;
-  white-space: nowrap;
   margin-top: -40px;
 }

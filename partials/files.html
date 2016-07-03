@@ -1,24 +1,38 @@
+<style>
+#NITCLogin {
+    display: block;
+    width: 50em;
+    margin: 10em auto;
+}
+label,
+h2 {
+  text-align: center;
+  font-size: 1em;
+}
+</style>
+
 <div style="height: 2em;"></div>
 <div class="container">
   <div id="loginScreen" class="row">
-    <form class="form-horizontal" role="form" onsubmit="ValidateFiles(document.getElementById('uname').value, document.getElementById('pwd').value); return false;">
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="email">Username:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="uname" placeholder="Enter username">
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="pwd">Password:</label>
-        <div class="col-sm-10">
-          <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default">Submit</button>
-        </div>
-      </div>
+    <form id="NITCLogin" class="form-horizontal" role="form" onsubmit="ValidateFiles(document.getElementById('uname').value, document.getElementById('pwd').value); return false;" ng-validate>
+        <h2>Please enter your username and password to continue.</h2>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Username:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="uname" placeholder="Enter username">
+            </div>
+          </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            </div>
+          </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">LogIn using Secure Server <i class="glyphicon glyphicon-hand-right"></i></button>
+            </div>
+          </div>
     </form>
   </div>
   <div id="ThereAlfiLeS" class="row"></div>

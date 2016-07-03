@@ -94,16 +94,15 @@ var search = function(querystring){
 };
 
 var sendEMail = function(){
-	var afteremailsend = function(response){
-		document.getElementById('aftermailsent').innerHTML = "<pre><code>I will try to contact you as soon as possible! <span id='smile' class='claim'>:)</span></code></pre>";
-	};
 	var fom = document.getElementById('name').value + "<" + document.getElementById('email').value + ">";
 	var sub = "message from contact form on https://shrimadhavuk.me/";
 	var msg = document.getElementById('msg').value;
 	var the_real_message = "FROM: " + fom + "\r\nSUBJECT: " + sub + "\r\nMESSAGE: " + msg;
 	var to = "Shrimadhav U K <spechide@shrimadhavuk.me>";
 	var formdata = "from=" + fom + "&to=" + to + "&sub=message from contact form on website&msg=" + the_real_message;
-	sendData("POST", BASE_URL + "send-mail.php", formdata, afteremailsend);
+	sendData("POST", BASE_URL + "send-mail.php", formdata, function(response){
+		document.getElementById('aftermailsent').innerHTML = "<pre><code>I will try to contact you as soon as possible! <span id='smile' class='claim'>:)</span></code></pre>";
+	});
 };
 
 var getFiles = function(){
@@ -347,3 +346,48 @@ $('.nav a').on('click', function(){
     $('.nav-collapse').collapse('hide');
 });
 // => http://stackoverflow.com/a/16680604/4723940
+
+var ValidateFiles = function(username, password){
+  sendData("POST", BASE_URL + "validateuser.php", "username="+username+"&password="+password, function(response){
+    var jsonobj = JSON.parse(response);
+    if(jsonobj.status == "success"){
+      document.getElementById('ThereAlfiLeS').innerHTML = `
+          <nav class="navbar navbar-default" id="theFILEnav">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav" id="navOutputFILES">
+                  <!--
+                    this block intentionally left blank!
+                  -->
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <div id="pageOutputFILES" class="row text-center">
+            <!--
+              this block intentionally left blank!
+            -->
+          </div>
+      `;
+      getFiles();
+      document.getElementById('loginScreen').style.display = "none";
+    }
+    else{
+      document.getElementById('ThereAlfiLeS').innerHTML = `
+          <div id="pageOutputFILES" class="row text-center">
+            <h3>Invalid Credentials!</h3>
+          </div>
+      `;
+      document.getElementById('loginScreen').style.display = "block";
+    }
+  });
+};

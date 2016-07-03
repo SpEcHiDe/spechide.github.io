@@ -1,34 +1,25 @@
 <div style="height: 2em;"></div>
 <div class="container">
-
-  <nav class="navbar navbar-default" id="theFILEnav">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+  <div id="loginScreen" class="row">
+    <form class="form-horizontal" role="form" onsubmit="ValidateFiles(document.getElementById('uname').value, document.getElementById('pwd').value); return false;">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="email">Username:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="uname" placeholder="Enter username">
+        </div>
       </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-        <ul class="nav navbar-nav" id="navOutputFILES">
-          <!--
-            this block intentionally left blank!
-          -->
-        </ul>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Password:</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+        </div>
       </div>
-    </div>
-  </nav>
-
-  <div id="pageOutputFILES" class="row text-center">
-    <!--
-      this block intentionally left blank!
-    -->
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </div>
+    </form>
   </div>
-
+  <div id="ThereAlfiLeS" class="row"></div>
 </div>
-
-<script>
-  getFiles();
-</script>

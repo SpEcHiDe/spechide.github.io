@@ -35,7 +35,7 @@ iframe{
   overflow: hidden;
   max-width: 100%;
 }
-iframe #intro_anime{
+iframe.intro_anime{
   max-height: 25%;
   width: 1000px;
   height: 300px;

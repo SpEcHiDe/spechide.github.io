@@ -232,7 +232,13 @@ var analytics_and_adsense = function(){
   document.write(unescape("%3cscript type='text/javascript' src='"+sa_protocol+"://sa.entireweb.com/sense2.js'%3e%3c/script%3e"));
 
   loadScript("//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", function(){
-    document.write(unescape("%3Cins%20class%3D%27adsbygoogle%27%20style%3D%27display%3Ablock%27%20data-ad-client%3D%27ca-pub-9613493231103665%27%20data-ad-slot%3D%277285932435%27%20data-ad-format%3D%27auto%27%3E%3C/ins%3E"));
+    var ins_emnt = document.createElement('ins');
+    ins_emnt.class = 'adsbygoogle';
+    ins_emnt.style = 'display:block';
+    ins_emnt.data-ad-client = 'ca-pub-9613493231103665';
+    ins_emnt.data-ad-slot = '7285932435';
+    ins_emnt.data-ad-format = 'auto'
+    document.getElementsByTagName('body')[0].appendChild(ins_emnt);
     (adsbygoogle = window.adsbygoogle || []).push({});
   });
 

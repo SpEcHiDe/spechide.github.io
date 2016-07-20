@@ -203,13 +203,11 @@ var analytics_and_adsense = function(){
   ga('create', 'UA-78771890-1', 'auto');
   ga('send', 'pageview');
 
-  var infolinkanalytics = function(){
+  //resources.infolinks.com/js/infolinks_main.js
+  loadScript("//resources.infolinks.com/js/infolinks_main.js", function(){
     var infolinks_pid = 2795540;
     var infolinks_wsid = 0;
-  }
-
-  //resources.infolinks.com/js/infolinks_main.js
-  loadScript("//resources.infolinks.com/js/infolinks_main.js", infolinkanalytics);
+  });
   //resources.infolinks.com/js/infolinks_main.js
 
   sa_client = "94c732f75083abcdc4b3c63809a9ad5d";
@@ -232,6 +230,11 @@ var analytics_and_adsense = function(){
   sa_borderwidth = "1";
   sa_font = "0";
   document.write(unescape("%3cscript type='text/javascript' src='"+sa_protocol+"://sa.entireweb.com/sense2.js'%3e%3c/script%3e"));
+
+  loadScript("//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", function(){
+    document.write(unescape("%3Cins%20class%3D%27adsbygoogle%27%20style%3D%27display%3Ablock%27%20data-ad-client%3D%27ca-pub-9613493231103665%27%20data-ad-slot%3D%277285932435%27%20data-ad-format%3D%27auto%27%3E%3C/ins%3E"));
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  });
 
 };
 

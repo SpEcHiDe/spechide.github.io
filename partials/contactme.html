@@ -5,13 +5,13 @@
 
     <div class="row">
       <div class="col-sm-6 text-center">
-          <div class="container" style="margin-top: 5px;" id="aftermailsent">
-      			<div class="clearfix" style="max-width: 50em;">
+          <div class="container" style="margin-top: 5px;">
+      			<div class="clearfix" style="max-width: 50em;" id="beforemailsent">
       				<form id="nl-form" class="nl-form" method="POST" accept-charset="UTF-8" onsubmit="sendEMail(); return false;" enctype="multipart/form-data" ng-validate>
       					My name is
       					<input type="text" value="" name="NAME" id="name" placeholder="[your name]" data-subline="please input your name" />.
       					You can contact me at
-      					<input type="email" value="" name="EMAIL" id="email" placeholder="[email id]" data-subline="please enter a valid electronic mail id" />,
+      					<input type="email" value="" name="EMAIL" id="email" placeholder="[your email id]" data-subline="please enter a valid electronic mail id" />,
       					and I would like to tell you that
       					<input type="text" value="" name="MSG" id="msg" placeholder="[your message]"/>
       					<div class="nl-submit-wrap">
@@ -20,6 +20,8 @@
       					<div class="nl-overlay"></div>
       				</form>
       			</div>
+            <div class="clearfix" style="max-width: 50em;" id="aftermailsent">
+            </div>
       		</div>
       </div>
       <div class="col-sm-6 text-center" style="padding-top: 15px;">

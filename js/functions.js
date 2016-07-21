@@ -94,14 +94,24 @@ var search = function(querystring){
 };
 
 var sendEMail = function(){
-	var fom = document.getElementById('name').value + "<" + document.getElementById('email').value + ">";
-	var sub = "message from contact form on https://shrimadhavuk.me/";
+  var fromname = document.getElementById('name').value;
+	var fromemail = document.getElementById('email').value;
+	var subject = "message from contact form on https://shrimadhavuk.me/";
 	var msg = document.getElementById('msg').value;
-	var the_real_message = "FROM: " + fom + "\r\nSUBJECT: " + sub + "\r\nMESSAGE: " + msg;
-	var to = "Shrimadhav U K <spechide@shrimadhavuk.me>";
-	var formdata = "from=" + fom + "&to=" + to + "&sub=message from contact form on website&msg=" + the_real_message;
+	var message = "FROM: " + fromname + "\r\nMESSAGE: " + msg;
+	var toemail = "Shrimadhav U K <spechide@shrimadhavuk.me>";
+	var formdata = "fromname=" + fromname + "&toemail=" + toemail + "&subject=" + subject +"&message=" + message + "&fromemail=" + fromemail;
 	sendData("POST", BASE_URL + "send-mail.php", formdata, function(response){
-		document.getElementById('aftermailsent').innerHTML = "<pre><code>I will try to contact you as soon as possible! <span id='smile' class='claim'>:)</span></code></pre>";
+    var jsonobj = JSON.parse(response);
+    var status = jsonobj.status;
+    if(status == 0){
+      document.getElementById('aftermailsent').innerHTML = "<pre><code>I will try to contact you as soon as possible! <span id='smile' class='claim'>:)</span></code></pre>";
+      document.getElementById('beforemailsent').style.display = "none";
+    }
+    else{
+      document.getElementById('aftermailsent').innerHTML = "<pre><code>an unfortunate error occured <span id='smile' class='claim'>:(</span></code><code>" + jsonobj.condition + "</code></pre>";
+      document.getElementById('beforemailsent').style.display = "block";
+    }
 	});
 };
 
@@ -231,16 +241,18 @@ var analytics_and_adsense = function(){
   sa_font = "0";
   document.write(unescape("%3cscript type='text/javascript' src='"+sa_protocol+"://sa.entireweb.com/sense2.js'%3e%3c/script%3e"));
 
-  loadScript("//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", function(){
-    var ins_emnt = document.createElement('ins');
-    ins_emnt.class = 'adsbygoogle';
-    ins_emnt.style = 'display:block';
-    ins_emnt.data-ad-client = 'ca-pub-9613493231103665';
-    ins_emnt.data-ad-slot = '7285932435';
-    ins_emnt.data-ad-format = 'auto'
-    document.getElementsByTagName('body')[0].appendChild(ins_emnt);
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  });
+  // Google AdSense not working!!!
+  // loadScript("//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", function(){
+  //   var ins_emnt = document.createElement('ins');
+  //   ins_emnt.class = 'adsbygoogle';
+  //   ins_emnt.style = 'display:block';
+  //   ins_emnt.data-ad-client = 'ca-pub-9613493231103665';
+  //   ins_emnt.data-ad-slot = '7285932435';
+  //   ins_emnt.data-ad-format = 'auto'
+  //   document.getElementsByTagName('body')[0].appendChild(ins_emnt);
+  //   (adsbygoogle = window.adsbygoogle || []).push({});
+  // });
+  // Google AdSense not working!!!
 
 };
 

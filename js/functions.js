@@ -39,10 +39,6 @@ function scrollNav(){
   $('.scrollTop a').scrollTop();
 }
 
-$('.carousel').carousel({
-  interval: 10000
-});
-
 var afterFetch = function(response){
   var jsonobj = JSON.parse(response);
   var rsp = "";
@@ -133,6 +129,7 @@ var getFiles = function(){
     document.getElementById('navOutputFILES').innerHTML = rspN;
   });
 };
+
 var ViewFiles = function(url){
   sendData("POST", BASE_URL + "viewer.php", "q="+url+"&t=g", function(esnopser){
     document.getElementById('pageOutputFILES').innerHTML = esnopser;
@@ -305,6 +302,69 @@ var MyDOB = function(year, month, date, hour, minute, second){
   document.getElementById('secl').innerHTML = "<span class='digit'>" + seconds.toString().split('').join('</span><span class="digit">') + "</span>";
 };
 
+if(window.location.hash == "#/"){
+  // => update age
+  setInterval(function(){
+    MyDOB(1995,11,16,19,30,30);
+  }, 1000);
+
+  // => trigger carousel onChange
+  $('.carousel').carousel({
+    interval: 10000
+  });
+}
+
+var ValidateFiles = function(username, password){
+  sendData("POST", BASE_URL + "validateuser.php", "username="+username+"&password="+password, function(response){
+    var jsonobj = JSON.parse(response);
+    if(jsonobj.status == "success"){
+      document.getElementById('ThereAlfiLeS').innerHTML = `
+          <nav class="navbar navbar-default" id="theFILEnav">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav" id="navOutputFILES">
+                  <!--
+                    this block intentionally left blank!
+                  -->
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <div id="pageOutputFILES" class="row text-center">
+            <!--
+              this block intentionally left blank!
+            -->
+          </div>
+      `;
+      getFiles();
+      document.getElementById('loginScreen').style.display = "none";
+    }
+    else{
+      document.getElementById('ThereAlfiLeS').innerHTML = `
+          <div id="pageOutputFILES" class="row text-center">
+            <h3>Invalid Credentials!</h3>
+          </div>
+      `;
+      document.getElementById('loginScreen').style.display = "block";
+    }
+  });
+};
+
+// => http://stackoverflow.com/a/16680604/4723940
+$('.nav a').on('click', function(){
+    $('.nav-collapse').collapse('hide');
+});
+// => http://stackoverflow.com/a/16680604/4723940
+
 $(window).bind('keydown', function(event) {
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery
     if (event.ctrlKey || event.metaKey) {
@@ -355,60 +415,3 @@ $(window).bind('keydown', function(event) {
     }
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery
 });
-
-setInterval(function(){
-  if(window.location.hash == "#/"){
-    MyDOB(1995,11,16,19,30,30);
-  }
-}, 1000);
-
-// => http://stackoverflow.com/a/16680604/4723940
-$('.nav a').on('click', function(){
-    $('.nav-collapse').collapse('hide');
-});
-// => http://stackoverflow.com/a/16680604/4723940
-
-var ValidateFiles = function(username, password){
-  sendData("POST", BASE_URL + "validateuser.php", "username="+username+"&password="+password, function(response){
-    var jsonobj = JSON.parse(response);
-    if(jsonobj.status == "success"){
-      document.getElementById('ThereAlfiLeS').innerHTML = `
-          <nav class="navbar navbar-default" id="theFILEnav">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-                <ul class="nav navbar-nav" id="navOutputFILES">
-                  <!--
-                    this block intentionally left blank!
-                  -->
-                </ul>
-              </div>
-            </div>
-          </nav>
-
-          <div id="pageOutputFILES" class="row text-center">
-            <!--
-              this block intentionally left blank!
-            -->
-          </div>
-      `;
-      getFiles();
-      document.getElementById('loginScreen').style.display = "none";
-    }
-    else{
-      document.getElementById('ThereAlfiLeS').innerHTML = `
-          <div id="pageOutputFILES" class="row text-center">
-            <h3>Invalid Credentials!</h3>
-          </div>
-      `;
-      document.getElementById('loginScreen').style.display = "block";
-    }
-  });
-};

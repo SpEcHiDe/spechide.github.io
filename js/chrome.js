@@ -1,6 +1,4 @@
 
-navigator.serviceWorker.register('js/sw.js');
-
 var Generate_MD5 = function(s) {
     function L(k, d) {
         return (k << d) | (k >>> (32 - d))

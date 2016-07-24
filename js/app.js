@@ -36,5 +36,8 @@ app.config(function($routeProvider, $locationProvider) {
 				.when('/mobile', {
             templateUrl : 'partials/mobile.html'
         })
+				.when('/achievements', {
+            templateUrl : 'partials/certificates.html'
+        })
 				$routeProvider.otherwise({redirectTo: '/404'});
 });

@@ -302,10 +302,13 @@ var MyDOB = function(year, month, date, hour, minute, second){
   document.getElementById('secl').innerHTML = "<span class='digit'>" + seconds.toString().split('').join('</span><span class="digit">') + "</span>";
 };
 
-if(window.location.hash == "#/"){
+if(window.location.hash == "#/" || window.location.hash == ""){
+// <= temporary fix
   // => update age
   setInterval(function(){
-    MyDOB(1995,11,16,19,30,30);
+    if(window.location.hash == "#/"){
+      MyDOB(1995,11,16,19,30,30);
+    }
   }, 1000);
 
   // => trigger carousel onChange

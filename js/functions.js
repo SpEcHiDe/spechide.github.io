@@ -187,6 +187,14 @@ var hasWebgl = (function() {
 // });
 // the above thing does not work on Mozilla FireFox!
 
+var getQueryStringValue = function(key) {
+  return unescape(
+    window.location.search.replace(
+      new RegExp("^(?:.*[&\\?]" + escape(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"
+    )
+  );
+};
+
 var analytics_and_adsense = function(){
 
   function loadScript(url, callback){
@@ -316,51 +324,6 @@ if(window.location.hash == "#/" || window.location.hash == ""){
     interval: 10000
   });
 }
-
-var ValidateFiles = function(username, password){
-  sendData("POST", BASE_URL + "validateuser.php", "username="+username+"&password="+password, function(response){
-    var jsonobj = JSON.parse(response);
-    if(jsonobj.status == "success"){
-      document.getElementById('ThereAlfiLeS').innerHTML = `
-          <nav class="navbar navbar-default" id="theFILEnav">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-                <ul class="nav navbar-nav" id="navOutputFILES">
-                  <!--
-                    this block intentionally left blank!
-                  -->
-                </ul>
-              </div>
-            </div>
-          </nav>
-
-          <div id="pageOutputFILES" class="row text-center">
-            <!--
-              this block intentionally left blank!
-            -->
-          </div>
-      `;
-      getFiles();
-      document.getElementById('loginScreen').style.display = "none";
-    }
-    else{
-      document.getElementById('ThereAlfiLeS').innerHTML = `
-          <div id="pageOutputFILES" class="row text-center">
-            <h3>Invalid Credentials!</h3>
-          </div>
-      `;
-      document.getElementById('loginScreen').style.display = "block";
-    }
-  });
-};
 
 // => http://stackoverflow.com/a/16680604/4723940
 $('.nav a').on('click', function(){

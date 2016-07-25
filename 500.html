@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="portfolio" lang="en">
+<html lang="en">
   <head>
 
     <meta charset="utf-8">
@@ -41,58 +41,27 @@
     <title>Shrimadhav U K</title>
 
     <!-- css files -->
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
-    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="http://shrimadhavuk.me/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="http://shrimadhavuk.me/css/bootstrap-theme.css" type="text/css">
+    <link rel="stylesheet" href="http://shrimadhavuk.me/css/font-awesome.css" type="text/css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.js"></script>
+      <script src="http://shrimadhavuk.me/js/html5shiv.js"></script>
+      <script src="http://shrimadhavuk.me/js/respond.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <link rel="stylesheet" href="css/404.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="css/timeline.css" />
-    <!--[if lte IE 7]><style>.support-note .note-ie{display:block;}</style><![endif]-->
-    <link rel="stylesheet" type="text/css" href="css/countdown.css" />
-    <link rel="stylesheet" type="text/css" href="css/contactme.css" />
-    <link rel="stylesheet" type="text/css" href="css/projects.css" />
+
+    <link rel="stylesheet" href="http://shrimadhavuk.me/css/styles.css" type="text/css">
+    <link rel="stylesheet" href="http://shrimadhavuk.me/css/404.css" type="text/css">
 
     <!-- the MANIFEST file -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="msapplication-config" content="browserconfig.xml">
-    <!-- http://realfavicongenerator.net/ -->
-    <meta name="apple-mobile-web-app-title" content="Shrimadhav U K">
-    <meta name="application-name" content="Shrimadhav U K">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico">
-    <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <!-- http://realfavicongenerator.net/ -->
+    <link rel="manifest" href="http://shrimadhavuk.me/manifest.json">
+    <meta name="msapplication-config" content="http://shrimadhavuk.me/browserconfig.xml">
 
   </head>
 
-  <body ng-controller="mainController">
-
-    <section class="fixedlocation" id="cookiewarning">
-      By using this webpage, you agree that you have read the <a href="/#/termsandconditions">terms and conditions</a> and the <a href="/#/privacypolicy">privacy policy</a>, and also agree to abide by it.
-      <a onclick="trackOff()"><strong>OK</strong></a>
-    </section>
+  <body>
 
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
@@ -108,7 +77,6 @@
       </div>
     </nav>
 
-    <!-- MAIN CONTENT AND INJECTED VIEWS -->
     <div class="container" id="main">
 
       <div style="height:50px;"></div>
@@ -164,39 +132,6 @@
       </div>
       </section>
     </div>
-
-    <!-- modal for displaying help contents -->
-    <div class="modal fade" id="helpMeModal" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">What is this?</h4>
-          </div>
-          <div class="modal-body">
-            <p>
-              <small>This website is an attempt to make my online presence stronger!</small>
-              <br>
-              The idea is inspired from <a href="http://webkay.robinlinus.com/">What every Browser knows about you</a>.
-              <br>
-            </p>
-          </div>
-          <div class="modal-footer">
-            &nbsp;<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script src="js/config.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src='js/angular.min.js'></script>
-    <script src='js/angular-route.js'></script>
-    <script src="js/app.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/contactme.js"></script>
-    <script src="js/functions.js"></script>
-    <script src="js/chrome.js"></script>
 
   </body>
 </html>

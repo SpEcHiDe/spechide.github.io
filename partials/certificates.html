@@ -1,3 +1,90 @@
+<style>
+    a,
+    a:hover {
+        text-decoration: none
+    }
+    .continer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: no-wrap;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+    }
+    .personal-details .bio,
+    .stats .count {
+        color: #4078C0
+    }
+    .github-widget {
+        border: 1px solid #DDD;
+        max-width: 350px
+    }
+    .item {
+        flex: 1;
+        text-align: center;
+        padding: 10px
+    }
+    .repositories .language,
+    .repositories .stars {
+        text-align: left
+    }
+    .repositories .language div,
+    .repositories .stars div {
+        padding: 5px 0
+    }
+    .photo {
+        flex: 2
+    }
+    .photo img {
+        border-radius: 100%;
+        max-width: 90px
+    }
+    .personal-details {
+        flex: 6
+    }
+    .personal-details .full-name {
+        font-size: 1.5em;
+        line-height: 1.5em
+    }
+    .personal-details .location {
+        font-size: .8em
+    }
+    .stats .count {
+        font-size: 1.2em;
+        font-weight: 700
+    }
+    .repositories .names {
+        flex: 2;
+        text-align: left
+    }
+    .repositories .names div {
+        padding: 5px 0;
+        text-overflow: ellipsis
+    }
+    .follow {
+        flex: 2
+    }
+    .active-time {
+        flex: 4;
+        font-size: .8em
+    }
+    .heading {
+        font-weight: 400;
+        color: #666
+    }
+    hr {
+        border: 1px solid #DDD
+    }
+    a {
+        color: #4078C0
+    }
+    .follow button {
+        width: 100%;
+        height: 2em;
+        border: none;
+        background: #ddd
+    }
+</style>
 
 <div class="container">
   <div class='row'>
@@ -47,7 +134,22 @@
       <div class='col-sm-4 col-md-4 col-xs-4 col-lg-4'>
         <h4>My GitHub status</h4>
         <!-- https://github.com/surbhioberoi/github-widget -->
-        <div class="github-widget" data-username="SpEcHiDe"></div>
+        <div class="github-widget" data-username="SpEcHiDe">
+          <div class="continer">
+              <div class="item photo"></div>
+              <div class="item personal-details"></div>
+          </div>
+          <div class="continer stats"></div>
+          <hr>
+          <div class="continer">
+              <div class="item heading">Top repositories</div>
+          </div>
+          <div class="repositories"></div>
+          <div class="continer">
+              <div class="item follow"></div>
+              <div class="item active-time"></div>
+          </div>
+        </div>
         <!-- https://github.com/surbhioberoi/github-widget -->
       </div>
       <div class='col-sm-4 col-md-4 col-xs-4 col-lg-4'>

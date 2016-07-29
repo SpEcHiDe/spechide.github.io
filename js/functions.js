@@ -111,31 +111,6 @@ var sendEMail = function(){
 	});
 };
 
-var getFiles = function(){
-  sendData("GET", BASE_URL + "files.php", "", function(response){
-    var jsonobj = JSON.parse(response);
-    var rspN = "";
-    for(var i = 0; i < jsonobj.length; i++){
-      var gid = jsonobj[i].GID;
-      var type = jsonobj[i].TypeOfID;
-      var url = jsonobj[i].URL;
-      if(gid == ""){
-        rspN += "<!--<li><a id='" + gid + "' onclick='ViewFiles(\"" + url + "\")'>" + type + "</a></li>-->";
-      }
-      else{
-        rspN += "<li><a id='" + gid + "' onclick='ViewFiles(\"" + url + "\")'>" + type + "</a></li>";
-      }
-    }
-    document.getElementById('navOutputFILES').innerHTML = rspN;
-  });
-};
-
-var ViewFiles = function(url){
-  sendData("POST", BASE_URL + "viewer.php", "q="+url+"&t=g", function(esnopser){
-    document.getElementById('pageOutputFILES').innerHTML = esnopser;
-  });
-};
-
 var fireOnKeyUpEvent = function(element){
   if ("createEvent" in document) {
     var evt = document.createEvent("HTMLEvents");

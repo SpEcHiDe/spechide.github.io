@@ -15,9 +15,6 @@ app.config(function($routeProvider, $locationProvider) {
 				.when('/projects', {
             templateUrl : 'partials/projects.html'
         })
-				.when('/files', {
-            templateUrl : 'partials/files.html'
-        })
         .when('/contactme', {
             templateUrl : 'partials/contactme.html'
         })

@@ -60,6 +60,13 @@ iframe.intro_anime{
   padding-right: 1em;
   color: #337ab7;
 }
+.fixedlocation p{
+  text-decoration: none;
+  margin: 0;
+  line-height: 0;
+  font-size: 1.5em;
+  color: #337ab7;
+}
 .fa > .label {
   display: none;
 }

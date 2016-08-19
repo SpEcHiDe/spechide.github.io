@@ -72,7 +72,7 @@ var afterFetch = function(response){
 
 var searchProjects = function(querystring){
   var url = BASE_URL + "projects.php";
-  var formdata = "search=" + querystring;
+  var formdata = "search=" + querystring + "&ybredro=STARTDATE";
   sendData("POST", url, formdata, afterFetch);
 };
 
@@ -306,6 +306,8 @@ $('.nav a').on('click', function(){
 // => http://stackoverflow.com/a/16680604/4723940
 
 $(window).bind('keydown', function(event) {
+  var currentLocation = window.location.protocol + "//" + window.location.host + window.location.pathname;
+  var locationArrays = ["#/", "#/achievements", "#/projects", "#/education", "#/contactme"];
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery
     if (event.ctrlKey || event.metaKey) {
         switch (String.fromCharCode(event.which).toLowerCase()) {
@@ -336,7 +338,11 @@ $(window).bind('keydown', function(event) {
         // => http://stackoverflow.com/a/5597114/4723940
         case 37:
             event.preventDefault();
-            console.log("left")
+            // LEFT arrow key
+            console.log("LEFT: horizontal scrolling disabled");
+            var currentHash = window.location.hash;
+            var requiredIndex = ((locationArrays.indexOf(currentHash)) == (0)) ? (locationArrays.length - 1) : (locationArrays.indexOf(currentHash) - 1);
+            window.location.replace(currentLocation + locationArrays[requiredIndex]);
             break;
         case 38:
             //event.preventDefault();
@@ -344,7 +350,12 @@ $(window).bind('keydown', function(event) {
             break;
         case 39:
             event.preventDefault();
-            console.log("right");
+            // RIGHT arrow key
+            console.log("RIGHT: horizontal scrolling disabled");
+            // TODO: the edge case error checkings !!!
+            var currentHash = window.location.hash;
+            var requiredIndex = ((locationArrays.indexOf(currentHash)) == (locationArrays.length - 1)) ? (0) : (locationArrays.indexOf(currentHash) + 1);
+            window.location.replace(currentLocation + locationArrays[requiredIndex]);
             break;
         case 40:
             //event.preventDefault();

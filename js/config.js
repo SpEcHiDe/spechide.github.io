@@ -1,1 +1,1 @@
-var BASE_URL = "//projects.shrimadhavuk.me/spechide/";
+var BASE_URL = "//spechide-spechide.rhcloud.com/spechide/";

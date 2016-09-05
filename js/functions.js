@@ -68,6 +68,7 @@ var FooterFixedLocation = `
         <a href="https://angel.co/SpEcHiDe" class="fa fa-angellist fa-2x"><span class="label">AngelList</span></a>
         <a href="https://bitbucket.org/SpEcHiDe" class="fa fa-bitbucket fa-2x"><span class="label">BitBucket</span></a>
         <a href="bitcoin:13csS5SByVR4e3tJ9c4gjC18Lua8dXDp9A" class="fa fa-bitcoin fa-2x"><span class="label">Bitcoin</span></a>
+        <a href="https://www.codementor.io/spechide" class="fa fa-cab fa-2x"><span class="label">CodeMentor</span></a>
         <a href="mailto:spechide@joindiaspora.com" class="fa fa-diasp">
           <span class="fa-stack fa-lg">
             <span class="fa fa-star-o fa-stack-2x"></span>

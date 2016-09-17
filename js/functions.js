@@ -404,6 +404,20 @@ $('.carousel').carousel({
   interval: 10000
 });
 
+var DisplayMessageInModal = function(heading, message){
+  $('.modal-body').html(message);
+  $('.modal-title').html(heading);
+  $($("#helpMeModal").modal());
+};
+
+var DisplaySpecialLink = function(url, desc){
+  DisplayMessageInModal(desc, "<iframe src='" + url + "' width='100%' height='100%' />");
+};
+
+var PreviewURL = function(url){
+  DisplaySpecialLink(url, "Preview WebPage in this Single Page Application");
+};
+
 // => http://stackoverflow.com/a/16680604/4723940
 $('.nav a').on('click', function(){
     $('.nav-collapse').collapse('hide');
@@ -434,9 +448,10 @@ $(window).bind('keydown', function(event) {
               break;
           case 'a':
               event.preventDefault();
-              $('.modal-body').html("<p><small>This website is an attempt to make my online presence stronger!</small><br>The idea is inspired from <a href='http://webkay.robinlinus.com/'>What every Browser knows about you</a>.<br></p>");
-              $('.modal-title').html("What is this?");
-              $($("#helpMeModal").modal());
+              DisplayMessageInModal(
+                "What is this?",
+                "<p><small>This website is an attempt to make my online presence stronger!</small><br>The idea is inspired from <a href='http://webkay.robinlinus.com/'>What every Browser knows about you</a>.<br></p>"
+              );
               break;
         }
     }
@@ -473,13 +488,3 @@ $(window).bind('keydown', function(event) {
     }
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery
 });
-
-var DisplaySpecialLink = function(url, desc){
-  $('.modal-body').html("<iframe src='" + url + "' width='100%' height='100%' />");
-  $('.modal-title').html(desc);
-  $($("#helpMeModal").modal());
-};
-
-var PreviewURL = function(url){
-  DisplaySpecialLink(url, "Preview WebPage in this Single Page Application");
-};

@@ -125,3 +125,19 @@ img{
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
+
+/* http://stackoverflow.com/a/18522320/4723940 */
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.modal-content {
+  height: auto;
+}
+.modal-body > iframe {
+  height: auto;
+  min-height: 100%;
+}
+/* http://stackoverflow.com/a/18522320/4723940 */

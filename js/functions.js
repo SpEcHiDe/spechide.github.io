@@ -38,15 +38,10 @@ var NavBar = `
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">What is this?</h4>
+        <h4 class="modal-title"><!-- intentionally left blank --></h4>
       </div>
       <div class="modal-body">
-        <p>
-          <small>This website is an attempt to make my online presence stronger!</small>
-          <br>
-          The idea is inspired from <a href="http://webkay.robinlinus.com/">What every Browser knows about you</a>.
-          <br>
-        </p>
+        <!-- intentionally left blank -->
       </div>
       <!--<div class="modal-footer">
         &nbsp;<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -439,6 +434,8 @@ $(window).bind('keydown', function(event) {
               break;
           case 'a':
               event.preventDefault();
+              $('.modal-body').html("<p><small>This website is an attempt to make my online presence stronger!</small><br>The idea is inspired from <a href='http://webkay.robinlinus.com/'>What every Browser knows about you</a>.<br></p>");
+              $('.modal-title').html("What is this?");
               $($("#helpMeModal").modal());
               break;
         }
@@ -477,7 +474,12 @@ $(window).bind('keydown', function(event) {
   // http://stackoverflow.com/questions/93695/best-cross-browser-method-to-capture-ctrls-with-jquery
 });
 
-$('.SplLinks').click(function(e) {
-    e.preventDefault();
-    
-});
+var DisplaySpecialLink = function(url, desc){
+  $('.modal-body').html("<iframe src='" + url + "' width='100%' height='100%' />");
+  $('.modal-title').html(desc);
+  $($("#helpMeModal").modal());
+};
+
+var PreviewURL = function(url){
+  DisplaySpecialLink(url, "Preview WebPage in this Single Page Application");
+};

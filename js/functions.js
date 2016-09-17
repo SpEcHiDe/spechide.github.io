@@ -13,7 +13,7 @@ var NavBar = `
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/blog" data-toggle="tooltip" title="the plAce where I blog">Blog</a></li>
+        <li><a href="//blog.shrimadhavuk.me/" data-toggle="tooltip" title="the plAce where I blog">Blog</a></li>
         <li><a href="#/achievements" data-toggle="tooltip" title="scanned copies of my certificates">Achievements</a></li>
         <li><a href="#/projects" data-toggle="tooltip" title="my projects">Projects</a></li>
         <li><a href="#/education">Education</a></li>

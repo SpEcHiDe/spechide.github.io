@@ -1,0 +1,85 @@
+a,
+a:hover {
+    text-decoration: none
+}
+.continer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+.personal-details .bio,
+.stats .count {
+    color: #4078C0
+}
+.github-widget {
+    border: 1px solid #DDD;
+    max-width: 350px
+}
+.item {
+    flex: 1;
+    text-align: center;
+    padding: 10px
+}
+.repositories .language,
+.repositories .stars {
+    text-align: left
+}
+.repositories .language div,
+.repositories .stars div {
+    padding: 5px 0
+}
+.photo {
+    flex: 2
+}
+.photo img {
+    border-radius: 100%;
+    max-width: 90px
+}
+.personal-details {
+    flex: 6
+}
+.personal-details .full-name {
+    font-size: 1.5em;
+    line-height: 1.5em
+}
+.personal-details .location {
+    font-size: .8em
+}
+.stats .count {
+    font-size: 1.2em;
+    font-weight: 700
+}
+.repositories .names {
+    flex: 2;
+    text-align: left
+}
+.repositories .names div {
+    padding: 5px 0;
+    text-overflow: ellipsis
+}
+.follow {
+    flex: 2
+}
+.active-time {
+    flex: 4;
+    font-size: .8em
+}
+.heading {
+    font-weight: 400;
+    color: #666
+}
+hr {
+    border: 1px solid #DDD
+}
+a {
+    color: #4078C0
+}
+.follow button {
+    width: 100%;
+    height: 2em;
+    border: none;
+    background: #ddd
+}

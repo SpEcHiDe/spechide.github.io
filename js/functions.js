@@ -107,7 +107,7 @@ var FooterFixedLocation = `
 $('body').append(NavBar);
 $('body').append(FooterFixedLocation);
 
-var sendData = function(type, URL, formData, callBack){
+var RequestData = function(type, URL, formData, callBack){
   // create a XHR object
   var xhr = new XMLHttpRequest();
   // open the XHR object in asynchronous mode
@@ -181,14 +181,14 @@ var afterFetch = function(response){
 var searchProjects = function(querystring){
   var url = BASE_URL + "projects.php";
   var formdata = "search=" + querystring + "&ybredro=STARTDATE";
-  sendData("POST", url, formdata, afterFetch);
+  RequestData("POST", url, formdata, afterFetch);
 };
 
 var searchProjectsByType = function(argone){
   var querystring = document.getElementById('search').value;
   var url = BASE_URL + "projects.php";
   var formdata = "search=" + querystring + "&orderby=" + argone;
-  sendData("POST", url, formdata, afterFetch);
+  RequestData("POST", url, formdata, afterFetch);
 };
 
 var search = function(querystring){
@@ -204,7 +204,7 @@ var sendEMail = function(){
 	var msg = document.getElementById('msg').value;
 	var toemail = String.fromCharCode(109,97,103,105,99,116,101,97,99,104,101,114,57,53,64,103,109,97,105,108,46,99,111,109);
 	var formdata = "fromname=" + fromname + "&toemail=" + toemail + "&subject=" + subject +"&message=" + msg + "&fromemail=" + fromemail;
-	sendData("POST", BASE_URL + "send-mail.php", formdata, function(response){
+	RequestData("POST", BASE_URL + "send-mail.php", formdata, function(response){
     var jsonobj = JSON.parse(response);
     var status = jsonobj.status;
     if(status == 0){

@@ -36,5 +36,8 @@ app.config(function($routeProvider, $locationProvider) {
 				.when('/achievements', {
             templateUrl : 'partials/certificates.html'
         })
+				.when('/obfuscator', {
+            templateUrl : 'partials/obfuscator.html'
+        })
 				$routeProvider.otherwise({redirectTo: '/404'});
 });

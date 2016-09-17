@@ -141,3 +141,7 @@ img{
   min-height: 100%;
 }
 /* http://stackoverflow.com/a/18522320/4723940 */
+
+.SplLinks {
+  cursor: pointer;
+}

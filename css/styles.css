@@ -137,7 +137,7 @@ img{
   height: auto;
 }
 .modal-body > iframe {
-  height: auto;
+  height: 35em;
   min-height: 100%;
 }
 /* http://stackoverflow.com/a/18522320/4723940 */

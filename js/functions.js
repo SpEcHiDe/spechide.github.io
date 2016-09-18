@@ -71,7 +71,7 @@ var FooterFixedLocation = `
           </span>
           <span class="label">Diaspora</span>
         </a>
-        <a href="mailto:spechide@shrimadhavuk.me" class="fa fa-envelope fa-2x"><span class="label">Email</span></a>
+        <a href="mailto:shrimadhavuk@gmail.com" class="fa fa-envelope fa-2x"><span class="label">Email</span></a>
         <a href="https://fb.me/shrimadhav" class="fa fa-facebook fa-2x"><span class="label">Facebook</span></a>
         <a href="https://www.flickr.com/SpEcHiDe" class="fa fa-flickr fa-2x"><span class="label">Flickr</span></a>
         <a href="https://github.com/SpEcHiDe" class="fa fa-github fa-2x"><span class="label">GitHub</span></a>

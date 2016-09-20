@@ -2,10 +2,10 @@
 <browserconfig>
   <msapplication>
     <tile>
-      <square70x70logo src="http://shrimadhavuk.me/img/mstile-70x70.png"/>
-      <square150x150logo src="http://shrimadhavuk.me/img/mstile-150x150.png"/>
-      <square310x310logo src="http://shrimadhavuk.me/img/mstile-310x310.png"/>
-      <wide310x150logo src="http://shrimadhavuk.me/img/mstile-310x150.png"/>
+      <square70x70logo src="http://spechide.github.io/img/mstile-70x70.png"/>
+      <square150x150logo src="http://spechide.github.io/img/mstile-150x150.png"/>
+      <square310x310logo src="http://spechide.github.io/img/mstile-310x310.png"/>
+      <wide310x150logo src="http://spechide.github.io/img/mstile-310x150.png"/>
       <TileColor>#da532c</TileColor>
     </tile>
   </msapplication>

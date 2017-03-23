@@ -81,193 +81,42 @@
       <link rel="stylesheet" href="//spechide.shrimadhavuk.me/css/bootstrap.css" type="text/css">
       <link rel="stylesheet" href="//spechide.shrimadhavuk.me/css/font-awesome.css" type="text/css">
       <link rel="stylesheet" href="//spechide.shrimadhavuk.me/css/normalize.css" type="text/css">
-      <link type="text/css" rel="stylesheet" href="index.css">
-      <link rel="stylesheet" href="//www.shrimadhavuk.me/css/countdown.css" type="text/css">
+      <style type="text/css">
+          body, html {
+              margin: 0;
+              padding: 0;
+              height: 100%;
+              overflow: hidden;
+          }
+          #content {
+              position:relative;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+          }
+          #uniqIDforthisIFrame {
+              width: 100%;
+              height: 100%;
+          }
+      </style>
 
     </head>
     <body>
 
-      <nav class="navbar navbar-default navbar-fixed-top malayalam_para">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="//www.shrimadhavuk.me/">Home</a>
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="//blog.shrimadhavuk.me/" data-toggle="tooltip" title="the plAce where I blog">Blog</a></li>
-              <li><a href="//about.shrimadhavuk.me/" data-toggle="tooltip" title="About ME in a formal way">About</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <div class="container">
-
-        <div style="height:5em;"></div>
-
-        <h1 class="text-center malayalam_para">Shrimadhav U K</h1>
-
-        <div id="time_countdown" class="time-count-container">
-            <div class="col-sm-6 col-xs-6 col-md-2">
-                <div class="time-box">
-                    <div class="time-box-inner dash years_dash animated">
-                          <span class="time-number" id="yrsl">
-                          <span class="digit">0</span>
-                          <span class="digit">0</span>
-                        </span>
-                        <span class="time-name">Years</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-xs-6 col-md-2">
-                <div class="time-box">
-                    <div class="time-box-inner dash days_dash animated">
-                        <span class="time-number" id="daysl">
-                          <span class="digit">0</span>
-                          <span class="digit">0</span>
-                          <span class="digit">0</span>
-                        </span>
-                        <span class="time-name">Days</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hidden-sm col-md-2 hidden-xs">
-                <div class="time-box">
-                    <div class="time-box-inner dash months_dash animated">
-                        <span class="time-number" id="monthsl">
-                          <span class="digit">&nbsp;</span>
-                          <span class="digit">:</span>
-                          <span class="digit">&nbsp;</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-xs-6 col-md-2">
-                <div class="time-box">
-                    <div class="time-box-inner dash hours_dash animated">
-                        <span class="time-number" id="hrsl">
-                          <span class="digit">0</span>
-                          <span class="digit">0</span>
-                        </span>
-                        <span class="time-name">Hours</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-xs-6 col-md-2">
-                <div class="time-box">
-                    <div class="time-box-inner dash minutes_dash animated">
-                        <span class="time-number" id="minl">
-                          <span class="digit">0</span>
-                          <span class="digit">0</span>
-                        </span>
-                        <span class="time-name">Minutes</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hidden-sm hidden-xs col-md-2">
-                <div class="time-box">
-                    <div class="time-box-inner dash seconds_dash animated">
-                        <span class="time-number" id="secl">
-                          <span class="digit">0</span>
-                          <span class="digit">0</span>
-                        </span>
-                        <span class="time-name">Seconds</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- <section class="fixedlocation" id="cookiewarning">
-          By using this webpage, you agree that you have read the
-          <a href="/termsandconditions">terms and conditions</a>
-          and the
-          <a href="/privacypolicy">privacy policy</a>,
-          and also agree to abide by it.
-          <a onclick="trackOff()"><strong>OK</strong></a>
-        </section> -->
-        <!-- un-necassary comment will not be displayed because of CloudFlare -->
-        <section class="fixedlocation" id="contactme">
-          <div class="container-fluid text-center social-links">
-            <span class="text-left">
-              &copy; 1995 | Shrimadhav U K
-            </span>
-            <span class="text-center">
-                &nbsp; &nbsp; &nbsp;
-                <!-- <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/AngelCo" class="fa fa-1x  fa-angellist"><span class="label">AngelList</span></a> -->
-                <!-- <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/BitBucket" class="fa fa-1x  fa-bitbucket"><span class="label">BitBucket</span></a> -->
-                <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/BitCoin" class="fa fa-1x  fa-bitcoin"><span class="label">Bitcoin</span></a>
-                <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/CodeMentor" class="fa fa-1x  fa-cab"><span class="label">CodeMentor</span></a>
-                <!-- <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/Diaspora" class="fa fa-diasp">
-                  <span class="fa-stack fa-lg">
-                    <span class="fa fa-star-o fa-stack-1x"></span>
-                    <span class="fa fa-fw fa-stack-1x"><strong>D</strong></span>
-                  </span>
-                  <span class="label">Diaspora</span>
-                </a> -->
-                <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/ElectronicMail" class="fa fa-1x  fa-envelope"><span class="label">Email</span></a>
-                <!-- <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/FaceBook" class="fa fa-1x  fa-facebook"><span class="label">Facebook</span></a> -->
-                <!-- <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/Flickr" class="fa fa-1x  fa-flickr"><span class="label">Flickr</span></a> -->
-                <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/GitHub" class="fa fa-1x  fa-github"><span class="label">GitHub</span></a>
-                <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/GitLab" class="fa fa-1x  fa-gitlab"><span class="label">GitLab</span></a>
-                <!-- <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/GooglePlus" class="fa fa-1x  fa-google-plus"><span class="label">Google+</span></a> -->
-                <!-- <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/HackerNews" class="fa fa-1x  fa-hacker-news"><span class="label">HackerNews</span></a> -->
-                <!-- <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/InstaGram" class="fa fa-1x  fa-instagram"><span class="label">Instagram</span></a> -->
-                <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/KeyBase" class="fa fa-1x  fa-key"><span class="label">KeyBase</span></a>
-                <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/LinkedIn" class="fa fa-1x  fa-linkedin"><span class="label">LinkedIn</span></a>
-                <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/Quora" class="fa fa-1x  fa-quora"><span class="label">Quora</span></a>
-                <!-- <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/StackOverFlow" class="fa fa-1x  fa-stack-overflow"><span class="label">StackOverFlow</span></a> -->
-                <!-- <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/Telegram" class="fa fa-1x  fa-telegram"><span class="label">Telegram</span></a> -->
-                <!-- <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/MobileNumber" class="fa fa-1x  fa-phone"><span class="label">Telegram</span></a> -->
-                <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/Twitter" class="fa fa-1x  fa-twitter"><span class="label">Twitter</span></a>
-                <!-- <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/WhatsApp" class="fa fa-1x  fa-whatsapp"><span class="label">WhatsApp</span></a> -->
-                <a href="https://spechide.shrimadhavuk.me/contact/SpEcHiDe.me/YouTube" class="fa fa-1x  fa-youtube"><span class="label">YouTube</span></a>
-                &nbsp; &nbsp; &nbsp;
-            </span>
-            <!-- <span class="text-right">
-              &copy; 1995 | Shrimadhav U K
-            </span> -->
-          </div>
-        </section>
-
-        <!-- modal for displaying help contents -->
-        <div class="modal fade" id="helpMeModal" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title"><!-- intentionally left blank --></h4>
-              </div>
-              <div class="modal-body">
-                <!-- intentionally left blank -->
-              </div>
-              <!--<div class="modal-footer">
-                &nbsp;<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>-->
-            </div>
-          </div>
-        </div>
-
+      <div id="content">
+        <!-- http://stackoverflow.com/a/25232908/4723940 -->
+        <iframe id="uniqIDforthisIFrame" class="embed-responsive-item" src='' width='100%' height='100%' src="//www.shrimadhavuk.me/"></iframe>
       </div>
-
+      
       <!-- jQuery JavaScript  -->
       <script type="text/javascript" src="//spechide.shrimadhavuk.me/js/jquery.js"></script>
       <!-- BootStrap JavaScript -->
       <script type="text/javascript" src="//spechide.shrimadhavuk.me/js/bootstrap.js"></script>
       <!-- AutoUpdate Functionality  -->
       <script type="text/javascript" src="//spechide.gitlab.io/CustomERRPages/googlechrome.js"></script>
-
-      <script type="text/javascript" src="//www.shrimadhavuk.me/index.js"></script>
 
     </body>
   </html>
